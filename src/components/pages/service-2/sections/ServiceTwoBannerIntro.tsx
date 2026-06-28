@@ -14,7 +14,7 @@ const ServiceTwoBannerIntro = () => {
                     <div className="col-span-12 lg:col-span-6 order-2 lg:order-1">
                         <div className="px-inner-service-video">
                             <video loop muted autoPlay playsInline>
-                                <source src="https://html.aqlova.com/videos/pixora/step-video.mp4" type="video/mp4" />
+                                <source src="https://html.aqlova.com/videos/170web/step-video.mp4" type="video/mp4" />
                             </video>
                         </div>
                     </div>

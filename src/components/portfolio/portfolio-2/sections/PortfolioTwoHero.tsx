@@ -26,7 +26,7 @@ const PortfolioTwoHero = () => {
                         <div className="px-hero-4-video-wrap flex justify-end">
                             <div className="px-hero-4-video">
                                 <video loop muted autoPlay playsInline>
-                                    <source src="https://html.aqlova.com/videos/pixora/banner-4-1.mp4" type="video/mp4" />
+                                    <source src="https://html.aqlova.com/videos/170web/banner-4-1.mp4" type="video/mp4" />
                                 </video>
                                 <div className="px-hero-4-video-btn flex justify-between items-center">
                                     <span>(Play Reel)</span>
@@ -39,7 +39,7 @@ const PortfolioTwoHero = () => {
                 <div className="grid grid-cols-12 gap-x-6">
                     <div className="col-span-12 xl:col-span-12">
                         <div className="px-hero-4-bigtitle text-center">
-                            <h2>pixora</h2>
+                            <h2>170web</h2>
                         </div>
                     </div>
                 </div>

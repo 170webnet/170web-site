@@ -32,42 +32,42 @@ export const modernAgencyTestimonials: TestimonialItemDT[] = [
 export const creativeAgencyTestimonials = [
     {
         id: 1,
-        text: `Pixora began as a collaborative architectural and landscape workshop,
+        text: `170web began as a collaborative architectural and landscape workshop,
          and has remained true to its trans disciplinary way of thinking since its inception`,
         name: "Royal Caribbean",
         role: "Commodity & Marketing Manager",
     },
     {
         id: 2,
-        text: `Pixora began as a collaborative architectural and landscape workshop,
+        text: `170web began as a collaborative architectural and landscape workshop,
          and has remained true to its trans disciplinary way of thinking since its inception`,
         name: "Jessica Morgan",
         role: "Brand Manager",
     },
     {
         id: 3,
-        text: `Pixora began as a collaborative architectural and landscape workshop,
+        text: `170web began as a collaborative architectural and landscape workshop,
          and has remained true to its trans disciplinary way of thinking since its inception`,
         name: "Daniel Foster",
         role: "Product Lead",
     },
     {
         id: 4,
-        text: `Pixora began as a collaborative architectural and landscape workshop,
+        text: `170web began as a collaborative architectural and landscape workshop,
          and has remained true to its trans disciplinary way of thinking since its inception`,
         name: "Sophia Turner",
         role: "UX Director",
     },
     {
         id: 5,
-        text: `Pixora began as a collaborative architectural and landscape workshop,
+        text: `170web began as a collaborative architectural and landscape workshop,
          and has remained true to its trans disciplinary way of thinking since its inception`,
         name: "Michael Reed",
         role: "Creative Producer",
     },
     {
         id: 6,
-        text: `Pixora began as a collaborative architectural and landscape workshop,
+        text: `170web began as a collaborative architectural and landscape workshop,
          and has remained true to its trans disciplinary way of thinking since its inception`,
         name: "Olivia Bennett",
         role: "Marketing Head",
@@ -77,37 +77,37 @@ export const creativeAgencyTestimonials = [
 export const serviceTestimonials = [
     {
         description:
-            "Pixora began as a collaborative architectural and landscape workshop, and has remained true to its trans disciplinary way of thinking since its inception",
+            "170web began as a collaborative architectural and landscape workshop, and has remained true to its trans disciplinary way of thinking since its inception",
         name: "Royal Carribbean",
         designation: "Commodity & Marketing Manager",
     },
     {
         description:
-            "Pixora began as a collaborative architectural and landscape workshop, and has remained true to its trans disciplinary way of thinking since its inception",
+            "170web began as a collaborative architectural and landscape workshop, and has remained true to its trans disciplinary way of thinking since its inception",
         name: "Royal Carribbean",
         designation: "Commodity & Marketing Manager",
     },
     {
         description:
-            "Pixora began as a collaborative architectural and landscape workshop, and has remained true to its trans disciplinary way of thinking since its inception",
+            "170web began as a collaborative architectural and landscape workshop, and has remained true to its trans disciplinary way of thinking since its inception",
         name: "Royal Carribbean",
         designation: "Commodity & Marketing Manager",
     },
     {
         description:
-            "Pixora began as a collaborative architectural and landscape workshop, and has remained true to its trans disciplinary way of thinking since its inception",
+            "170web began as a collaborative architectural and landscape workshop, and has remained true to its trans disciplinary way of thinking since its inception",
         name: "Royal Carribbean",
         designation: "Commodity & Marketing Manager",
     },
     {
         description:
-            "Pixora began as a collaborative architectural and landscape workshop, and has remained true to its trans disciplinary way of thinking since its inception",
+            "170web began as a collaborative architectural and landscape workshop, and has remained true to its trans disciplinary way of thinking since its inception",
         name: "Royal Carribbean",
         designation: "Commodity & Marketing Manager",
     },
     {
         description:
-            "Pixora began as a collaborative architectural and landscape workshop, and has remained true to its trans disciplinary way of thinking since its inception",
+            "170web began as a collaborative architectural and landscape workshop, and has remained true to its trans disciplinary way of thinking since its inception",
         name: "Royal Carribbean",
         designation: "Commodity & Marketing Manager",
     },

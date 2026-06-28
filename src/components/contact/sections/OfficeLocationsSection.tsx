@@ -7,7 +7,7 @@ const officeLocations: OfficeLocationDt[] = [
         city: "London",
         address: ["28 Foubert’s Place", "London W1F 7PR"],
         phone: "+44 (0)20 3667 7446",
-        email: "london@pixora.com",
+        email: "london@170web.com",
         directionsLink: "#",
     },
     {
@@ -15,7 +15,7 @@ const officeLocations: OfficeLocationDt[] = [
         city: "New York",
         address: ["28 Foubert’s Place", "London W1F 7PR"],
         phone: "+44 (0)20 3667 7446",
-        email: "london@pixora.com",
+        email: "london@170web.com",
         directionsLink: "#",
     },
     {
@@ -23,7 +23,7 @@ const officeLocations: OfficeLocationDt[] = [
         city: "Singapore",
         address: ["28 Foubert’s Place", "London W1F 7PR"],
         phone: "+44 (0)20 3667 7446",
-        email: "london@pixora.com",
+        email: "london@170web.com",
         directionsLink: "#",
     },
 ];

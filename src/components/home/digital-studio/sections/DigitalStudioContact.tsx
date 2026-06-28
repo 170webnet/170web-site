@@ -10,7 +10,7 @@ const DigitalStudioContact = () => {
                 <div className="grid grid-cols-12 gap-x-6">
                     <div className="col-span-12 lg:col-span-5">
                         <div className="bf-contact-form mb-30">
-                            <span className="bf-contact-subtitle">Pixora@</span>
+                            <span className="bf-contact-subtitle">170web@</span>
                             <h3 className="bf-contact-title mb-25">Leave a reply</h3>
                             <DigitalStudioContactForm />
                         </div>
@@ -44,7 +44,7 @@ const DigitalStudioContact = () => {
                                 </div>
                                 <div className="bf-contact-author-info">
                                     <h6>Team lead</h6>
-                                    <span className="block mb-15">at Pixora@</span>
+                                    <span className="block mb-15">at 170web@</span>
                                     <h4 className="mb-15">Belal Mahmud</h4>
                                     <SmartLink href="/contact-me" className="tp-btn inline-flex items-center justify-center">
                                         <span>

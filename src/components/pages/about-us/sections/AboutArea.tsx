@@ -7,7 +7,7 @@ const AboutArea = () => {
                 <div className="grid grid-cols-12 gap-x-6">
                     <div className="col-span-12 xl:col-span-12">
                         <div className="px-about-3-text text-center">
-                            <h2 className="px-about-3-bigtext">About pixora</h2>
+                            <h2 className="px-about-3-bigtext">About 170web</h2>
                         </div>
                     </div>
                 </div>
@@ -22,7 +22,7 @@ const AboutArea = () => {
                     <div className="col-span-12 xl:col-span-7">
                         <div className="px-about-3-content">
                             <p>
-                                Pixora is a creative  studio <br />
+                                170web is a creative  studio <br />
                                 based in Portugal, Brazil, and London. <br />
                                 We think like an  <span>agency</span> and <span>produce</span> <br />
                                 like a visuals for brands & agencies.

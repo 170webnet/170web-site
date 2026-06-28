@@ -52,7 +52,7 @@ const CreativeAgencyStep = ({ sectionSpacing = "" }) => {
                 <div className="px-step-video">
                     <video loop muted autoPlay playsInline>
                         <source
-                            src="https://html.aqlova.com/videos/pixora/step-video.mp4"
+                            src="https://html.aqlova.com/videos/170web/step-video.mp4"
                             type="video/mp4"
                         />
                     </video>

@@ -40,7 +40,7 @@ const DigitalStudioHero = () => {
                     </div>
                     <div className="col-span-12 md:col-span-9 lg:col-span-6">
                         <div className="bf-hero-3-dec mb-30">
-                            <p>Pixora is a strategic design partner to bold<br />
+                            <p>170web is a strategic design partner to bold<br />
                                 digital brands. We join your team, co-build<br />
                                 your thing, and help bring it to the world.</p>
                         </div>

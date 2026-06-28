@@ -26,7 +26,7 @@ const SOCIAL_LINKS = [
     },
 ];
 
-const EMAIL = "inquiry@pixora.com";
+const EMAIL = "inquiry@170web.com";
 
 const CreativeAgencySocial = () => {
     return (

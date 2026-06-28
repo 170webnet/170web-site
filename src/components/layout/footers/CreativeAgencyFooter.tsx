@@ -71,7 +71,7 @@ const CreativeAgencyFooter = () => {
                                                     <div className="design-footer-widget design-footer-col-4">
                                                         <h4 className="design-footer-widget-title sm">Skype</h4>
                                                         <div className="design-footer-widget-info">
-                                                            <Link className="px-line-lr" href="#">pixora.agency</Link>
+                                                            <Link className="px-line-lr" href="#">170web.agency</Link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -84,7 +84,7 @@ const CreativeAgencyFooter = () => {
                                 <div className="grid grid-cols-12 gap-x-6">
                                     <div className="col-span-12 md:col-span-6">
                                         <div className="design-copyright-text text-center md:text-left mb-10">
-                                            <p>© {currentYear} Pixora, All rights reserved.</p>
+                                            <p>© {currentYear} 170web, All rights reserved.</p>
                                         </div>
                                     </div>
                                     <div className="col-span-12 md:col-span-6">

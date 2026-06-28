@@ -34,7 +34,7 @@ const Service = () => {
                         <div className="px-service-3-video">
                             <video width={650} loop muted autoPlay playsInline>
                                 <source
-                                    src="https://html.aqlova.com/videos/pixora/service-video.mp4"
+                                    src="https://html.aqlova.com/videos/170web/service-video.mp4"
                                     type="video/mp4"
                                 />
                             </video>

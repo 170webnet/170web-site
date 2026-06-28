@@ -26,7 +26,7 @@ const ServiceBanner = () => {
                                     <Image src="/assets/img/shape/shape-1.png" alt="shape" width={171} height={60} />
                                 </div>
                                 <video loop muted autoPlay playsInline>
-                                    <source src="https://html.aqlova.com/videos/pixora/banner-4-1.mp4" type="video/mp4" />
+                                    <source src="https://html.aqlova.com/videos/170web/banner-4-1.mp4" type="video/mp4" />
                                 </video>
                             </div>
                         </div>

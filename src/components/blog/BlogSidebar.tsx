@@ -44,7 +44,7 @@ const tags = [
   { id: "design-trends", name: "Design Trends" },
   { id: "development", name: "Development" },
   { id: "lifestyle", name: "Lifestyle" },
-  { id: "pixora", name: "Pixora" },
+  { id: "170web", name: "170web" },
 ];
 
 const socialLinks = [
@@ -90,8 +90,8 @@ const BlogSidebar = () => {
                     <div className="sidebar-widget-author-btn">
                         <Link className="tp-btn-px sidebar-btn w-full" href="#">
                             <span>
-                                <span className="text-1">Pixora Theme</span>
-                                <span className="text-2">Pixora Theme</span>
+                                <span className="text-1">170web Theme</span>
+                                <span className="text-2">170web Theme</span>
                             </span>
                         </Link>
                     </div>

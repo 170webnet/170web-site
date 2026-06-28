@@ -59,7 +59,7 @@ const CreativeAgencyHero = () => {
 					<div className="col-span-12 lg:col-span-9 xl:col-span-7 2xl:col-span-7">
 						<div className="px-hero-5-content">
 							<p>
-								Pixora is a creative studio <br />
+								170web is a creative studio <br />
 								based in London. We think like <br />
 								an agency and produce like visuals <br />
 								for brands & agencies.
@@ -123,7 +123,7 @@ const CreativeAgencyHero = () => {
 
 								<video loop muted autoPlay playsInline>
 									<source
-										src="https://html.aqlova.com/videos/pixora/banner-4-1.mp4"
+										src="https://html.aqlova.com/videos/170web/banner-4-1.mp4"
 										type="video/mp4"
 									/>
 								</video>

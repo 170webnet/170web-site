@@ -76,7 +76,7 @@ const BlogStandardPostItem = ({ post }: blogPropsDt) => {
                             </div>
                             <div className="postbox-author-info">
                                 <h4 className="postbox-author-name">Devon Lane</h4>
-                                <span>Co-Founder of Pixora</span>
+                                <span>Co-Founder of 170web</span>
                             </div>
                         </div>
                         <div className="postbox-meta">

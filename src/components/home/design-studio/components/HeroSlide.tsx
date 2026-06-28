@@ -7,14 +7,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const heroSlides = [
-    { title: "©Pixora - Motion", subtitle: "Graphics, Visual Studio", img: "/assets/img/hero/hero-2-4.jpg" },
-    { title: "©Pixora - Visual", subtitle: "Storytelling, Digital Agency", img: "/assets/img/hero/hero-2-2.jpg" },
-    { title: "©Pixora - Brand", subtitle: "Identity, Media Studio", img: "/assets/img/hero/hero-2-1.jpg" },
-    { title: "©Pixora - Digital", subtitle: "Branding, Creative Agency", img: "/assets/img/hero/hero-2-3.jpg" },
-    { title: "©Pixora - Motion", subtitle: "Graphics, Visual Studio", img: "/assets/img/hero/hero-2-4.jpg" },
-    { title: "©Pixora - Visual", subtitle: "Storytelling, Digital Agency", img: "/assets/img/hero/hero-2-2.jpg" },
-    { title: "©Pixora - Brand", subtitle: "Identity, Media Studio", img: "/assets/img/hero/hero-2-1.jpg" },
-    { title: "©Pixora - Digital", subtitle: "Branding, Creative Agency", img: "/assets/img/hero/hero-2-3.jpg" },
+    { title: "©170web - Motion", subtitle: "Graphics, Visual Studio", img: "/assets/img/hero/hero-2-4.jpg" },
+    { title: "©170web - Visual", subtitle: "Storytelling, Digital Agency", img: "/assets/img/hero/hero-2-2.jpg" },
+    { title: "©170web - Brand", subtitle: "Identity, Media Studio", img: "/assets/img/hero/hero-2-1.jpg" },
+    { title: "©170web - Digital", subtitle: "Branding, Creative Agency", img: "/assets/img/hero/hero-2-3.jpg" },
+    { title: "©170web - Motion", subtitle: "Graphics, Visual Studio", img: "/assets/img/hero/hero-2-4.jpg" },
+    { title: "©170web - Visual", subtitle: "Storytelling, Digital Agency", img: "/assets/img/hero/hero-2-2.jpg" },
+    { title: "©170web - Brand", subtitle: "Identity, Media Studio", img: "/assets/img/hero/hero-2-1.jpg" },
+    { title: "©170web - Digital", subtitle: "Branding, Creative Agency", img: "/assets/img/hero/hero-2-3.jpg" },
 ];
 
 const HeroSlide = () => {

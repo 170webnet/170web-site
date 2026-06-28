@@ -7,8 +7,8 @@ const contactInfoData = [
     {
         id: 1,
         title: "inquires",
-        content: "contact@pixora.com",
-        href: "mailto:contact@pixora.com",
+        content: "contact@170web.com",
+        href: "mailto:contact@170web.com",
         colClass: "col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-12",
     },
     {

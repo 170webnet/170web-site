@@ -18,7 +18,7 @@ const About = () => {
                     <div className="xl:col-start-6 col-span-12 xl:col-span-5">
                         <div className="px-about-4-content">
                             <p>
-                                Pixora is a creative  studio based in Portugal, <br />
+                                170web is a creative  studio based in Portugal, <br />
                                 Brazil, and London. We think like an  agency and produce <br />
                                 like a visuals for brands & agencies.
                             </p>

@@ -27,7 +27,7 @@ const locations = [
 
 const contacts = [
     { label: "+999 23654 2654", href: "tel:+999236542654" },
-    { label: "pixora@help.com", href: "mailto:pixora@help.com" },
+    { label: "170web@help.com", href: "mailto:170web@help.com" },
 ];
 /* ------------------ COMPONENTS ------------------ */
 const FooterTop = () => (
@@ -115,7 +115,7 @@ const FooterBottom = () => (
             <div className="col-span-12 sm:col-span-8 md:col-span-6 lg:col-span-6">
                 <div className="tp-footer-copyright">
                     <p>
-                        © {getCurrentYear()} <Link href="#">Pixora.</Link> All rights reserved.
+                        © {getCurrentYear()} <Link href="#">170web.</Link> All rights reserved.
                     </p>
                 </div>
             </div>

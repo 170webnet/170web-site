@@ -33,7 +33,7 @@ const DigitalStudioService = () => {
                             </h3>
                             <div className="tp_text_anim">
                                 <p className="bf-service-3-dec">
-                                    Pixora power of our 8+ years of experience. We build excellence
+                                    170web power of our 8+ years of experience. We build excellence
                                     works. <br />
                                     That will help you to grow your business products.
                                 </p>

@@ -25,7 +25,7 @@ const StartupAgencyHero = () => {
             <div className="col-span-12 xl:col-span-9">
               <div className="px-hero-title-box">
                 <span className="px-hero-subtitle px-fade-anim" data-delay=".3">
-                  Pixora digital studio.
+                  170web digital studio.
                 </span>
 
                 <h2 className="px-hero-title px-fade-anim" data-delay=".5">
@@ -51,7 +51,7 @@ const StartupAgencyHero = () => {
                   <div className="px-hero-video">
                     <video loop muted autoPlay playsInline>
                       <source
-                        src="https://html.aqlova.com/videos/pixora/banner-4-1.mp4"
+                        src="https://html.aqlova.com/videos/170web/banner-4-1.mp4"
                         type="video/mp4"
                       />
                     </video>

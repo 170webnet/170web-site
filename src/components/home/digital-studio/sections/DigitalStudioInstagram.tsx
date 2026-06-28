@@ -42,7 +42,7 @@ const DigitalStudioInstagram = () => {
                 <div className="bf-instagram-content-wrap text-left">
                     <div className="bf-instagram-title-box">
                         <span className="bf-instagram-subtitle">INSTAGRAM</span>
-                        <h4 className="bf-instagram-title">@Pixoraagency</h4>
+                        <h4 className="bf-instagram-title">@170webagency</h4>
                     </div>
 
                     <div className="bf-instagram-content">

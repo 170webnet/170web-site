@@ -10,11 +10,11 @@ export default function DarkLayout({
 }) {
     useEffect(() => {
         // add class to html when entering dark page
-        document.documentElement.classList.add("pixora-dark");
+        document.documentElement.classList.add("170web-dark");
 
         // class remove when exiting dark page
         return () => {
-            document.documentElement.classList.remove("pixora-dark");
+            document.documentElement.classList.remove("170web-dark");
         };
     }, []);
 

@@ -71,8 +71,8 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#0A0A0A", copyr
                                 </h4>
 
                                 <div className="px-footer-widget-info">
-                                    <Link href="mailto:pixora@studio.com">
-                                        pixora@studio.com
+                                    <Link href="mailto:170web@studio.com">
+                                        170web@studio.com
                                     </Link>
                                     <Link href="tel:+3025550107">
                                         +(302) 555-0107
@@ -101,7 +101,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#0A0A0A", copyr
                         <div className="col-span-12">
                             <div className="px-copyright-content text-center">
                                 <h2 className="px-copyright-big-text">
-                                    Pixora.Studio
+                                    170web.Studio
                                 </h2>
                             </div>
                         </div>

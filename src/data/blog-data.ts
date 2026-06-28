@@ -70,7 +70,7 @@ export const blogs: blogDt[] = [
         desc: "A journey of self-discovery and exploration that allows us to align our values, interests, and skills with our professional pursuitsplatea dictumst[…]",
         authorImg: "/assets/img/blog/blog-details/user-1.jpg",
         authorName: "Phil Martinez",
-        designation: "Co-Founder of Pixora",
+        designation: "Co-Founder of 170web",
         date: "March 15, 2026"
     },
     {
@@ -82,7 +82,7 @@ export const blogs: blogDt[] = [
         desc: "A journey of self-discovery and exploration that allows us to align our values, interests, and skills with our professional pursuitsplatea dictumst[…]",
         authorImg: "/assets/img/blog/blog-details/user-1.jpg",
         authorName: "Devon Lane",
-        designation: "Co-Founder of Pixora",
+        designation: "Co-Founder of 170web",
         date: "March 17, 2026"
     },
     {
@@ -90,7 +90,7 @@ export const blogs: blogDt[] = [
         type: "quote",
         image: "/assets/img/blog/blog-standard/blog-s-4.jpg",
         title: "Quote post",
-        desc: `Pixora created something better then I ecer could have imagined Dipiscing elit, sed do eiusmod`,
+        desc: `170web created something better then I ecer could have imagined Dipiscing elit, sed do eiusmod`,
         authorImg: "/assets/img/blog/blog-details/user-1.jpg",
         authorName: "Phil Martinez",
         designation: "Floyd Miles",
@@ -109,7 +109,7 @@ export const blogs: blogDt[] = [
         desc: "A journey of self-discovery and exploration that allows us to align our values, interests, and skills with our professional pursuitsplatea dictumst[…]",
         authorImg: "/assets/img/blog/blog-details/user-1.jpg",
         authorName: "Jacob Jones",
-        designation: "Co-Founder of Pixora",
+        designation: "Co-Founder of 170web",
         date: "March 18, 2026"
     },
     //blog standard blog data end
@@ -122,7 +122,7 @@ export const blogs: blogDt[] = [
         desc: "A journey of self-discovery and exploration that allows us to align our values, interests, and skills with our professional pursuitsplatea dictumst[…]",
         authorImg: "/assets/img/blog/blog-details/user-1.jpg",
         authorName: "Jacob Jones",
-        designation: "Co-Founder of Pixora",
+        designation: "Co-Founder of 170web",
         date: "March 18, 2026"
     },
     {
@@ -133,7 +133,7 @@ export const blogs: blogDt[] = [
         desc: "A journey of self-discovery and exploration that allows us to align our values, interests, and skills with our professional pursuitsplatea dictumst[…]",
         authorImg: "/assets/img/blog/blog-details/user-1.jpg",
         authorName: "Jacob Jones",
-        designation: "Co-Founder of Pixora",
+        designation: "Co-Founder of 170web",
         date: "March 18, 2026"
     },
     {
@@ -144,7 +144,7 @@ export const blogs: blogDt[] = [
         desc: "A journey of self-discovery and exploration that allows us to align our values, interests, and skills with our professional pursuitsplatea dictumst[…]",
         authorImg: "/assets/img/blog/blog-details/user-1.jpg",
         authorName: "Jacob Jones",
-        designation: "Co-Founder of Pixora",
+        designation: "Co-Founder of 170web",
         date: "March 18, 2026"
     },
     //minimal portfolio blog data start

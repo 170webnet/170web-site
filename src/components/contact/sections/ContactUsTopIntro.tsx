@@ -28,7 +28,7 @@ const ContactUsTopIntro = () => {
                         <div className="col-span-12 lg:col-span-4"></div>
                         <div className="col-span-12 lg:col-span-8">
                             <div className="tp-contact-us-text tp_fade_anim">
-                                <p className="m-0">Pixora is a beacon of best innovation and the dynamic <br /> parent a company of wealcoder and many other subsidiaries.</p>
+                                <p className="m-0">170web is a beacon of best innovation and the dynamic <br /> parent a company of wealcoder and many other subsidiaries.</p>
                             </div>
                         </div>
                     </div>

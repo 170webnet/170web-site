@@ -49,11 +49,11 @@ const ModernAgencyFooter = () => {
                             <div className="grid grid-cols-12 gap-x-6 items-center">
                                 <div className="col-span-12 md:col-span-6">
                                     <div className="px-social-mail">
-                                        <Link className="px-line-lr" href="mailto:inquiry@pixora.com">
+                                        <Link className="px-line-lr" href="mailto:inquiry@170web.com">
                                             <span>
                                                 <FooterSendMessageIcon />
                                             </span>
-                                            inquiry@pixora.com
+                                            inquiry@170web.com
                                         </Link>
                                     </div>
                                 </div>
@@ -125,7 +125,7 @@ const ModernAgencyFooter = () => {
                                                     <div className="design-footer-widget design-footer-col-4">
                                                         <h4 className="design-footer-widget-title sm">Skype</h4>
                                                         <div className="design-footer-widget-info">
-                                                            <Link className="px-line-lr" href="#">pixora.agency</Link>
+                                                            <Link className="px-line-lr" href="#">170web.agency</Link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -138,7 +138,7 @@ const ModernAgencyFooter = () => {
                                 <div className="grid grid-cols-12 gap-x-6">
                                     <div className="col-span-12 md:col-span-6">
                                         <div className="design-copyright-text text-center md:text-left mb-10">
-                                            <p>© {getCurrentYear()} Pixora, All rights reserved.</p>
+                                            <p>© {getCurrentYear()} 170web, All rights reserved.</p>
                                         </div>
                                     </div>
                                     <div className="col-span-12 md:col-span-6">

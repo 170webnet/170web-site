@@ -8,7 +8,7 @@ const AboutTwoArea = () => {
                     <div className="col-span-12 xl:col-span-9">
                         <div className="px-inner-about-1-top mb-70 px-fade-anim">
                             <p>
-                                Pixora Design Agency delivers{" "}
+                                170web Design Agency delivers{" "}
                                 <span>
                                     creative, innovative, and tailored design solutions.
                                 </span>
@@ -20,7 +20,7 @@ const AboutTwoArea = () => {
                     <div className="col-span-12 xl:col-span-6">
                         <div className="px-inner-about-1-video">
                             <video loop muted autoPlay playsInline>
-                                <source src="https://html.aqlova.com/videos/pixora/step-video.mp4" type="video/mp4" />
+                                <source src="https://html.aqlova.com/videos/170web/step-video.mp4" type="video/mp4" />
                             </video>
                         </div>
                     </div>

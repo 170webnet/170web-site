@@ -5,14 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 const heroContent = [
-    { col: "col-span-12 lg:col-span-2", img: "/assets/img/hero/hero-2-1.jpg", title: "©Pixora - Video", subtitle: "Branding, Digital Studio", spacingCls: "", alignCls: "justify-start" },
-    { col: "col-span-12 lg:col-span-4", img: "/assets/img/hero/hero-2-2.jpg", title: "©Pixora - Motion", subtitle: "Graphics, Visual Studio", spacingCls: "pl-80", alignCls: "justify-start" },
-    { col: "col-span-12 lg:col-span-4", img: "/assets/img/hero/hero-2-3.jpg", title: "©Pixora - Brand", subtitle: "Identity, Media Studio", spacingCls: "pr-80", alignCls: "justify-end" },
-    { col: "col-span-12 lg:col-span-2", img: "/assets/img/hero/hero-2-4.jpg", title: "©Pixora - Digital", subtitle: "Branding, Creative Agency", spacingCls: "", alignCls: "justify-end" },
-    { col: "col-span-12 lg:col-span-3", img: "/assets/img/hero/hero-2-5.jpg", title: "©Pixora - Video", subtitle: "Production, Design Studio", spacingCls: "pr-85", alignCls: "justify-end" },
-    { col: "col-span-12 lg:col-span-3", img: "/assets/img/hero/hero-2-6.jpg", title: "©Pixora - Visual", subtitle: "Storytelling, Digital Agency", spacingCls: "pl-105", alignCls: "justify-start" },
-    { col: "col-span-12 lg:col-span-3", img: "/assets/img/hero/hero-2-7.jpg", title: "©Pixora - Creative", subtitle: "Media, Branding Studio", spacingCls: "pl-100", alignCls: "justify-start" },
-    { col: "col-span-12 lg:col-span-3", img: "/assets/img/hero/hero-2-8.jpg", title: "©Pixora - Motion", subtitle: "Design, Creative Studio", spacingCls: "pl-100", alignCls: "justify-start" },
+    { col: "col-span-12 lg:col-span-2", img: "/assets/img/hero/hero-2-1.jpg", title: "©170web - Video", subtitle: "Branding, Digital Studio", spacingCls: "", alignCls: "justify-start" },
+    { col: "col-span-12 lg:col-span-4", img: "/assets/img/hero/hero-2-2.jpg", title: "©170web - Motion", subtitle: "Graphics, Visual Studio", spacingCls: "pl-80", alignCls: "justify-start" },
+    { col: "col-span-12 lg:col-span-4", img: "/assets/img/hero/hero-2-3.jpg", title: "©170web - Brand", subtitle: "Identity, Media Studio", spacingCls: "pr-80", alignCls: "justify-end" },
+    { col: "col-span-12 lg:col-span-2", img: "/assets/img/hero/hero-2-4.jpg", title: "©170web - Digital", subtitle: "Branding, Creative Agency", spacingCls: "", alignCls: "justify-end" },
+    { col: "col-span-12 lg:col-span-3", img: "/assets/img/hero/hero-2-5.jpg", title: "©170web - Video", subtitle: "Production, Design Studio", spacingCls: "pr-85", alignCls: "justify-end" },
+    { col: "col-span-12 lg:col-span-3", img: "/assets/img/hero/hero-2-6.jpg", title: "©170web - Visual", subtitle: "Storytelling, Digital Agency", spacingCls: "pl-105", alignCls: "justify-start" },
+    { col: "col-span-12 lg:col-span-3", img: "/assets/img/hero/hero-2-7.jpg", title: "©170web - Creative", subtitle: "Media, Branding Studio", spacingCls: "pl-100", alignCls: "justify-start" },
+    { col: "col-span-12 lg:col-span-3", img: "/assets/img/hero/hero-2-8.jpg", title: "©170web - Motion", subtitle: "Design, Creative Studio", spacingCls: "pl-100", alignCls: "justify-start" },
 ];
 
 
@@ -68,7 +68,7 @@ const Hero = () => {
                     <div className="col-span-12 xl:col-span-12">
                         <div className="px-hero-2-bottom text-center p-relative px-fade-anim" data-delay=".3">
                             <h4 className="px-hero-2-text flex items-end justify-center">
-                                design <i className="hidden xl:block"><span>©Pixora <br /> Live in a World <br /> of creative designs</span></i>Studio
+                                design <i className="hidden xl:block"><span>©170web <br /> Live in a World <br /> of creative designs</span></i>Studio
                             </h4>
                         </div>
                     </div>

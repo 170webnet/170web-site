@@ -27,8 +27,8 @@ const PersonalPortfolioFooter = () => {
                                         </Link>
                                     </div>
                                     <div className="px-footer-3-mail">
-                                        <Link href="mailto:Hello@Pixora.com">
-                                            Hello@Pixora.com
+                                        <Link href="mailto:Hello@170web.com">
+                                            Hello@170web.com
                                         </Link>
                                     </div>
                                 </div>

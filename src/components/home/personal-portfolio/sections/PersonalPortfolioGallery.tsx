@@ -14,22 +14,22 @@ type GalleryItemType = {
 const galleryOne: GalleryItemType[] = [
     { type: "image", src: "/assets/img/gallery/gallery-1.jpg" },
     { type: "image", src: "/assets/img/gallery/gallery-7.jpg" },
-    { type: "video", src: "https://html.aqlova.com/videos/pixora/banner-4-1.mp4" },
+    { type: "video", src: "https://html.aqlova.com/videos/170web/banner-4-1.mp4" },
     { type: "image", src: "/assets/img/gallery/gallery-2.jpg" },
     { type: "image", src: "/assets/img/gallery/gallery-3.jpg" },
     { type: "image", src: "/assets/img/gallery/gallery-1.jpg" },
     { type: "image", src: "/assets/img/gallery/gallery-7.jpg" },
-    { type: "video", src: "https://html.aqlova.com/videos/pixora/banner-4-1.mp4" },
+    { type: "video", src: "https://html.aqlova.com/videos/170web/banner-4-1.mp4" },
 ];
 
 const galleryTwo: GalleryItemType[] = [
     { type: "image", src: "/assets/img/gallery/gallery-4.jpg" },
-    { type: "video", src: "https://html.aqlova.com/videos/pixora/banner-4-1.mp4" },
+    { type: "video", src: "https://html.aqlova.com/videos/170web/banner-4-1.mp4" },
     { type: "image", src: "/assets/img/gallery/gallery-5.jpg" },
     { type: "image", src: "/assets/img/gallery/gallery-6.jpg" },
     { type: "image", src: "/assets/img/gallery/gallery-7.jpg" },
      { type: "image", src: "/assets/img/gallery/gallery-4.jpg" },
-    { type: "video", src: "https://html.aqlova.com/videos/pixora/banner-4-1.mp4" },
+    { type: "video", src: "https://html.aqlova.com/videos/170web/banner-4-1.mp4" },
     { type: "image", src: "/assets/img/gallery/gallery-5.jpg" },
 ];
 

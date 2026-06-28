@@ -166,7 +166,7 @@ const SecondaryOffcanvas = ({ menuOpenTemp }: { menuOpenTemp: boolean }) => {
                                 <div className="px-offcanvas-2-video">
                                     <div className="px-hero-video">
                                         <video loop muted autoPlay playsInline>
-                                            <source src="https://html.aqlova.com/videos/pixora/banner-4-1.mp4" type="video/mp4" />
+                                            <source src="https://html.aqlova.com/videos/170web/banner-4-1.mp4" type="video/mp4" />
                                         </video>
                                     </div>
                                 </div>

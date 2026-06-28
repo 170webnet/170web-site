@@ -74,7 +74,7 @@ const PrimaryOffCanvas = () => {
                             <h3 className="tp-offcanvas-title sm">Information</h3>
                             <ul>
                                 <li><Link href="tel:1245654">+ 4 20 7700 1007</Link></li>
-                                <li><Link href="mailto:hello@pixora.com">hello@pixora.com</Link></li>
+                                <li><Link href="mailto:hello@170web.com">hello@170web.com</Link></li>
                                 <li><Link href="#">Avenue de Roma 158b, Lisboa</Link></li>
                             </ul>
                         </div>

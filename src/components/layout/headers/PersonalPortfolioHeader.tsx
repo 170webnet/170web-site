@@ -44,7 +44,7 @@ const PersonalPortfolioHeader = () => {
                             <div className="col-span-5">
                                 <div className="px-header-6-action flex justify-end items-center">
                                     <div className="px-header-6-info hidden xl:block">
-                                        <Link className="px-line-lr" href="mailto:hello@pixora.com">Hello@Pixora.com</Link>
+                                        <Link className="px-line-lr" href="mailto:hello@170web.com">Hello@170web.com</Link>
                                     </div>
                                     <div className="px-header-6-btn ml-25 hidden xl:block">
                                         <SmartLink className="px-btn-grey" href="/contact-me">
