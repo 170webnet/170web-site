@@ -27,12 +27,12 @@ const CreativeAgencyHeader = () => {
                                         <Image
                                             width={735}
                                             height={256}
-                                            className="px-header-logo-anim hidden xl:block img-fluid"
+                                            className="px-header-logo-anim hidden xl:block max-w-full h-auto"
                                             src="/assets/img/logo/logo-orange.png"
                                             alt="logo"
                                             style={{ width: "735px", height: "auto" }}
                                         />
-                                        <Image width={95} height={100} className="xl:hidden img-fluid" src="/assets/img/logo/logo-orange.png" alt="logo" />
+                                        <Image width={95} height={100} className="xl:hidden max-w-full h-auto" src="/assets/img/logo/logo-orange.png" alt="logo" />
                                     </Link>
                                 </div>
                             </div>

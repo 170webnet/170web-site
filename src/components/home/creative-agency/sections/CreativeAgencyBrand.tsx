@@ -33,7 +33,7 @@ const CreativeAgencyBrand = () => {
 							className="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4 xl:col-span-2"
 						>
 							<div className="px-brand-item">
-								<Image className="img-fluid" width={90} height={40} src={img} alt={`brand-${index + 1}`} />
+								<Image className="max-w-full h-auto" width={90} height={40} src={img} alt={`brand-${index + 1}`} />
 							</div>
 						</div>
 					))}

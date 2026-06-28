@@ -11,7 +11,7 @@ const About = () => {
                         <div className="px-about-2-title-box p-relative">
                             <h3 className="px-about-2-title"><b className="text-effect">We are</b> <i>The Creative</i> <br />
                                 <em className="text-effect">
-                                    <Image className="img-fluid" width={640} height={340} src="/assets/img/gift-img/title-img.gif" alt="gif image" />
+                                    <Image className="max-w-full h-auto" width={640} height={340} src="/assets/img/gift-img/title-img.gif" alt="gif image" />
                                     design
                                 </em> <br />
                                 <b className="p-relative text-effect">studio<span></span></b>

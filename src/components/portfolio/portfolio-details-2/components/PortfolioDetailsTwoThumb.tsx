@@ -20,7 +20,7 @@ const PortfolioDetailsTwoThumb = () => {
                     <div className="col-span-12 lg:col-span-12">
                         <div className="px-pd-4-thumb-wrap fix mb-20">
                             <div className="px-pd-4-thumb-item text-center">
-                                <Image width={1606} height={1034} className="img-fluid"
+                                <Image width={1606} height={1034} className="max-w-full h-auto"
                                     src="/assets/img/project/portfolio-details-2/portfolio-details-2-thumb-3.jpg"
                                     alt="Portfolio project showcase"
                                 />
@@ -34,7 +34,7 @@ const PortfolioDetailsTwoThumb = () => {
                     {images.map((image, index) => (
                         <div className={image.col} key={`${image.src}-${index}`}>
                             <div className="px-pd-4-thumb-box mb-20">
-                                <Image width={643} height={800} className="img-fluid w-auto h-full"
+                                <Image width={643} height={800} className="max-w-full h-auto w-auto h-full"
                                     data-speed=".8"
                                     src={image.src}
                                     alt={`Portfolio preview ${index + 1}`}

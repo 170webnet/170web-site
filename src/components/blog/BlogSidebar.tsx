@@ -127,7 +127,7 @@ const BlogSidebar = () => {
                         <div key={post.id} className="rc-post flex items-center">
                             <div className="rc-post-thumb">
                                 <Link href="#">
-                                    <Image className="img-fluid w-full h-auto" width={140} height={140} src={post.img} alt="post" />
+                                    <Image className="max-w-full h-auto w-full h-auto" width={140} height={140} src={post.img} alt="post" />
                                 </Link>
                             </div>
 

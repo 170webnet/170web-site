@@ -31,7 +31,7 @@ const DigitalStudioProjectItem: React.FC<PortfolioProjectDT> = ({ id, title, cat
 
             <div className="col-span-12 xl:col-span-7 xl:order-1 order-0">
               <div className={`bf-portfolio-3-thumb ${customClass}`}>
-                <Image className="img-fluid" width={985} height={663} src={image} alt={title} />
+                <Image className="max-w-full h-auto" width={985} height={663} src={image} alt={title} />
               </div>
             </div>
           </>
@@ -39,7 +39,7 @@ const DigitalStudioProjectItem: React.FC<PortfolioProjectDT> = ({ id, title, cat
           <>
             <div className="col-span-12 xl:col-span-7">
               <div className={`bf-portfolio-3-thumb ${customClass}`}>
-                <Image className="img-fluid" width={985} height={663} src={image} alt={title} />
+                <Image className="max-w-full h-auto" width={985} height={663} src={image} alt={title} />
               </div>
             </div>
 

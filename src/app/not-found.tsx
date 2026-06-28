@@ -13,7 +13,7 @@ const page = () => {
                 <div className="grid grid-cols-12 gap-x-6">
                     <div className="col-span-12 xl:col-span-12">
                         <div className="tp-error-wrapper text-center">
-                            <Image className="img-fluid" width={866} height={340} src="/assets/img/error/error.png" alt="error image" />
+                            <Image className="max-w-full h-auto" width={866} height={340} src="/assets/img/error/error.png" alt="error image" />
                             <div className="tp-error-content">
                                 <h4 className="tp-error-title-sm mt-30">Something went Wrong...</h4>
                                 <p>Sorry, we {`couldn't`} find your page.</p>

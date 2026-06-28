@@ -74,7 +74,7 @@ const PersonalPortfolioAbout = () => {
                     <div className="col-span-12 lg:col-span-5 xl:col-span-5">
                         <div className="px-about-6-thumb pt-25">
                             <Image
-                                className="img-fluid"
+                                className="max-w-full h-auto"
                                 width={440}
                                 height={260}
                                 src="/assets/img/about/about-6-1.jpg"

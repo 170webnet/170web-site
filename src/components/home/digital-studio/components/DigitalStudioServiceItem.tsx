@@ -11,7 +11,7 @@ const DigitalStudioServiceItem: React.FC<ServiceItemDT> = ({ image, title, categ
                     <div className="bf-service-item-3-wrap flex items-center">
                         <div className="bf-service-item-3-thumb">
                             <SmartLink href="/service-1">
-                                <Image className="img-fluid" width={290} height={202} src={image} alt="service image" />
+                                <Image className="max-w-full h-auto" width={290} height={202} src={image} alt="service image" />
                             </SmartLink>
                         </div>
                         <div className="bf-service-item-3-text">

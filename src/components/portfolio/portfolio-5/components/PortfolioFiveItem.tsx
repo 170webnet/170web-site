@@ -17,7 +17,7 @@ const PortfolioFiveItem: React.FC<PortfolioProjectDT> = ({ id, filters, title, y
                 <div className="px-project-thumb">
                     <SmartLink href={`/portfolio-details-2/${id}`}>
                         <div className="ripple-image">
-                            <Image width={905} height={680} className="img-fluid"
+                            <Image width={905} height={680} className="max-w-full h-auto"
                                 src={image}
                                 alt={title}
                             />

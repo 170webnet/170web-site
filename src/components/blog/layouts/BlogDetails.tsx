@@ -84,7 +84,7 @@ const BlogDetailsArea = ({ id }: IdProps) => {
             {/* -- postbox area start -- */}
             <section id="postbox" className="postbox-area tp-blog-details-ptb pt-80 pb-120">
                 <div className="tp-blog-details-banner fix mb-100">
-                    <Image className="img-fluid" data-speed=".8" width={1905} height={1429} src="/assets/img/blog/blog-details/blog-details-banner.jpg" alt="blog banner" />
+                    <Image className="max-w-full h-auto" data-speed=".8" width={1905} height={1429} src="/assets/img/blog/blog-details/blog-details-banner.jpg" alt="blog banner" />
                 </div>
                 <div className="mx-auto w-full max-w-[1230px] px-3">
                     <div className="grid grid-cols-12 gap-x-6 justify-center">
@@ -109,10 +109,10 @@ const BlogDetailsArea = ({ id }: IdProps) => {
                                 </div>
                                 <div className="postbox-details-thumb flex items-center mb-50">
                                     <div>
-                                        <Image className="img-fluid" width={382} height={397} src="/assets/img/blog/blog-details/blog-details-sm-1.jpg" alt="blog image" />
+                                        <Image className="max-w-full h-auto" width={382} height={397} src="/assets/img/blog/blog-details/blog-details-sm-1.jpg" alt="blog image" />
                                     </div>
                                     <div>
-                                        <Image className="img-fluid" width={382} height={397} src="/assets/img/blog/blog-details/blog-details-sm-2.jpg" alt="blog image" />
+                                        <Image className="max-w-full h-auto" width={382} height={397} src="/assets/img/blog/blog-details/blog-details-sm-2.jpg" alt="blog image" />
                                     </div>
                                 </div>
                                 <div className="postbox-details-text mb-50">

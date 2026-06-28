@@ -38,7 +38,7 @@ const TeamCard: React.FC<TeamItemDT> = ({ id, image, name, role, animation }) =>
                         <div className="px-team-social">
                             <SocialLinks />
                         </div>
-                        <Image className="img-fluid w-full h-auto" width={362} height={420} src={image} alt={name} />
+                        <Image className="max-w-full h-auto w-full h-auto" width={362} height={420} src={image} alt={name} />
                     </div>
                 </div>
 

@@ -9,7 +9,7 @@ const PortfolioFourItem: React.FC<PortfolioProjectDT> = ({ id, filters, image, t
                 <Link href={`/portfolio-details-1/${id}`}>
                     <div className="px-project-5-thumb ripple-image">
                         <Image width={436} height={340}
-                            className="w-full img-fluid"
+                            className="w-full max-w-full h-auto"
                             src={image}
                             alt={title}
                         />

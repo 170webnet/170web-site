@@ -25,7 +25,7 @@ const PortfolioDetailsThumb = () => {
                                     {images.map((src, index) => (
                                         <SwiperSlide key={`${src}-${index}`}>
                                             <div className="px-pd-2-slider-thumb">
-                                                <Image className="img-fluid" width={744} height={401} src={src} alt={`portfolio-thumb-${index + 1}`} />
+                                                <Image className="max-w-full h-auto" width={744} height={401} src={src} alt={`portfolio-thumb-${index + 1}`} />
                                             </div>
                                         </SwiperSlide>
                                     ))}

@@ -40,7 +40,7 @@ const CreativeAgencyService = () => {
 
 								{/* ICON */}
 								<div className="px-service-5-icon">
-									<Image className="img-fluid w-auto h-auto" width={90} height={60} src={service.icon} alt={service.title} />
+									<Image className="max-w-full h-auto w-auto h-auto" width={90} height={60} src={service.icon} alt={service.title} />
 								</div>
 
 								{/* CONTENT */}

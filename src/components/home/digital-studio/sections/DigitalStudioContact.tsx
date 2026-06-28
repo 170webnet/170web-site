@@ -40,7 +40,7 @@ const DigitalStudioContact = () => {
                             </div>
                             <div className="bf-contact-author mt-30">
                                 <div className="bf-contact-author-thumb">
-                                    <Image className="img-fluid" width={160} height={178} src="/assets/img/update/contact/thumb.jpg" alt="thumb image" />
+                                    <Image className="max-w-full h-auto" width={160} height={178} src="/assets/img/update/contact/thumb.jpg" alt="thumb image" />
                                 </div>
                                 <div className="bf-contact-author-info">
                                     <h6>Team lead</h6>

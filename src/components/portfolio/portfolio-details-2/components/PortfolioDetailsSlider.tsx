@@ -50,7 +50,7 @@ const PortfolioDetailsSlider = () => {
                         {sliderImages.map((image, index) => (
                             <SwiperSlide key={`${image}-${index}`}>
                                 <div className="px-pd-4-slider-thumb">
-                                    <Image width={759} height={409} className="img-fluid"
+                                    <Image width={759} height={409} className="max-w-full h-auto"
                                         src={image}
                                         alt={`Portfolio slider preview ${index + 1}`}
                                     />

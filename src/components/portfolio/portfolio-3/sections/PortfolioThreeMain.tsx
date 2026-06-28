@@ -101,7 +101,7 @@ const PortfolioThreeMain = () => {
                 <div className="px-project-6-img-wrap">
                     <div className="px-project-6-img-slider">
                         {images.map((img) => (
-                            <Image className="img-fluid" width={330} height={330} key={img} src={img} alt="portfolio" />
+                            <Image className="max-w-full h-auto" width={330} height={330} key={img} src={img} alt="portfolio" />
                         ))}
                     </div>
                 </div>

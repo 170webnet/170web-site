@@ -9,7 +9,7 @@ const MinimalPortfolioBlogItem: React.FC<blogDt> = ({ id, image, title, category
             <div className="tp-blog-item mb-30">
                 <div className="tp-blog-thumb fix mb-25">
                     <Image width={426} height={446}
-                        className="w-full img-fluid"
+                        className="w-full max-w-full h-auto"
                         src={image}
                         alt={title}
                     />

@@ -19,7 +19,7 @@ const ContactCard = ({
                 data-speed={speed}
             >
                 <div className="tp-contact-us-thumb flex justify-center">
-                    <Image className="img-fluid w-full h-auto" width={356} height={244} src={image} alt={city} />
+                    <Image className="max-w-full h-auto w-full h-auto" width={356} height={244} src={image} alt={city} />
                 </div>
 
                 <div className="tp-contact-us-bottom">

@@ -22,7 +22,7 @@ const CommentItem = ({
             <div className="postbox__comment-box flex">
                 <div className="postbox__comment-info">
                     <div className="postbox__comment-avater mr-30">
-                        <Image className="img-fluid" width={70} height={70} src={avatar} alt={name} />
+                        <Image className="max-w-full h-auto" width={70} height={70} src={avatar} alt={name} />
                     </div>
                 </div>
 

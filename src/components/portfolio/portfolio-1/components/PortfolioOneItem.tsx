@@ -15,7 +15,7 @@ const PortfolioOneItem: React.FC<PortfolioProjectDT> = ({ id, type, video, image
                         ) : (
                             <div className="ripple-image">
                                 <Image
-                                    className="img-fluid w-full h-auto"
+                                    className="max-w-full h-auto w-full h-auto"
                                     width={905}
                                     height={680}
                                     src={image}

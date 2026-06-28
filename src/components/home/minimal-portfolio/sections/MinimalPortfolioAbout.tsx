@@ -37,12 +37,12 @@ const MinimalPortfolioAbout = () => {
                             <div className="grid grid-cols-12 gap-x-[20px]">
                                 <div className="col-span-12 md:col-span-6 lg:col-span-6">
                                     <div className="bf-about-thumb mb-20">
-                                        <Image className="w-full img-fluid" width={259} height={269} src="/assets/img/update/about/thumb.jpg" alt="About image" />
+                                        <Image className="w-full max-w-full h-auto" width={259} height={269} src="/assets/img/update/about/thumb.jpg" alt="About image" />
                                     </div>
                                 </div>
                                 <div className="col-span-12 md:col-span-6 lg:col-span-6">
                                     <div className="bf-about-thumb mb-20">
-                                        <Image className="w-full img-fluid" width={259} height={269} src="/assets/img/update/about/thumb-2.jpg" alt="About image 2" />
+                                        <Image className="w-full max-w-full h-auto" width={259} height={269} src="/assets/img/update/about/thumb-2.jpg" alt="About image 2" />
                                     </div>
                                 </div>
                             </div>

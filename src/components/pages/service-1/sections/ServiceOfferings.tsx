@@ -50,7 +50,7 @@ const ServiceOfferings = () => {
                         <div key={item.id} className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3">
                             <div className="px-service-5-item mb-25">
                                 <div className="px-service-5-icon">
-                                    <Image className="img-fluid w-auto h-auto" width={90} height={60} src={item.icon} alt="Service icon" />
+                                    <Image className="max-w-full h-auto w-auto h-auto" width={90} height={60} src={item.icon} alt="Service icon" />
                                 </div>
 
                                 <div className="px-service-5-content">

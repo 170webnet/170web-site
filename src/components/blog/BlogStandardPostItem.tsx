@@ -40,7 +40,7 @@ const BlogStandardPostItem = ({ post }: blogPropsDt) => {
                     </div>
                     <div className="postbox-thumb mb-35">
                         <Link href={`/blog-details/${post.id}`}>
-                            <Image className="img-fluid w-full h-auto" width={704} height={402} src={post.image} alt="Blog Image" />
+                            <Image className="max-w-full h-auto w-full h-auto" width={704} height={402} src={post.image} alt="Blog Image" />
                         </Link>
                     </div>
                     <div className="postbox-content">
@@ -88,7 +88,7 @@ const BlogStandardPostItem = ({ post }: blogPropsDt) => {
                     </div>
                     <div className="postbox-thumb postbox-thumb-overlay p-relative mb-35">
                         <Link href={`/blog-details/${post.id}`}>
-                            <Image className="img-fluid" width={811} height={463} src={post.image} alt="Blog Image" />
+                            <Image className="max-w-full h-auto" width={811} height={463} src={post.image} alt="Blog Image" />
                         </Link>
                         <div className="postbox-play-btn z-index-1" style={{ cursor: "pointer" }}>
                             <button type="button" aria-label="Play video" onClick={() => post?.videoId && playVideo(post.videoId)} className="popup-video">
@@ -199,7 +199,7 @@ const BlogStandardPostItem = ({ post }: blogPropsDt) => {
                                     {post?.images?.map((img: string, i: number) => (
                                         <SwiperSlide key={`${img}-${i}`}>
                                             <div className="postbox-slider-item">
-                                                <Image width={1137} height={668} className="img-fluid w-full" src={img} alt="image" />
+                                                <Image width={1137} height={668} className="max-w-full h-auto w-full" src={img} alt="image" />
                                             </div>
                                         </SwiperSlide>
                                     ))}

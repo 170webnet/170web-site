@@ -1,6 +1,13 @@
+"use client";
+import { useState } from "react";
 import { services } from "@/data/site-data";
 
 const Service = () => {
+    // Accordion controlado por estado (substitui o collapse JS do Bootstrap).
+    const [openId, setOpenId] = useState<number | string | null>(
+        services[0]?.id ?? null
+    );
+
     return (
         <div
             className="px-service-area px-service-3-style pt-120 z-index-1"
@@ -38,22 +45,19 @@ const Service = () => {
                     <div className="col-span-12 xl:col-span-6">
                         <div className="px-service-accordion-wrap">
                             <div className="accordion" id="accordionExample1">
-                                {services.map((service, index) => {
-                                    const collapseId = `collapse${service.id}`;
-                                    const headingId = `heading${service.id}`;
-                                    const isFirst = index === 0;
+                                {services.map((service) => {
+                                    const isOpen = openId === service.id;
 
                                     return (
                                         <div key={service.id} className="accordion-items">
-                                            <h2 className="accordion-header" id={headingId}>
+                                            <h2 className="accordion-header">
                                                 <button
-                                                    className={`accordion-buttons ${!isFirst ? "collapsed" : ""
-                                                        }`}
+                                                    className={`accordion-buttons cursor-pointer ${!isOpen ? "collapsed" : ""}`}
                                                     type="button"
-                                                    data-bs-toggle="collapse"
-                                                    data-bs-target={`#${collapseId}`}
-                                                    aria-expanded={isFirst}
-                                                    aria-controls={collapseId}
+                                                    aria-expanded={isOpen}
+                                                    onClick={() =>
+                                                        setOpenId(isOpen ? null : service.id)
+                                                    }
                                                 >
                                                     <i>
                                                         <service.Icon />
@@ -64,18 +68,17 @@ const Service = () => {
                                             </h2>
 
                                             <div
-                                                id={collapseId}
-                                                className={`accordion-collapse collapse ${isFirst ? "show" : ""
-                                                    }`}
-                                                data-bs-parent="#accordionExample1"
+                                                className={`accordion-collapse grid transition-[grid-template-rows] duration-500 ease-in-out ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
                                             >
-                                                <div className="accordion-body">
-                                                    <p>{service.description}</p>
+                                                <div className="overflow-hidden">
+                                                    <div className="accordion-body">
+                                                        <p>{service.description}</p>
 
-                                                    <div className="px-service-accordion-category">
-                                                        {service.categories.map((cat) => (
-                                                            <span key={`${service.id}-${cat}`}>{cat}</span>
-                                                        ))}
+                                                        <div className="px-service-accordion-category">
+                                                            {service.categories.map((cat) => (
+                                                                <span key={`${service.id}-${cat}`}>{cat}</span>
+                                                            ))}
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>

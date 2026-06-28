@@ -14,7 +14,7 @@ const BlogCard: React.FC<blogDt> = ({ id, title, image, date }) => {
                             alt={title}
                             width={800}
                             height={600}
-                            className="img-fluid"
+                            className="max-w-full h-auto"
                         />
                     </div>
                 </SmartLink>

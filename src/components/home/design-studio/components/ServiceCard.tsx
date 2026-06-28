@@ -24,7 +24,7 @@ const ServiceCard = ({
                 <div className="col-span-12 lg:col-span-4 xl:col-span-3">
                     <div className="px-service-2-info">
                         <div className="px-service-2-thumb">
-                            <Image width={350} height={263} className="w-full img-fluid" src={image} alt={title} />
+                            <Image width={350} height={263} className="w-full max-w-full h-auto" src={image} alt={title} />
                         </div>
                         <div className="px-service-2-content">
                             <span>{title}</span>

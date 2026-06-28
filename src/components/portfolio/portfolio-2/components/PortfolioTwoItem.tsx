@@ -21,7 +21,7 @@ const PortfolioTwoItem: React.FC<PortfolioPropsItem> = ({ id, image, type, title
                         <div className="px-project-3-thumb">
                             <div className="ripple-image">
                                 <Image
-                                    className="img-fluid w-full h-auto"
+                                    className="max-w-full h-auto w-full h-auto"
                                     width={905}
                                     height={680}
                                     src={image}

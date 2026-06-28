@@ -50,7 +50,7 @@ const PersonalPortfolioHero = () => {
                                 </p>
 
                                 <div className="px-hero-6-signature">
-                                    <Image className="img-fluid" width={111} height={60} src="/assets/img/signature/signature.svg" alt="signature" />
+                                    <Image className="max-w-full h-auto" width={111} height={60} src="/assets/img/signature/signature.svg" alt="signature" />
                                 </div>
                             </div>
 
@@ -77,7 +77,7 @@ const PersonalPortfolioHero = () => {
                     <div className="col-span-12 lg:col-span-7 xl:col-span-5 order-0 lg:order-1">
                         <div className="px-hero-6-thumb">
                             <Image
-                                className="img-fluid"
+                                className="max-w-full h-auto"
                                 width={heroConfig.width}
                                 height={heroConfig.height}
                                 src={heroConfig.src}

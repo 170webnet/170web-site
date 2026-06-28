@@ -20,7 +20,7 @@ export default function Error({
                     <div className="grid grid-cols-12 gap-x-6">
                         <div className="col-span-12 xl:col-span-12">
                             <div className="tp-error-wrapper text-center">
-                                <Image width={650} height={400} className='img-fluid w-auto h-auto' src="/assets/img/error/fixing-bugs.jpg" alt="error" />
+                                <Image width={650} height={400} className='max-w-full h-auto w-auto h-auto' src="/assets/img/error/fixing-bugs.jpg" alt="error" />
                                 <h1 className="title">Something went wrong</h1>
                                 <p className="text">
                                     {error?.message}

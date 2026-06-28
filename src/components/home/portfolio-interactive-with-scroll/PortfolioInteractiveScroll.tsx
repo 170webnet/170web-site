@@ -40,7 +40,7 @@ const PortfolioInteractiveScroll = () => {
                     >
                         {portfolioItems.map((item) => (
                             <div key={item.id} className={`tp-port-slider-thumb ${item.id}`}>
-                                <Image className="img-fluid" width={2060} height={628} src={item.img} alt={item.title} />
+                                <Image className="max-w-full h-auto" width={2060} height={628} src={item.img} alt={item.title} />
                             </div>
                         ))}
                     </div>

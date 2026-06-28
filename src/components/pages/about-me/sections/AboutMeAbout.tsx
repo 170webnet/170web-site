@@ -8,7 +8,7 @@ const ABOUT_IMAGES = [
 
 const InlineImage = ({ src }: { src: string }) => (
     <span className="am-inline-img">
-        <Image className="img-fluid" width={120} height={80} src={src} alt="about visual" />
+        <Image className="max-w-full h-auto" width={120} height={80} src={src} alt="about visual" />
     </span>
 );
 

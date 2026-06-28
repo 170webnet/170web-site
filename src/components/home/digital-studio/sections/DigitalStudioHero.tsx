@@ -17,12 +17,12 @@ const DigitalStudioHero = () => {
                                 </div>{" "}<span className="bf-item-anime marque inline-block">CREATIVE</span>
                                 <div className="spacing pr-140 inline-block p-relative">
                                     <span className="bf-item-anime-md marque inline-block">experien­ce</span>
-                                    <Image width={290} height={290} className="bf-hero-3-thumb hidden xl:inline-block img-fluid" src="/assets/img/update/hero/hero-3/thumb-2.jpg" alt="thumb image" />
+                                    <Image width={290} height={290} className="bf-hero-3-thumb hidden xl:inline-block max-w-full h-auto" src="/assets/img/update/hero/hero-3/thumb-2.jpg" alt="thumb image" />
                                 </div>
                                 <span className="bf-item-anime marque inline-block">that</span>
                                 <div className="spacing pr-35 inline-block p-relative">
                                     <span className="bf-item-anime-md marque inline-block">Shape</span>
-                                    <Image width={240} height={160} className="bf-hero-3-thumb-2 hidden xl:inline-block img-fluid" src="/assets/img/update/hero/hero-3/thumb.jpg" alt="thumb" />
+                                    <Image width={240} height={160} className="bf-hero-3-thumb-2 hidden xl:inline-block max-w-full h-auto" src="/assets/img/update/hero/hero-3/thumb.jpg" alt="thumb" />
                                 </div>
                                 <span className="bf-item-anime marque inline-block">TOMMOROW.</span>
                             </div>

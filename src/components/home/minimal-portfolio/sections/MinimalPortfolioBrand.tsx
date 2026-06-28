@@ -28,7 +28,7 @@ const MinimalPortfolioBrand = () => {
                                             className="col-span-6 sm:col-span-4 md:col-span-4 lg:col-span-2"
                                         >
                                             <div className="bf-brands-item mb-5">
-                                                <Image width={128} height={30} className="img-fluid w-auto h-auto"
+                                                <Image width={128} height={30} className="max-w-full h-auto w-auto h-auto"
                                                     src={`/assets/img/update/brands/${logo}`}
                                                     alt={`brand-${index + 1}`}
                                                 />

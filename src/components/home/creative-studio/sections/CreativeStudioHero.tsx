@@ -24,7 +24,7 @@ const Hero = () => {
                                 height={300}
                                 src="/assets/img/gift-img/title-img.gif"
                                 alt="gif image"
-                                className="px-about-3-gift-img img-fluid w-auto h-auto"
+                                className="px-about-3-gift-img max-w-full h-auto w-auto h-auto"
                             />
                             <span className="px-about-2-subtitle p-relative fs-130"><i></i>/ FROM <br /> London</span>
                         </div>

@@ -21,7 +21,7 @@ const TeamDetailsMainContent = ({ id }: IdProps) => {
                             {/* image */}
                             <div className="tp-team-details-thumb mb-40">
                                 <div className="ripple-image">
-                                    {team?.image && <Image className="img-fluid" width={540} height={600}
+                                    {team?.image && <Image className="max-w-full h-auto" width={540} height={600}
                                         src={team?.image}
                                         alt={team?.name}
                                     />}

@@ -13,7 +13,7 @@ const AboutMeHero = () => {
                                     <span className="hidden md:block">ME</span>
                                     <span data-speed=".9" className="am-hero-img-wrap">
                                         <span className="am-hero-img-main">
-                                            <Image className="img-fluid" width={640} height={740} src="/assets/img/about/about-me-1.jpg" alt="about thumb" />
+                                            <Image className="max-w-full h-auto" width={640} height={740} src="/assets/img/about/about-me-1.jpg" alt="about thumb" />
                                         </span>
                                         <span className="signature flex justify-center">
                                             <Image width={361} height={196} src="/assets/img/about/about-me-sign.png" alt="sign image" />

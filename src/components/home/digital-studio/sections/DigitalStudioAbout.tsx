@@ -41,18 +41,18 @@ const DigitalStudioAbout = () => {
                     </div>
                     <div className="col-span-12 sm:col-span-5 md:col-span-5 lg:col-span-3">
                         <div className="bf-about-3-thumb mb-30">
-                            <Image className="img-fluid" width={256} height={266} src="/assets/img/update/about/abour-3/thumb.jpg" alt="thumb" />
+                            <Image className="max-w-full h-auto" width={256} height={266} src="/assets/img/update/about/abour-3/thumb.jpg" alt="thumb" />
                         </div>
                     </div>
                     <div className="col-span-12 sm:col-span-7 md:col-span-7 lg:col-span-4">
                         <div className="bf-about-3-thumb-2 pt-60 ml-50 mb-30">
-                            <Image className="img-fluid" width={306} height={400} src="/assets/img/update/about/abour-3/thumb-2.jpg" alt="thumb" />
+                            <Image className="max-w-full h-auto" width={306} height={400} src="/assets/img/update/about/abour-3/thumb-2.jpg" alt="thumb" />
                         </div>
                     </div>
                     <div className="col-span-12 lg:col-span-5">
                         <div className="bf-about-3-info-wrap pt-90 ml-35">
                             <div className="bf-about-3-avatar">
-                                <Image width={140} height={54} className="mb-15 img-fluid" src="/assets/img/update/about/abour-3/avatar.png" alt="avatar image" />
+                                <Image width={140} height={54} className="mb-15 max-w-full h-auto" src="/assets/img/update/about/abour-3/avatar.png" alt="avatar image" />
                                 <p>Driven by a passion for innovation, we specialize in
                                     delivering top-quality design solutions</p>
                             </div>

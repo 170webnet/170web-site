@@ -74,7 +74,7 @@ const InnerServiceItem = ({
                         <div className="inner-service-1-thumb">
                             <div className="ripple-image">
                                 <Image
-                                    className="w-full img-fluid"
+                                    className="w-full max-w-full h-auto"
                                     width={643}
                                     height={720}
                                     src={image}

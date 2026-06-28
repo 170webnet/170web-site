@@ -1,32 +1,23 @@
 /* ──────────────────────────────────────────────────────────────────────────
  * Tailwind CSS v4 — entrada do design system Tailwind do projeto.
  *
- * MIGRAÇÃO INCREMENTAL (Bootstrap → Tailwind):
- * Durante a migração, o Tailwind CONVIVE com o Bootstrap + os 16k de SCSS do
- * template. Duas decisões garantem que adicionar o Tailwind NÃO altere nenhuma
- * página ainda não migrada:
+ * Bootstrap foi REMOVIDO. O Preflight do Tailwind agora faz a normalização base
+ * (em @layer base), e o SCSS do template (unlayered) sobrescreve o que precisa —
+ * inclusive o próprio reset `*{margin:0;padding:0;box-sizing:border-box}` do
+ * template vence o Preflight nas propriedades em comum.
  *
- *   1. Sem Preflight. O reset do Tailwind conflitaria com o Reboot do Bootstrap.
- *
- *   2. Utilities dentro de @layer(utilities). Regras "unlayered" (todo o CSS do
- *      template/Bootstrap) SEMPRE vencem regras em cascade layer, independente de
- *      especificidade ou ordem. Isso é essencial porque o Tailwind v4 gera
- *      spacing dinâmico: ele emitiria `.pb-75 { padding-bottom: 18.75rem }`, que
- *      colide com a `.pb-75 { padding-bottom: 75px }` do template. Com o Tailwind
- *      em layer, a regra do template vence e o spacing legado fica intacto.
- *      Os utilitários de layout que usamos na migração (flex, grid, grid-cols-*,
- *      col-span-*, gap-*, items-*, justify-*) não têm classe de mesmo nome no
- *      template, então aplicam normalmente.
- *
- * AO REMOVER O BOOTSTRAP (todas as páginas migradas): trocar os dois @import
- * abaixo por `@import "tailwindcss";` (reativa Preflight + utilities unlayered),
- * e este arquivo passa a ser o único reset/base do projeto.
+ * Utilities continuam em @layer(utilities) de propósito: o template tem um
+ * spacing.css com classes numéricas (pb-75=75px, mb-80=80px...) que colidem com
+ * o spacing dinâmico do Tailwind (pb-75=18.75rem). Como o spacing.css é unlayered,
+ * ele vence as utilities em layer e o spacing legado fica intacto. As utilities
+ * do Tailwind/shadcn (px-2, gap-1, bg-primary, etc.) não têm classe de mesmo
+ * nome no template, então aplicam normalmente. O Preflight (border-style:solid,
+ * reset de button, etc.) faz os componentes shadcn renderizarem corretamente.
  * ────────────────────────────────────────────────────────────────────────── */
 
-@layer theme, components, utilities;
-
 @import "tailwindcss/theme.css" layer(theme);
-@import "tailwindcss/utilities.css" layer(utilities);
+@import "tailwindcss/preflight.css";
+@import "tailwindcss/utilities.css";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
@@ -60,12 +51,10 @@
   --font-morganite: "Morganite-Bold", sans-serif;
 }
 
-@layer components {
-  /* Réplica fiel do `.container` do Bootstrap (max-widths em steps + padding de
-     12px + centralização). Usar onde o template usava `container` puro. */
-  .container-px {
-    @apply mx-auto w-full px-3 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px];
-  }
+/* Réplica do `.container` do Bootstrap (max-widths em steps + padding + centralização).
+   Unlayered de propósito, para o mx-auto vencer o reset `*{margin:0}` do template. */
+.container-px {
+  @apply mx-auto w-full px-3 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px];
 }
 
 @theme inline {

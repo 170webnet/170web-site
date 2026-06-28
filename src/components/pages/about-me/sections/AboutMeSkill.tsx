@@ -35,7 +35,7 @@ const AboutMeSkill = () => {
                     {/* Left Title */}
                     <div className="col-span-12 lg:col-span-5">
                         <div className="am-skill-title-box">
-                            <span className="px-section-subtitle text-uppercase pb-30">
+                            <span className="px-section-subtitle uppercase pb-30">
                                 About
                             </span>
                             <h4 className="px-section-title ff-thunder fs-80">Skills</h4>

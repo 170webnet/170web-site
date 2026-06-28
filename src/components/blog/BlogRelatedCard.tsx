@@ -7,7 +7,7 @@ const BlogRelatedCard: React.FC<blogDt> = ({ image, category, title, date }) => 
         <div className="px-blog-item px-orange-style mb-40">
             <Link href="#">
                 <div className="px-blog-thumb ripple-image">
-                    <Image className="img-fluid" width={554} height={380} src={image} alt={title} />
+                    <Image className="max-w-full h-auto" width={554} height={380} src={image} alt={title} />
                 </div>
             </Link>
 

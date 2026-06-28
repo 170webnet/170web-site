@@ -48,7 +48,7 @@ const GalleryItem = ({ item }: GalleryItemProps) => {
                         <source src={item.src} type="video/mp4" />
                     </video>
                 ) : (
-                    <Image className="img-fluid" src={item.src} alt="gallery" width={520} height={400} />
+                    <Image className="max-w-full h-auto" src={item.src} alt="gallery" width={520} height={400} />
                 )}
             </div>
         </div>

@@ -9,7 +9,7 @@ const CAProjectItem: React.FC<PortfolioProjectDT> = ({ id, image, title }) => {
                 <Link href={`/portfolio-details-1/${id}`}>
                     <div className="px-project-5-thumb ripple-image">
                         <Image width={436} height={340}
-                            className="img-fluid w-full"
+                            className="max-w-full h-auto w-full"
                             src={image}
                             alt={title}
                         />

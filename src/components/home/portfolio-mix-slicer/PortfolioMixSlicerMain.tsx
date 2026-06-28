@@ -63,7 +63,7 @@ const PortfolioMixSlicerMain = () => {
                             <div className="tp-portfolio-mix-slider-item">
                                 {/* Image */}
                                 <div className="tp-portfolio-mix-slider-image">
-                                    <Image className="img-fluid w-full h-auto" width={1920} height={1080} src={slide.img} alt={slide.title} />
+                                    <Image className="max-w-full h-auto w-full h-auto" width={1920} height={1080} src={slide.img} alt={slide.title} />
                                     <PhotoView key={slide.id} src={slide.img}>
                                         <div className="popup-image">
                                             <i className="fa-regular fa-arrows-maximize"></i>

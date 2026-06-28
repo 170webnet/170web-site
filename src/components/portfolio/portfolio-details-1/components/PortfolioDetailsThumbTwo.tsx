@@ -27,7 +27,7 @@ const PortfolioDetailsThumbTwo = () => {
             <div className={item.col} key={item.id}>
               <div className="px-pd-2-thumb-item mb-20">
                 <Image
-                  className="img-fluid w-full h-auto"
+                  className="max-w-full h-auto w-full h-auto"
                   width={1206}
                   height={905}
                   data-speed=".8"

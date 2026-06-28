@@ -39,7 +39,7 @@ const DigitalStudioProject = () => {
                         </div>
                         <div className="col-span-12 md:col-span-3 lg:col-span-3 xl:col-span-4">
                             <div className="bf-portfolio-3-shape mt-20">
-                                <Image className="img-fluid" width={442} height={296} src="/assets/img/update/portfolio/port-3/cat.png" alt="cat" />
+                                <Image className="max-w-full h-auto" width={442} height={296} src="/assets/img/update/portfolio/port-3/cat.png" alt="cat" />
                                 <div className="bf-portfolio-3-btn pt-90 text-left md:text-right">
                                     <SmartLink
                                         href="/portfolio-1"

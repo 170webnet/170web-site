@@ -118,7 +118,7 @@ const CreativeAgencyHero = () => {
 						<div className="px-hero-4-video-wrap flex justify-end">
 							<div className="px-hero-4-video">
 								<div className="text-right hidden xl:block mb-50">
-									<Image className="img-fluid" width={171} height={60} src="/assets/img/shape/shape-1.png" alt="shape" />
+									<Image className="max-w-full h-auto" width={171} height={60} src="/assets/img/shape/shape-1.png" alt="shape" />
 								</div>
 
 								<video loop muted autoPlay playsInline>
