@@ -6,7 +6,13 @@ import type { Metadata } from "next";
 // template por especificidade, enquanto as classes de spacing do template
 // (pb-75 etc.) vençam o Tailwind de mesmo nome por ordem de fonte.
 import "./tailwind.css";
-import "swiper/css/bundle";
+// Swiper: só o CSS dos módulos usados (Navigation, Pagination, FreeMode, Grid)
+// em vez do bundle completo. Autoplay/Controller/Mousewheel não têm CSS.
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/free-mode";
+import "swiper/css/grid";
 import "./globals.scss";
 
 const inter = Inter({

@@ -1,0 +1,4 @@
+// Estilos do tema dark (escopados em .pixora-dark) — carregados SOMENTE nas rotas
+// /dark, via este layout. Ficam FORA do bundle CSS global para não pesar (~42KB)
+// nas rotas light, que nunca aplicam .pixora-dark.
+@forward '../../../public/assets/scss/layout/pages/dark';

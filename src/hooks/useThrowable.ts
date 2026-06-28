@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import Matter from "matter-js";
+import type Matter from "matter-js";
 import gsap from "gsap";
 
 interface Options {
@@ -12,211 +12,159 @@ export const useThrowable = (options: Options = {}) => {
     useEffect(() => {
         if (!sceneRef.current) return;
 
-        const {
-            Engine,
-            Runner,
-            Bodies,
-            Composite,
-            Mouse,
-            MouseConstraint,
-            Events,
-            Body,
-        } = Matter;
+        let cancelled = false;
+        let cleanup: () => void = () => {};
 
-        const element = sceneRef.current;
+        // matter-js (~60KB) é carregado sob demanda só quando a seção monta no client.
+        (async () => {
+            const M = (await import("matter-js")).default;
+            if (cancelled || !sceneRef.current) return;
 
-        const engine = Engine.create();
-        const runner = Runner.create();
+            const {
+                Engine,
+                Runner,
+                Bodies,
+                Composite,
+                Mouse,
+                MouseConstraint,
+                Events,
+                Body,
+            } = M;
 
-        let width = element.offsetWidth;
-        let height = element.offsetHeight;
+            const element = sceneRef.current;
 
-        engine.gravity.y = 0.8;
+            const engine = Engine.create();
+            const runner = Runner.create();
 
-        // -----------------------------
-        // IntersectionObserver FIX
-        // -----------------------------
-        let isVisible = false;
+            let width = element.offsetWidth;
+            let height = element.offsetHeight;
 
-        const observer = new IntersectionObserver(([entry]) => {
-            isVisible = entry.isIntersecting;
+            engine.gravity.y = 0.8;
 
-            if (isVisible) {
-                Runner.run(runner, engine);
-            } else {
-                Runner.stop(runner);
-            }
-        });
-
-        observer.observe(element);
-
-        // -----------------------------
-        // Mouse FIX (scroll safe)
-        // -----------------------------
-        const mouse = Mouse.create(element);
-
-        const mouseConstraint = MouseConstraint.create(engine, {
-            mouse,
-            constraint: {
-                stiffness: 0.15,
-                render: { visible: false },
-            },
-        });
-
-        Composite.add(engine.world, mouseConstraint);
-
-        // IMPORTANT FIX: disable wheel hijack properly 
-        const mcMouse = mouseConstraint.mouse as Matter.Mouse;
-
-        // safe cast to extend internal Matter Mouse
-        type ExtendedMouse = Matter.Mouse & {
-            mousewheel?: EventListener;
-            mousewheelStart?: EventListener;
-            mousewheelMove?: EventListener;
-            mousewheelEnd?: EventListener;
-        };
-
-        const extendedMouse = mcMouse as ExtendedMouse;
-
-        // remove wheel listener safely
-        if (extendedMouse.mousewheel) {
-            extendedMouse.element.removeEventListener("wheel", extendedMouse.mousewheel);
-        }
-
-        // disable internal handlers
-        extendedMouse.mousewheel = undefined;
-        extendedMouse.mousewheelStart = undefined;
-        extendedMouse.mousewheelMove = undefined;
-        extendedMouse.mousewheelEnd = undefined;
-        // Elements
-        const items = element.querySelectorAll<HTMLElement>("[data-px-throwable-el]");
-        const bodies: Matter.Body[] = [];
-
-        // -----------------------------
-        // create bodies
-        // -----------------------------
-        items.forEach((el) => {
-            const rect = el.getBoundingClientRect();
-
-            const body = Bodies.rectangle(
-                Math.random() * width,
-                Math.random() * -height,
-                rect.width,
-                rect.height,
-                {
-                    restitution: 0.4,
-                    friction: 0.1,
+            // IntersectionObserver: roda a física só quando visível
+            let isVisible = false;
+            const observer = new IntersectionObserver(([entry]) => {
+                isVisible = entry.isIntersecting;
+                if (isVisible) {
+                    Runner.run(runner, engine);
+                } else {
+                    Runner.stop(runner);
                 }
-            );
+            });
+            observer.observe(element);
 
-            Composite.add(engine.world, body);
-            bodies.push(body);
-        });
+            // Mouse (scroll safe)
+            const mouse = Mouse.create(element);
+            const mouseConstraint = MouseConstraint.create(engine, {
+                mouse,
+                constraint: {
+                    stiffness: 0.15,
+                    render: { visible: false },
+                },
+            });
+            Composite.add(engine.world, mouseConstraint);
 
-        // rain effect
-        bodies.forEach((body, index) => {
-            setTimeout(() => {
-                Body.setStatic(body, false);
-            }, index * 80);
-        });
+            // desabilita o hijack do wheel
+            const mcMouse = mouseConstraint.mouse as Matter.Mouse;
+            type ExtendedMouse = Matter.Mouse & {
+                mousewheel?: EventListener;
+                mousewheelStart?: EventListener;
+                mousewheelMove?: EventListener;
+                mousewheelEnd?: EventListener;
+            };
+            const extendedMouse = mcMouse as ExtendedMouse;
+            if (extendedMouse.mousewheel) {
+                extendedMouse.element.removeEventListener("wheel", extendedMouse.mousewheel);
+            }
+            extendedMouse.mousewheel = undefined;
+            extendedMouse.mousewheelStart = undefined;
+            extendedMouse.mousewheelMove = undefined;
+            extendedMouse.mousewheelEnd = undefined;
 
-        // boundaries
-        const ground = Bodies.rectangle(width / 2, height + 50, width, 100, {
-            isStatic: true,
-        });
+            // Elements → bodies
+            const items = element.querySelectorAll<HTMLElement>("[data-px-throwable-el]");
+            const bodies: Matter.Body[] = [];
 
-        const leftWall = Bodies.rectangle(-50, height / 2, 100, height, {
-            isStatic: true,
-        });
-
-        const rightWall = Bodies.rectangle(width + 50, height / 2, 100, height, {
-            isStatic: true,
-        });
-
-        Composite.add(engine.world, [ground, leftWall, rightWall]);
-
-        // -----------------------------
-        // quickSetter (performance)
-        // -----------------------------
-        const setters = Array.from(items).map((el) => ({
-            x: gsap.quickSetter(el, "x", "px"),
-            y: gsap.quickSetter(el, "y", "px"),
-            r: gsap.quickSetter(el, "rotation", "deg"),
-        }));
-
-        // -----------------------------
-        // tick
-        // -----------------------------
-        Events.on(runner, "tick", () => {
-            if (!isVisible) return;
-
-            bodies.forEach((body, i) => {
-                const set = setters[i];
-                const el = items[i];
-
-                if (!set || !el) return;
-
+            items.forEach((el) => {
                 const rect = el.getBoundingClientRect();
-
-                // center align fix
-                set.x(body.position.x - rect.width / 2);
-                set.y(body.position.y - rect.height / 2);
-
-                set.r((body.angle * 180) / Math.PI);
+                const body = Bodies.rectangle(
+                    Math.random() * width,
+                    Math.random() * -height,
+                    rect.width,
+                    rect.height,
+                    { restitution: 0.4, friction: 0.1 }
+                );
+                Composite.add(engine.world, body);
+                bodies.push(body);
             });
-        });
 
-        // -----------------------------
-        // scroll gravity (safe)
-        // -----------------------------
-        if (options.scrollGravity) {
-            let lastScroll = window.scrollY;
+            // rain effect
+            bodies.forEach((body, index) => {
+                setTimeout(() => {
+                    Body.setStatic(body, false);
+                }, index * 80);
+            });
 
+            // boundaries
+            const ground = Bodies.rectangle(width / 2, height + 50, width, 100, { isStatic: true });
+            const leftWall = Bodies.rectangle(-50, height / 2, 100, height, { isStatic: true });
+            const rightWall = Bodies.rectangle(width + 50, height / 2, 100, height, { isStatic: true });
+            Composite.add(engine.world, [ground, leftWall, rightWall]);
+
+            // quickSetter (performance)
+            const setters = Array.from(items).map((el) => ({
+                x: gsap.quickSetter(el, "x", "px"),
+                y: gsap.quickSetter(el, "y", "px"),
+                r: gsap.quickSetter(el, "rotation", "deg"),
+            }));
+
+            // tick
             Events.on(runner, "tick", () => {
-                const scrollY = window.scrollY;
-                const diff = scrollY - lastScroll;
-
-                engine.gravity.y = 0.8 + diff * 0.002;
-
-                lastScroll = scrollY;
-            });
-        }
-
-        // -----------------------------
-        // resize fix
-        // -----------------------------
-        const handleResize = () => {
-            width = element.offsetWidth;
-            height = element.offsetHeight;
-
-            Body.setPosition(ground, {
-                x: width / 2,
-                y: height + 50,
+                if (!isVisible) return;
+                bodies.forEach((body, i) => {
+                    const set = setters[i];
+                    const el = items[i];
+                    if (!set || !el) return;
+                    const rect = el.getBoundingClientRect();
+                    set.x(body.position.x - rect.width / 2);
+                    set.y(body.position.y - rect.height / 2);
+                    set.r((body.angle * 180) / Math.PI);
+                });
             });
 
-            Body.setPosition(leftWall, {
-                x: -50,
-                y: height / 2,
-            });
+            // scroll gravity
+            if (options.scrollGravity) {
+                let lastScroll = window.scrollY;
+                Events.on(runner, "tick", () => {
+                    const scrollY = window.scrollY;
+                    const diff = scrollY - lastScroll;
+                    engine.gravity.y = 0.8 + diff * 0.002;
+                    lastScroll = scrollY;
+                });
+            }
 
-            Body.setPosition(rightWall, {
-                x: width + 50,
-                y: height / 2,
-            });
-        };
+            // resize fix
+            const handleResize = () => {
+                width = element.offsetWidth;
+                height = element.offsetHeight;
+                Body.setPosition(ground, { x: width / 2, y: height + 50 });
+                Body.setPosition(leftWall, { x: -50, y: height / 2 });
+                Body.setPosition(rightWall, { x: width + 50, y: height / 2 });
+            };
+            window.addEventListener("resize", handleResize);
 
-        window.addEventListener("resize", handleResize);
+            cleanup = () => {
+                window.removeEventListener("resize", handleResize);
+                observer.disconnect();
+                Runner.stop(runner);
+                Engine.clear(engine);
+                Composite.clear(engine.world, false as unknown as boolean);
+            };
+        })();
 
-        // -----------------------------
-        // cleanup
-        // -----------------------------
         return () => {
-            window.removeEventListener("resize", handleResize);
-            observer.disconnect();
-
-            Runner.stop(runner);
-            Engine.clear(engine);
-            Composite.clear(engine.world, false as unknown as boolean);
+            cancelled = true;
+            cleanup();
         };
     }, [options.scrollGravity]);
 

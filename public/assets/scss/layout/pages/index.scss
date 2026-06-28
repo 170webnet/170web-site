@@ -10,4 +10,5 @@
 @forward './team';
 @forward './step';
 @forward './contact';
-@forward './dark';
+// './dark' NÃO é mais forwardado aqui — carregado só nas rotas /dark
+// via src/app/dark/dark.scss (importado em src/app/dark/layout.tsx).

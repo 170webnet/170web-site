@@ -7,6 +7,7 @@ declare module "splitting" {
 // Type declarations for side-effect style imports (CSS/SCSS) used by external libraries
 // This prevents TypeScript errors when importing styles like Atropos, Swiper, and global SCSS files
 declare module 'atropos/css';
-declare module "swiper/css/bundle";
+declare module "swiper/css";
+declare module "swiper/css/*";
 declare module "*.scss";
 declare module "*.css";
