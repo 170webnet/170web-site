@@ -9,11 +9,11 @@ const StartupAgencyAward = () => {
 
     return (
         <section className="px-award-area pb-130">
-            <div className="container">
+            <div className="container-px">
                 {/* Title Section */}
                 <div className="px-award-title-wrap mb-45">
-                    <div className="row">
-                        <div className="col-xl-3">
+                    <div className="grid grid-cols-12 gap-x-6">
+                        <div className="col-span-12 xl:col-span-3">
                             <div className="px-award-subtitle-box">
                                 <span className="px-section-subtitle pt-40">
                                     <i>
@@ -24,7 +24,7 @@ const StartupAgencyAward = () => {
                             </div>
                         </div>
 
-                        <div className="col-xl-9">
+                        <div className="col-span-12 xl:col-span-9">
                             <div className="px-award-content">
                                 <h3 className="px-section-title mb-25 text-effect words chars splitting">
                                     Awards.

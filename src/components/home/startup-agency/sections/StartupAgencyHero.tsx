@@ -18,11 +18,11 @@ const StartupAgencyHero = () => {
           backgroundPosition: "center center",
         }}>
       </div>
-      <div className="container container-1550">
+      <div className="mx-auto w-full max-w-[1550px] px-3">
         {/* Hero Title */}
         <div className="px-hero-title-wrap pb-110">
-          <div className="row align-items-end">
-            <div className="col-xl-9">
+          <div className="grid grid-cols-12 gap-x-6 items-end">
+            <div className="col-span-12 xl:col-span-9">
               <div className="px-hero-title-box">
                 <span className="px-hero-subtitle px-fade-anim" data-delay=".3">
                   Pixora digital studio.
@@ -37,9 +37,9 @@ const StartupAgencyHero = () => {
             </div>
 
             {/* Hero Info */}
-            <div className="col-xl-3">
+            <div className="col-span-12 xl:col-span-3">
               <div
-                className="px-hero-info-wrap d-flex justify-content-md-end px-fade-anim"
+                className="px-hero-info-wrap flex md:justify-end px-fade-anim"
                 data-delay=".5"
                 data-fade-from="left"
               >
@@ -63,7 +63,7 @@ const StartupAgencyHero = () => {
         </div>
 
         {/* Services */}
-        <div className="px-hero-service-wrap d-flex justify-content-between align-items-center">
+        <div className="px-hero-service-wrap flex justify-between items-center">
           {services.map(({ id, title }) => (
             <div key={id} className="px-hero-service-item">
               <span># {id}</span>

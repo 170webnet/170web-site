@@ -26,11 +26,11 @@ const Brand = () => {
 
     return (
         <section className="px-brand-area brand-skew-anim pb-160">
-            <div className="container container-1550">
+            <div className="mx-auto w-full max-w-[1550px] px-3">
 
                 {/* Section Title */}
-                <div className="row">
-                    <div className="col-xl-3">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 xl:col-span-3">
                         <div className="px-brand-subtitle-box mb-40">
                             <span className="px-section-subtitle">
                                 <i>
@@ -43,11 +43,11 @@ const Brand = () => {
                 </div>
 
                 {/* Brand List */}
-                <div className="row gx-5">
+                <div className="grid grid-cols-12 gap-x-1.25">
                     {brandImagesItems.map((brand, index) => (
                         <div
                             key={`${brand.img}-${index}`}
-                            className="col-xl-2 col-lg-4 col-md-6 col-sm-6"
+                            className="col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-2"
                         >
                             <div className="px-brand-item">
                                 <Image

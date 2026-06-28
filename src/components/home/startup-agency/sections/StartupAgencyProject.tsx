@@ -9,11 +9,11 @@ const StartupAgencyProject = () => {
 
     return (
         <section className="px-project-area pt-100 pb-130">
-            <div className="container container-1550">
+            <div className="mx-auto w-full max-w-[1550px] px-3">
                 {/* TITLE */}
                 <div className="px-project-title-wrap mb-80">
-                    <div className="row">
-                        <div className="col-xl-3">
+                    <div className="grid grid-cols-12 gap-x-6">
+                        <div className="col-span-12 xl:col-span-3">
                             <span className="px-section-subtitle pt-40">
                                 <i>
                                     <PlusIcon />
@@ -22,7 +22,7 @@ const StartupAgencyProject = () => {
                             </span>
                         </div>
 
-                        <div className="col-xl-9">
+                        <div className="col-span-12 xl:col-span-9">
                             <div className="px-project-title-box">
                                 <h3 className="px-section-title mb-25 text-effect">
                                     <span>Recent </span>
@@ -39,7 +39,7 @@ const StartupAgencyProject = () => {
                 </div>
 
                 {/* PROJECT LIST */}
-                <div className="row gx-20">
+                <div className="grid grid-cols-12 gap-x-5">
                     {displayProjectData.map((project) => (
                         <ProjectSingleCard key={project.id} {...project} />
                     ))}

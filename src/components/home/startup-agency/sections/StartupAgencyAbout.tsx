@@ -45,10 +45,10 @@ const brandImages = [
 const StartupAgencyAbout = () => {
     return (
         <section className="px-about-area about-skew-anim pb-75">
-            <div className="container container-1550">
-                <div className="row">
+            <div className="mx-auto w-full max-w-[1550px] px-3">
+                <div className="grid grid-cols-12 gap-x-6">
                     {/* LEFT */}
-                    <div className="col-xl-3">
+                    <div className="col-span-12 xl:col-span-3">
                         <span className="px-section-subtitle px-about-subtitle-box">
                             <i>
                                 <PlusIcon />
@@ -58,7 +58,7 @@ const StartupAgencyAbout = () => {
                     </div>
 
                     {/* RIGHT */}
-                    <div className="col-xl-9">
+                    <div className="col-span-12 xl:col-span-9">
                         {/* CONTENT */}
                         <div className="px-about-content-wrap">
                             <h4 className="px-about-title mb-55">
@@ -66,8 +66,8 @@ const StartupAgencyAbout = () => {
                                 in website development, SEO, <br /> and marketing.
                             </h4>
 
-                            <div className="row">
-                                <div className="offset-xxl-4 col-xxl-6 offset-xl-4 col-xl-8">
+                            <div className="grid grid-cols-12 gap-x-6">
+                                <div className="col-span-12 xl:col-span-8 xl:col-start-5 2xl:col-span-6 2xl:col-start-5">
                                     <div className="px-about-content mb-70">
                                         <p>
                                             <span>Our focus is on creating functional,</span> fast, & <br />
@@ -92,17 +92,17 @@ const StartupAgencyAbout = () => {
 
                         {/* STATS */}
                         <div className="px-about-info-wrap">
-                            <div className="row gx-5">
+                            <div className="grid grid-cols-12 gap-x-1.25">
                                 {aboutStats.map((item) => (
                                     <div
                                         key={item.id}
-                                        className="col-xl-4 col-lg-4 col-md-6"
+                                        className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-4"
                                     >
                                         <div
                                             className="px-about-info mb-5 px-fade-anim"
                                             data-delay={item.delay}
                                         >
-                                            <div className="px-about-info-head d-flex justify-content-between">
+                                            <div className="px-about-info-head flex justify-between">
                                                 <h4>
                                                     <span>{item.value.replace(/\D/g, "")}</span>
                                                     {item.value.replace(/\d/g, "")}
@@ -110,7 +110,7 @@ const StartupAgencyAbout = () => {
                                                 <em>{item.index}</em>
                                             </div>
 
-                                            <div className="px-about-info-body d-flex flex-column justify-content-between">
+                                            <div className="px-about-info-body flex flex-col justify-between">
                                                 <h4>
                                                     {item.title.split(" ").map((word, idx) => (
                                                         <span key={idx}>

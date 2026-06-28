@@ -2,23 +2,35 @@
  * Tailwind CSS v4 — entrada do design system Tailwind do projeto.
  *
  * MIGRAÇÃO INCREMENTAL (Bootstrap → Tailwind):
- * Durante a migração, Tailwind convive com o Bootstrap/SCSS legado. Por isso:
- *   1. NÃO importamos o Preflight (reset do Tailwind) — ele conflitaria com o
- *      Reboot do Bootstrap e quebraria as páginas ainda não migradas.
- *   2. As `utilities` ficam SEM cascade layer, então vencem o reboot do
- *      Bootstrap por especificidade (classe .flex > seletor de elemento).
+ * Durante a migração, o Tailwind CONVIVE com o Bootstrap + os 16k de SCSS do
+ * template. Duas decisões garantem que adicionar o Tailwind NÃO altere nenhuma
+ * página ainda não migrada:
  *
- * Quando o Bootstrap for removido (todas as páginas migradas), trocar por:
- *   @import "tailwindcss";
+ *   1. Sem Preflight. O reset do Tailwind conflitaria com o Reboot do Bootstrap.
+ *
+ *   2. Utilities dentro de @layer(utilities). Regras "unlayered" (todo o CSS do
+ *      template/Bootstrap) SEMPRE vencem regras em cascade layer, independente de
+ *      especificidade ou ordem. Isso é essencial porque o Tailwind v4 gera
+ *      spacing dinâmico: ele emitiria `.pb-75 { padding-bottom: 18.75rem }`, que
+ *      colide com a `.pb-75 { padding-bottom: 75px }` do template. Com o Tailwind
+ *      em layer, a regra do template vence e o spacing legado fica intacto.
+ *      Os utilitários de layout que usamos na migração (flex, grid, grid-cols-*,
+ *      col-span-*, gap-*, items-*, justify-*) não têm classe de mesmo nome no
+ *      template, então aplicam normalmente.
+ *
+ * AO REMOVER O BOOTSTRAP (todas as páginas migradas): trocar os dois @import
+ * abaixo por `@import "tailwindcss";` (reativa Preflight + utilities unlayered),
  * e este arquivo passa a ser o único reset/base do projeto.
  * ────────────────────────────────────────────────────────────────────────── */
 
+@layer theme, components, utilities;
+
 @import "tailwindcss/theme.css" layer(theme);
-@import "tailwindcss/utilities.css";
+@import "tailwindcss/utilities.css" layer(utilities);
 
 @theme {
   /* Breakpoints alinhados ao template/Bootstrap (min-width), não aos defaults
-     do Tailwind — para preservar o comportamento de col-{sm,md,lg,xl}. */
+     do Tailwind — preserva o comportamento responsivo de col-{sm,md,lg,xl}. */
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
@@ -44,10 +56,10 @@
   --font-morganite: "Morganite-Bold", sans-serif;
 }
 
-/* Classes utilitárias de composição reutilizadas na migração.
-   Em layer(components) para que utilities pontuais ainda possam sobrescrever. */
 @layer components {
+  /* Réplica fiel do `.container` do Bootstrap (max-widths em steps + padding de
+     12px + centralização). Usar onde o template usava `container` puro. */
   .container-px {
-    @apply mx-auto w-full max-w-[1320px] px-3;
+    @apply mx-auto w-full px-3 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px];
   }
 }
