@@ -1,0 +1,53 @@
+/* ──────────────────────────────────────────────────────────────────────────
+ * Tailwind CSS v4 — entrada do design system Tailwind do projeto.
+ *
+ * MIGRAÇÃO INCREMENTAL (Bootstrap → Tailwind):
+ * Durante a migração, Tailwind convive com o Bootstrap/SCSS legado. Por isso:
+ *   1. NÃO importamos o Preflight (reset do Tailwind) — ele conflitaria com o
+ *      Reboot do Bootstrap e quebraria as páginas ainda não migradas.
+ *   2. As `utilities` ficam SEM cascade layer, então vencem o reboot do
+ *      Bootstrap por especificidade (classe .flex > seletor de elemento).
+ *
+ * Quando o Bootstrap for removido (todas as páginas migradas), trocar por:
+ *   @import "tailwindcss";
+ * e este arquivo passa a ser o único reset/base do projeto.
+ * ────────────────────────────────────────────────────────────────────────── */
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css";
+
+@theme {
+  /* Breakpoints alinhados ao template/Bootstrap (min-width), não aos defaults
+     do Tailwind — para preservar o comportamento de col-{sm,md,lg,xl}. */
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-2xl: 1400px;
+
+  /* Cores da marca — espelham public/assets/scss/utils/_colors.scss */
+  --color-px-white: #ffffff;
+  --color-px-black: #0a0a0a;
+  --color-px-black-2: #1e1e1e;
+  --color-px-red: #e11010;
+  --color-px-orange: #ff471d;
+  --color-px-orange-dark: #ff572d;
+  --color-px-grey-1: #f6f7f9;
+  --color-px-body: #6d6868;
+  --color-px-border: #eaebed;
+  --color-px-primary: #ff5e00; /* theme-1 — laranja principal */
+
+  /* Famílias tipográficas do template (fontes já carregadas via @font-face no SCSS) */
+  --font-sans: "Inter", sans-serif;
+  --font-thunder: "Thunder", sans-serif;
+  --font-thunder-med: "ThunderMed", sans-serif;
+  --font-morganite: "Morganite-Bold", sans-serif;
+}
+
+/* Classes utilitárias de composição reutilizadas na migração.
+   Em layer(components) para que utilities pontuais ainda possam sobrescrever. */
+@layer components {
+  .container-px {
+    @apply mx-auto w-full max-w-[1320px] px-3;
+  }
+}
