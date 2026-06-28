@@ -17,9 +17,9 @@ export default function HeaderMenu() {
 
                     {item.type === "mega" && (
                         <div className="tp-submenu submenu px-megamenu">
-                            <div className="row">
+                            <div className="grid grid-cols-12 gap-x-6">
                                 {item.columns?.map((col, index) => (
-                                    <div className="col-xl-6" key={`${col.title}-${index}`}>
+                                    <div className="col-span-12 xl:col-span-6" key={`${col.title}-${index}`}>
                                         <div className="px-megamenu-box">
                                             <div className="px-megamenu-title-wrap">
                                                 <span className="px-megamenu-title">{col.title}</span>

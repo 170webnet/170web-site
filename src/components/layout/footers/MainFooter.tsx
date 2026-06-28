@@ -11,11 +11,11 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#0A0A0A", copyr
         <footer className="px-footer" style={{ backgroundColor: sectionBgClass }}>
             {/* Top Footer */}
             <div className="px-footer-area pt-125 pb-35">
-                <div className="container container-1550">
-                    <div className="row align-items-center">
+                <div className="mx-auto w-full max-w-[1550px] px-3">
+                    <div className="grid grid-cols-12 gap-x-6 items-center">
 
                         {/* About */}
-                        <div className="col-xl-4 col-lg-4">
+                        <div className="col-span-12 lg:col-span-4 xl:col-span-4">
                             <div
                                 className="px-footer-widget px-footer-col-1 pb-40 px-fade-anim"
                                 data-delay=".3"
@@ -39,7 +39,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#0A0A0A", copyr
                         </div>
 
                         {/* Quick Links */}
-                        <div className="col-xl-5 col-lg-4 col-md-6">
+                        <div className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-5">
                             <div
                                 className="px-footer-widget px-footer-col-2 pb-40 px-fade-anim"
                                 data-delay=".5"
@@ -61,7 +61,7 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#0A0A0A", copyr
                         </div>
 
                         {/* Contact */}
-                        <div className="col-xl-3 col-lg-4 col-md-6">
+                        <div className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3">
                             <div
                                 className="px-footer-widget px-footer-col-3 pb-40 mb-30 px-fade-anim"
                                 data-delay=".7"
@@ -96,9 +96,9 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#0A0A0A", copyr
 
             {/* Copyright */}
             <div className={`px-copyright-area ${copyrightClassName}`}>
-                <div className="container container-1550">
-                    <div className="row">
-                        <div className="col-xl-12">
+                <div className="mx-auto w-full max-w-[1550px] px-3">
+                    <div className="grid grid-cols-12 gap-x-6">
+                        <div className="col-span-12">
                             <div className="px-copyright-content text-center">
                                 <h2 className="px-copyright-big-text">
                                     Pixora.Studio

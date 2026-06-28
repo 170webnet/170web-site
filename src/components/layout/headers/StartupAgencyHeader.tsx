@@ -18,18 +18,18 @@ const StartupAgencyHeader = () => {
       <>
          <header>
             <div className="px-header-area header-transparent px-header-ptb">
-               <div className="container container-1550">
-                  <div className="row align-items-center">
-                     <div className="col-lg-4 col-md-3 col-6">
+               <div className="mx-auto w-full max-w-[1550px] px-3">
+                  <div className="grid grid-cols-12 gap-x-6 items-center">
+                     <div className="col-span-6 md:col-span-3 lg:col-span-4">
                         <div className="px-header-logo">
                            <Link href="/">
                               <Image width={90} height={32} src="/assets/img/logo/logo-white.png" alt="logo white" />
                            </Link>
                         </div>
                      </div>
-                     <div className="col-lg-8 col-md-9 col-6">
-                        <div className="px-header-box d-flex justify-content-end align-items-center">
-                           <div className={`px-header-menu tp-header-dropdown px-megamenu-style ${dropdownBackgroundCls} d-none d-xl-block`}>
+                     <div className="col-span-6 md:col-span-9 lg:col-span-8">
+                        <div className="px-header-box flex justify-end items-center">
+                           <div className={`px-header-menu tp-header-dropdown px-megamenu-style ${dropdownBackgroundCls} hidden xl:block`}>
                               <nav className="tp-mobile-menu-active">
                                  <HeaderMenu />
                               </nav>

@@ -68,10 +68,10 @@ const MobileMenus = () => {
                                 className="tp-submenu submenu px-megamenu"
                                 style={{ display: isActive ? "block" : "none" }}
                             >
-                                <div className="row">
+                                <div className="grid grid-cols-12 gap-x-6">
                                     {/* COLUMN MENU */}
                                     {menu.columns?.map((col) => (
-                                        <div className="col-xl-6" key={col.title}>
+                                        <div className="col-span-12 xl:col-span-6" key={col.title}>
                                             <div className="px-megamenu-box">
                                                 <div className="px-megamenu-title-wrap">
                                                     <span className="px-megamenu-title">{col?.title}</span>
