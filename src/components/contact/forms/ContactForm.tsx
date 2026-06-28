@@ -1,5 +1,6 @@
 "use client";
-import { ContactFormValuesDt } from "@/types/contact-dt";
+import { contactFormSchema, type ContactFormValues } from "@/lib/schemas/contact";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 
@@ -9,7 +10,9 @@ const ContactForm = () => {
         handleSubmit,
         reset,
         formState: { errors },
-    } = useForm<ContactFormValuesDt>();
+    } = useForm<ContactFormValues>({
+        resolver: zodResolver(contactFormSchema),
+    });
 
     const onSubmit = () => {
         toast.success("Message sent successfully!");
@@ -26,14 +29,7 @@ const ContactForm = () => {
                         <input
                             placeholder="Your email *"
                             type="email"
-                            {...register("email", {
-                                required: "Email is required",
-                                pattern: {
-                                    value:
-                                        /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-                                    message: "Enter a valid email address",
-                                },
-                            })}
+                            {...register("email")}
                         />
                         {errors.email && (
                             <p className="form-error">{errors.email.message}</p>
@@ -47,13 +43,7 @@ const ContactForm = () => {
                         <input
                             placeholder="Your name *"
                             type="text"
-                            {...register("name", {
-                                required: "Name is required",
-                                minLength: {
-                                    value: 3,
-                                    message: "Name must be at least 3 characters",
-                                },
-                            })}
+                            {...register("name")}
                         />
                         {errors.name && (
                             <p className="form-error">{errors.name.message}</p>
@@ -67,13 +57,7 @@ const ContactForm = () => {
                         <input
                             placeholder="Your phone *"
                             type="text"
-                            {...register("phone", {
-                                required: "Phone number is required",
-                                pattern: {
-                                    value: /^[0-9+\-\s()]{7,15}$/,
-                                    message: "Enter a valid phone number",
-                                },
-                            })}
+                            {...register("phone")}
                         />
                         {errors.phone && (
                             <p className="form-error">{errors.phone.message}</p>
@@ -108,13 +92,7 @@ const ContactForm = () => {
                     <div className="tp-contact-form-input mb-20">
                         <textarea
                             placeholder="Message *"
-                            {...register("message", {
-                                required: "Message is required",
-                                minLength: {
-                                    value: 10,
-                                    message: "Message must be at least 10 characters",
-                                },
-                            })}
+                            {...register("message")}
                         ></textarea>
                         {errors.message && (
                             <p className="form-error">
