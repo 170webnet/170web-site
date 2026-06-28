@@ -27,7 +27,7 @@ const PrimaryOffCanvas = () => {
         <>
             <div className={`tp-offcanvas-area ${isMainSidebarOpen ? "opened" : ""}`}>
                 <div className={`tp-offcanvas-wrapper ${isDark ? "offcanvas-black-bg" : "offcanvas-white-bg"}`}>
-                    <div className="tp-offcanvas-top d-flex align-items-center justify-content-between">
+                    <div className="tp-offcanvas-top flex items-center justify-between">
                         <div className="tp-offcanvas-logo">
                             <Link href="/">
                                 <Image width={120} height={42} className="logo-1" src="/assets/img/logo/logo-orange.png" alt="logo-orange" />
@@ -48,18 +48,18 @@ const PrimaryOffCanvas = () => {
                         </div>
                     </div>
                     <div className="tp-offcanvas-main">
-                        <div className="tp-offcanvas-content d-none d-xl-block">
+                        <div className="tp-offcanvas-content hidden xl:block">
                             <h3 className="tp-offcanvas-title">Hello There!</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
                         </div>
-                        <div className="tp-offcanvas-menu d-xl-none">
+                        <div className="tp-offcanvas-menu xl:hidden">
                             <nav><MobileMenus /></nav>
                         </div>
-                        <div className="tp-offcanvas-gallery d-none d-xl-block">
-                            <div className="row gx-2">
+                        <div className="tp-offcanvas-gallery hidden xl:block">
+                            <div className="grid grid-cols-12 gap-x-[2px]">
                                 <PhotoProviderWrapper>
                                     {galleryImages.map((image: ImageDT) => (
-                                        <div className="col-md-3 col-3" key={image.id}>
+                                        <div className="col-span-3 md:col-span-3" key={image.id}>
                                             <div className="tp-offcanvas-gallery-img fix">
                                                 <PhotoView src={image.imgSrc}>
                                                     <Image style={{ width: "auto", height: "auto" }} width={82} height={82} src={image.imgSrc} alt={`gallery image${image.id}`} />

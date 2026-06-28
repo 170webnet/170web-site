@@ -29,7 +29,7 @@ const AboutMeTextSlide = () => {
                 >
                     {SLIDES.map((text, index) => (
                         <SwiperSlide key={`${text}-${index}`}>
-                            <div className="px-text-slider-item d-flex align-items-center">
+                            <div className="px-text-slider-item flex items-center">
                                 <span>{text}</span>
                                 <span className="pl-40">
                                     <StarIcon fillColor="currentcolor"/>

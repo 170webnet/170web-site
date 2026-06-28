@@ -33,7 +33,7 @@ const CreativeAgencyTextSlider = () => {
                     >
                         {SLIDES.map((slide) => (
                             <SwiperSlide key={slide.id}>
-                                <div className="px-text-slider-item d-flex align-items-center">
+                                <div className="px-text-slider-item flex items-center">
                                     <span>{slide.text}</span>
                                     <div className="px-btn-zikzak text-center p-relative ml-40">
                                         <span className="btn-text">

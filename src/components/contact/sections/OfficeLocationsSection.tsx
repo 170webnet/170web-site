@@ -37,9 +37,9 @@ const OfficeLocationsSection: React.FC<bgColorProps> = ({ sectionBgColor }) => {
         <div
             className="px-contact-info-ptb pt-120 pb-130"
             style={{ backgroundColor: sectionBgColor }}>
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-12">
+            <div className="container-px">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 lg:col-span-12">
 
                         {/* Heading */}
                         <div className="px-contact-info-heading mb-20">

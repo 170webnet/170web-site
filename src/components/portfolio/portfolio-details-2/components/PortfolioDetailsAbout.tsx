@@ -10,9 +10,9 @@ const services = [
 const PortfolioDetailsAbout = () => {
     return (
         <section className="px-pd-4-about-ptb px-pd-style pt-160 pb-140">
-            <div className="container container-1230">
-                <div className="row">
-                    <div className="col-lg-5">
+            <div className="mx-auto w-full max-w-[1230px] px-3">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 lg:col-span-5">
                         <div
                             className="px-pd-4-about-heading tp_fade_anim"
                             data-delay=".3"
@@ -21,7 +21,7 @@ const PortfolioDetailsAbout = () => {
                         </div>
                     </div>
 
-                    <div className="col-lg-7">
+                    <div className="col-span-12 lg:col-span-7">
                         <div className="px-portfolio-details-4-about-content">
                             <h3 className="px-pd-4-about-text">
                                 From 2004, we have earned more than thirty awards,

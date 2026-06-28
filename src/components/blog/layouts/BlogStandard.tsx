@@ -10,24 +10,24 @@ const BlogStandard = () => {
     return (
         // --postbox area start-- 
         <section id="postbox" className="postbox-ptb pt-110 pb-120">
-            <div className="container container-1330">
-                <div className="row">
-                    <div className="col-xxl-8 col-xl-8 col-lg-8">
+            <div className="mx-auto w-full max-w-[1330px] px-3">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 lg:col-span-8 xl:col-span-8 2xl:col-span-8">
                         <div className="postbox-wrapper">
 
                             {displayBlogData.map((post) => (
                                 <BlogStandardPostItem key={post.id} post={post} />
                             ))}
                             <div className="basic-pagination-wrap">
-                                <div className="row">
-                                    <div className="col-xl-6">
+                                <div className="grid grid-cols-12 gap-x-6">
+                                    <div className="col-span-12 xl:col-span-6">
                                         <BlogPagination />
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="col-xxl-4 col-xl-4 col-lg-4">
+                    <div className="col-span-12 lg:col-span-4 xl:col-span-4 2xl:col-span-4">
                         <BlogSidebar />
                     </div>
                 </div>

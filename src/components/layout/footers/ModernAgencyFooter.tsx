@@ -43,11 +43,11 @@ const ModernAgencyFooter = () => {
     return (
         <footer>
             <div className="design-footer-area pb-25">
-                <div className="container container-1870">
+                <div className="mx-auto w-full max-w-[1870px] px-3">
                     <div className="design-footer-bg" style={{ backgroundColor: footerClasses.backgroundColor }}>
                         <div className="px-social-bg px-social-black-bg" style={{ backgroundColor: "#0A0A0A" }}>
-                            <div className="row align-items-center">
-                                <div className="col-md-6">
+                            <div className="grid grid-cols-12 gap-x-6 items-center">
+                                <div className="col-span-12 md:col-span-6">
                                     <div className="px-social-mail">
                                         <Link className="px-line-lr" href="mailto:inquiry@pixora.com">
                                             <span>
@@ -57,8 +57,8 @@ const ModernAgencyFooter = () => {
                                         </Link>
                                     </div>
                                 </div>
-                                <div className="col-md-6">
-                                    <div className="px-social-icon text-md-end">
+                                <div className="col-span-12 md:col-span-6">
+                                    <div className="px-social-icon md:text-right">
                                         {socialLinks.map((item) => (
                                             <Link style={{marginLeft:"4px"}} key={item.id} href={item.href}>
                                                 <Image
@@ -76,22 +76,22 @@ const ModernAgencyFooter = () => {
                         </div>
                         <div className="design-footer-wrap">
                             <div className="design-footer-top-wrap pb-30">
-                                <div className="row align-items-end">
-                                    <div className="col-lg-8">
+                                <div className="grid grid-cols-12 gap-x-6 items-end">
+                                    <div className="col-span-12 lg:col-span-8">
                                         <div className="design-footer-top-text mb-20">
                                             <h4 className={`px-section-title ff-inter ${footerClasses.footerTitleColor} text-effect`}>Thinking of something big</h4>
                                         </div>
                                     </div>
-                                    <div className="col-lg-4">
-                                        <div className="design-footer-top-btn text-start text-lg-end mb-20">
+                                    <div className="col-span-12 lg:col-span-4">
+                                        <div className="design-footer-top-btn text-left lg:text-right mb-20">
                                             <SmartLink className="px-btn-black" href="/contact-us">{`Let's`} talk!</SmartLink>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="design-footer-middle pt-55">
-                                <div className="row align-items-center">
-                                    <div className="col-xl-4 col-lg-5 col-md-6">
+                                <div className="grid grid-cols-12 gap-x-6 items-center">
+                                    <div className="col-span-12 md:col-span-6 lg:col-span-5 xl:col-span-4">
                                         <div className="design-footer-widget design-footer-col-1 pb-60">
                                             <h4 className="design-footer-widget-title">Our Newsletter</h4>
                                             <div className="design-footer-widget-input p-relative">
@@ -102,10 +102,10 @@ const ModernAgencyFooter = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="col-xl-8 col-lg-7 col-md-6">
+                                    <div className="col-span-12 md:col-span-6 lg:col-span-7 xl:col-span-8">
                                         <div className="design-footer-right pb-60">
-                                            <div className="row align-items-center">
-                                                <div className="col-xl-4">
+                                            <div className="grid grid-cols-12 gap-x-6 items-center">
+                                                <div className="col-span-12 xl:col-span-4">
                                                     <div className="design-footer-widget design-footer-col-2">
                                                         <h4 className="design-footer-widget-title sm">Call us</h4>
                                                         <div className="design-footer-widget-info">
@@ -113,7 +113,7 @@ const ModernAgencyFooter = () => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="col-xl-4">
+                                                <div className="col-span-12 xl:col-span-4">
                                                     <div className="design-footer-widget design-footer-col-3">
                                                         <h4 className="design-footer-widget-title sm">Drop us a line</h4>
                                                         <div className="design-footer-widget-info">
@@ -121,7 +121,7 @@ const ModernAgencyFooter = () => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="col-xl-4">
+                                                <div className="col-span-12 xl:col-span-4">
                                                     <div className="design-footer-widget design-footer-col-4">
                                                         <h4 className="design-footer-widget-title sm">Skype</h4>
                                                         <div className="design-footer-widget-info">
@@ -135,14 +135,14 @@ const ModernAgencyFooter = () => {
                                 </div>
                             </div>
                             <div className="design-copyright-area pt-30 pb-10">
-                                <div className="row">
-                                    <div className="col-md-6">
-                                        <div className="design-copyright-text text-center text-md-start mb-10">
+                                <div className="grid grid-cols-12 gap-x-6">
+                                    <div className="col-span-12 md:col-span-6">
+                                        <div className="design-copyright-text text-center md:text-left mb-10">
                                             <p>© {getCurrentYear()} Pixora, All rights reserved.</p>
                                         </div>
                                     </div>
-                                    <div className="col-md-6">
-                                        <div className="design-copyright-backtoTop text-center smooth  text-md-end smooth mb-10">
+                                    <div className="col-span-12 md:col-span-6">
+                                        <div className="design-copyright-backtoTop text-center smooth  md:text-right smooth mb-10">
                                             <ScrollLink target="#hero">
                                                 Back to top
                                                 <span>

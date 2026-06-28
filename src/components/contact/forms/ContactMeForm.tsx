@@ -65,10 +65,10 @@ const ContactMeForm = () => {
                 <div className="tp-contact-me-interest-form-wrap">
                     <form onSubmit={handleSubmit(onSubmit)}>
 
-                        <div className="row">
+                        <div className="grid grid-cols-12 gap-x-6">
 
                             {/* Name */}
-                            <div className="col-lg-6">
+                            <div className="col-span-12 lg:col-span-6">
                                 <div className="tp-contact-form-input mb-20">
                                     <label>Full name*</label>
                                     <input
@@ -86,7 +86,7 @@ const ContactMeForm = () => {
                             </div>
 
                             {/* Email */}
-                            <div className="col-lg-6">
+                            <div className="col-span-12 lg:col-span-6">
                                 <div className="tp-contact-form-input mb-20">
                                     <label>Email address*</label>
                                     <input
@@ -109,7 +109,7 @@ const ContactMeForm = () => {
                             </div>
 
                             {/* Website */}
-                            <div className="col-lg-12">
+                            <div className="col-span-12 lg:col-span-12">
                                 <div className="tp-contact-form-input mb-20">
                                     <label>Website link</label>
                                     <input
@@ -120,7 +120,7 @@ const ContactMeForm = () => {
                             </div>
 
                             {/* Message */}
-                            <div className="col-lg-12">
+                            <div className="col-span-12 lg:col-span-12">
                                 <div className="tp-contact-form-input mb-20">
                                     <label>How Can We Help You*</label>
                                     <textarea
@@ -137,7 +137,7 @@ const ContactMeForm = () => {
 
                                 <div className="tp-contact-form-btn">
                                     <button
-                                        className="w-100"
+                                        className="w-full"
                                         type="submit"
                                         aria-label="Send contact message"
                                     >

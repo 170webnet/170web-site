@@ -17,7 +17,7 @@ const TextMarquee = () => {
                 >
                     {SLIDER_TEXTS.map((item) => (
                         <SwiperSlide key={item.id}>
-                            <div className="px-text-slider-item d-flex align-items-center">
+                            <div className="px-text-slider-item flex items-center">
                                 <span>{item.text}</span>
                                 <span className="pl-40">
                                     <StarIcon />

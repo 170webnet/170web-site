@@ -8,22 +8,22 @@ const AboutUsTeam = () => {
 
     return (
         <div className="px-team-area px-team-inner-ptb pt-130 px-fade-anim">
-            <div className="container container-1550">
+            <div className="mx-auto w-full max-w-[1550px] px-3">
                 {/* TOP SECTION */}
                 <div className="px-team-top mb-60">
-                    <div className="row align-items-end">
+                    <div className="grid grid-cols-12 gap-x-6 items-end">
 
-                        <div className="col-xl-8 col-lg-8 col-md-9">
+                        <div className="col-span-12 md:col-span-9 lg:col-span-8 xl:col-span-8">
                             <div className="px-team-title-box">
                                 <h3 className="px-section-title ff-thunder fs-100 mb-0">
                                     Meet the <br /> talented team
                                 </h3>
                             </div>
                         </div>
-                        <div className="col-xl-4 col-lg-4 col-md-3">
-                            <div className="px-team-link text-md-end pb-15">
+                        <div className="col-span-12 md:col-span-3 lg:col-span-4 xl:col-span-4">
+                            <div className="px-team-link md:text-right pb-15">
                                 <SmartLink
-                                    className="px-about-4-link text-black px-doubble-effect d-inline-flex align-items-center"
+                                    className="px-about-4-link text-black px-doubble-effect inline-flex items-center"
                                     href="/team"
                                 >
                                     <span>Discover All</span>
@@ -43,7 +43,7 @@ const AboutUsTeam = () => {
                 </div>
 
                 {/* TEAM GRID */}
-                <div className="row">
+                <div className="grid grid-cols-12 gap-x-6">
                     {teamItems.map((member) => (
                         <TeamCard key={member.id} {...member} />
                     ))}

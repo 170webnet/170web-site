@@ -35,13 +35,13 @@ const BlogDetailsArea = ({ id }: IdProps) => {
         <>
             {/* -- postbox area start -- */}
             <div className="tp-blog-details-without-ptb px-blog-details">
-                <div className="container container-1230">
-                    <div className="row">
-                        <div className="col-lg-12">
+                <div className="mx-auto w-full max-w-[1230px] px-3">
+                    <div className="grid grid-cols-12 gap-x-6">
+                        <div className="col-span-12 lg:col-span-12">
                             <div className="tp-blog-details-without-heading text-center">
                                 <article className="postbox-details-item">
                                     <div className="postbox-details-info-wrap">
-                                        <div className="postbox-tag postbox-details-tag justify-content-center">
+                                        <div className="postbox-tag postbox-details-tag justify-center">
                                             <span>
                                                 <i>
                                                     <BlogEditIcon />
@@ -51,8 +51,8 @@ const BlogDetailsArea = ({ id }: IdProps) => {
                                             <span>4 min read</span>
                                         </div>
                                         <h4 className="postbox-title fs-80"> {blog?.title || "Lessons learned from professional challenges"}</h4>
-                                        <div className="postbox-details-meta d-flex align-items-center justify-content-center">
-                                            <div className="postbox-author-box d-flex align-items-center ">
+                                        <div className="postbox-details-meta flex items-center justify-center">
+                                            <div className="postbox-author-box flex items-center ">
                                                 <div className="postbox-author-img">
                                                     <Image width={42} height={42} src={blog?.authorImg || "/assets/img/blog/blog-details/user-1.jpg"} alt="user image" />
                                                 </div>
@@ -86,9 +86,9 @@ const BlogDetailsArea = ({ id }: IdProps) => {
                 <div className="tp-blog-details-banner fix mb-100">
                     <Image className="img-fluid" data-speed=".8" width={1905} height={1429} src="/assets/img/blog/blog-details/blog-details-banner.jpg" alt="blog banner" />
                 </div>
-                <div className="container container-1230">
-                    <div className="row justify-content-center">
-                        <div className="col-xxl-8 col-xl-8 col-lg-8">
+                <div className="mx-auto w-full max-w-[1230px] px-3">
+                    <div className="grid grid-cols-12 gap-x-6 justify-center">
+                        <div className="col-span-12 lg:col-span-8 xl:col-span-8 2xl:col-span-8">
                             <div className="postbox-wrapper">
                                 <div className="postbox-details-text mb-45">
                                     <h4 className="postbox-title fs-34">Using a Query</h4>
@@ -107,7 +107,7 @@ const BlogDetailsArea = ({ id }: IdProps) => {
                                         We love to bring designs to life as a developer, and I aim to do this using whatever front end tools are necessary. My preferred tools are more modern javascript libraries like React.js but I like to use whatever is best for the websites needs. There are several reasons why a business would consider a rebrand and it doesn’t necessarily mean the business has been unsuccessful.
                                     </p>
                                 </div>
-                                <div className="postbox-details-thumb d-flex align-items-center mb-50">
+                                <div className="postbox-details-thumb flex items-center mb-50">
                                     <div>
                                         <Image className="img-fluid" width={382} height={397} src="/assets/img/blog/blog-details/blog-details-sm-1.jpg" alt="blog image" />
                                     </div>
@@ -122,7 +122,7 @@ const BlogDetailsArea = ({ id }: IdProps) => {
                                 </div>
                                 <div className="postbox-details-quote-box mb-45">
                                     <blockquote>
-                                        <div className="postbox-details-quote-wrap d-flex align-items-start">
+                                        <div className="postbox-details-quote-wrap flex items-start">
                                             <i>
                                                 <BlogQuoteIcon />
                                             </i>
@@ -174,8 +174,8 @@ const BlogDetailsArea = ({ id }: IdProps) => {
                                         The specificity of the <span>:not()</span> pseudo-class is the specificity of its argument. The :not() pseudo-class does not add to the selector specificity, unlike other pseudo-classes.
                                     </p>
                                 </div>
-                                <div className="postbox-details-tag-wrap d-flex justify-content-between align-items-center">
-                                    <div className="postbox-details-tag d-flex align-items-center mb-0">
+                                <div className="postbox-details-tag-wrap flex justify-between items-center">
+                                    <div className="postbox-details-tag flex items-center mb-0">
                                         <span>Tagged with :</span>
                                         <div className="tagcloud">
                                             {tags.map((tag) => (
@@ -198,14 +198,14 @@ const BlogDetailsArea = ({ id }: IdProps) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-span-12 lg:col-span-4">
                             <BlogSidebar />
                         </div>
                     </div>
                 </div>
-                <div className="container container-1230">
-                    <div className="row">
-                        <div className="col-xl-8">
+                <div className="mx-auto w-full max-w-[1230px] px-3">
+                    <div className="grid grid-cols-12 gap-x-6">
+                        <div className="col-span-12 xl:col-span-8">
                             <BlogComments />
                             <PostboxDetailsForm />
                         </div>
@@ -217,17 +217,17 @@ const BlogDetailsArea = ({ id }: IdProps) => {
 
             {/* -- related blog area start -- */}
             <div className="tp-blog-details-related-ptb pt-100 pb-80">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12">
+                <div className="container-px">
+                    <div className="grid grid-cols-12 gap-x-6">
+                        <div className="col-span-12 lg:col-span-12">
                             <h4 className="postbox-title fs-80 ff-thandar">
                                 Related Posts
                             </h4>
                         </div>
                     </div>
-                    <div className="row">
+                    <div className="grid grid-cols-12 gap-x-6">
                         {blogRelatedData.map((blog) => (
-                            <div key={blog.id} className="col-xl-4 col-lg-6">
+                            <div key={blog.id} className="col-span-12 lg:col-span-6 xl:col-span-4">
                                 <BlogRelatedCard {...blog} />
                             </div>
                         ))}

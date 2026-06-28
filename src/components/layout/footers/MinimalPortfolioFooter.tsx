@@ -19,11 +19,11 @@ const MinimalPortfolioFooter = () => {
                     backgroundImage: "url(/assets/img/update/footer/bg.jpg)",
                 }}
             >
-                <div className="container-fluid">
+                <div className="w-full px-3">
                     <div className="des-footer-area des-footer-bg text-center">
 
                         {/* TOP */}
-                        <div className="des-footer-top d-flex align-items-center justify-content-between">
+                        <div className="des-footer-top flex items-center justify-between">
                             <span>Creative Design Agency</span>
 
                             <div className="des-footer-logo">
@@ -51,7 +51,7 @@ const MinimalPortfolioFooter = () => {
                         </div>
 
                         {/* BOTTOM */}
-                        <div className="des-footer-bottom d-flex align-items-center justify-content-between">
+                        <div className="des-footer-bottom flex items-center justify-between">
                             <span>Powered by Aqlova</span>
 
                             <div className="des-footer-bottom-social text-center">

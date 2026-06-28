@@ -27,22 +27,22 @@ const MinimalPortfolioAward = () => {
       className="design-award-area pt-190 title-box pb-160"
       style={{ backgroundColor: serviceClasses.sectionBg }}
     >
-      <div className="container container-1350">
+      <div className="mx-auto w-full max-w-[1350px] px-3">
         <div className="design-award-wrap">
-          <div className="row row-cols-1">
+          <div className="flex flex-wrap row-cols-1">
             {awards.map((item, i) => {
               const isActive =
                 activeIndex === null || activeIndex === i;
 
               return (
-                <div className="col" key={item.id}>
+                <div className="flex-1" key={item.id}>
                   <div
                     className={`design-award-item hover-reveal-item p-relative ${isActive ? "active" : ""
                       }`}
                     onMouseEnter={() => setActiveIndex(i)}
                     onMouseLeave={() => setActiveIndex(null)}
                   >
-                    <div className="design-award-content design-award-content-xs d-flex align-items-center justify-content-between">
+                    <div className="design-award-content design-award-content-xs flex items-center justify-between">
                       <h4>{item.title}</h4>
                       <span>{item.subtitle}</span>
                     </div>

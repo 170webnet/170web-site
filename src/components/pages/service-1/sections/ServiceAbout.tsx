@@ -4,9 +4,9 @@ import { TextArrowIcon } from "@/svg";
 const ServiceAbout = () => {
     return (
         <div className="px-about-4-area px-about-5-style px-inner-service-2-style pt-120 pb-70">
-            <div className="container container-1550">
-                <div className="row">
-                    <div className="col-xl-10">
+            <div className="mx-auto w-full max-w-[1550px] px-3">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 xl:col-span-10">
                         <div className="px-about-4-title-box mb-55">
                             <h3 className="px-section-title ff-inter px-fade-anim">
                                 PASSIONATELY PUSHING THE <br />
@@ -17,8 +17,8 @@ const ServiceAbout = () => {
                         </div>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="offset-xl-5 col-xl-5">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 xl:col-start-6 xl:col-span-5">
                         <div className="px-about-4-content">
                             <div className="px-fade-anim">
                                 <p>

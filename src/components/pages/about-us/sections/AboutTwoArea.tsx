@@ -3,9 +3,9 @@ import { SmartLink } from "@/components/common";
 const AboutTwoArea = () => {
     return (
         <div className="px-inner-about-1-style pt-120 pb-80">
-            <div className="container container-1550">
-                <div className="row">
-                    <div className="col-xl-9">
+            <div className="mx-auto w-full max-w-[1550px] px-3">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 xl:col-span-9">
                         <div className="px-inner-about-1-top mb-70 px-fade-anim">
                             <p>
                                 Pixora Design Agency delivers{" "}
@@ -16,15 +16,15 @@ const AboutTwoArea = () => {
                         </div>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-xl-6">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 xl:col-span-6">
                         <div className="px-inner-about-1-video">
                             <video loop muted autoPlay playsInline>
                                 <source src="https://html.aqlova.com/videos/pixora/step-video.mp4" type="video/mp4" />
                             </video>
                         </div>
                     </div>
-                    <div className="col-xl-5">
+                    <div className="col-span-12 xl:col-span-5">
                         <div className="px-inner-about-1-content">
                             <div className="px-fade-anim">
                                 <p className="mb-20">

@@ -3,9 +3,9 @@ import Image from "next/image";
 const Hero = () => {
     return (
         <div className="px-about-2-area px-about-3-ptb pt-175 pb-30">
-            <div className="container container-1750">
-                <div className="row align-items-end">
-                    <div className="col-xl-9">
+            <div className="mx-auto w-full max-w-[1750px] px-3">
+                <div className="grid grid-cols-12 gap-x-6 items-end">
+                    <div className="col-span-12 xl:col-span-9">
                         <div className="px-about-2-title-box">
                             <h3 className="px-about-2-title fs-300">
                                 We are <i>The Creative</i> <br />
@@ -17,8 +17,8 @@ const Hero = () => {
                             </h3>
                         </div>
                     </div>
-                    <div className="col-xl-3">
-                        <div className="px-about-2-subtitle-box p-relative text-end">
+                    <div className="col-span-12 xl:col-span-3">
+                        <div className="px-about-2-subtitle-box p-relative text-right">
                             <Image
                                 width={500}
                                 height={300}

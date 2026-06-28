@@ -9,11 +9,11 @@ const Award = () => {
  
     return (
         <div className="px-award-2-area px-award-style-2 pt-120 pb-130">
-            <div className="container container-1750">
+            <div className="mx-auto w-full max-w-[1750px] px-3">
                 {/* title */}
                 <div className="px-award-title-wrap mb-35">
-                    <div className="row align-items-end">
-                        <div className="col-xl-3">
+                    <div className="grid grid-cols-12 gap-x-6 items-end">
+                        <div className="col-span-12 xl:col-span-3">
                             <div className="px-award-subtitle-box">
                                 <span className="px-section-subtitle pb-120">
                                     <i>
@@ -24,7 +24,7 @@ const Award = () => {
                             </div>
                         </div>
 
-                        <div className="col-xl-9">
+                        <div className="col-span-12 xl:col-span-9">
                             <div className="px-award-content">
                                 <h3 className="px-section-title ff-thunder mb-0 text-effect">
                                     Awards.
@@ -37,22 +37,22 @@ const Award = () => {
 
                 {/* table header */}
                 <div className="px-award-wrapper">
-                    <div className="row">
-                        <div className="offset-xl-3 col-xl-9">
+                    <div className="grid grid-cols-12 gap-x-6">
+                        <div className="col-span-12 xl:col-start-4 xl:col-span-9">
                             <div className="px-award-item px-fade-anim" data-delay=".2">
-                                <div className="row">
-                                    <div className="offset-xl-3 col-xl-4 offset-lg-2 col-lg-4 offset-md-1 col-md-5">
+                                <div className="grid grid-cols-12 gap-x-6">
+                                    <div className="col-span-12 md:col-start-2 md:col-span-5 lg:col-start-3 lg:col-span-4 xl:col-start-4 xl:col-span-4">
                                         <div className="px-award-label">
                                             <label>Award</label>
                                         </div>
                                     </div>
-                                    <div className="col-xl-4 col-lg-4 col-md-4">
+                                    <div className="col-span-12 md:col-span-4 lg:col-span-4 xl:col-span-4">
                                         <div className="px-award-label">
                                             <label>Nomination</label>
                                         </div>
                                     </div>
-                                    <div className="col-xl-1 col-lg-2 col-md-2">
-                                        <div className="px-award-label text-md-end">
+                                    <div className="col-span-12 md:col-span-2 lg:col-span-2 xl:col-span-1">
+                                        <div className="px-award-label md:text-right">
                                             <label>Year</label>
                                         </div>
                                     </div>

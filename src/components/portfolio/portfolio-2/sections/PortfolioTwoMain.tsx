@@ -10,8 +10,8 @@ const PortfolioTwoMain = () => {
             id="project"
             className="px-project-4-area px-project-4-style px-orange-style pb-60"
         >
-            <div className="container container-1870">
-                <div className="row">
+            <div className="mx-auto w-full max-w-[1870px] px-3">
+                <div className="grid grid-cols-12 gap-x-6">
                     {portfolios.map((item, index) => (
                         <PortfolioTwoItem
                             key={item.id}

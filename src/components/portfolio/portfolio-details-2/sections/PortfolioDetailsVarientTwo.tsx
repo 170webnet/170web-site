@@ -15,13 +15,13 @@ const PortfolioDetailsVarientTwo = ({ id }: IdProps) => {
     return (
         <>
             <div className="px-pd-4-ptb pt-190 pb-50">
-                <div className="container container-1630">
-                    <div className="row">
-                        <div className="col-lg-12">
+                <div className="mx-auto w-full max-w-[1630px] px-3">
+                    <div className="grid grid-cols-12 gap-x-6">
+                        <div className="col-span-12 lg:col-span-12">
                             <div className="px-pd-4-heading mb-90 tp_fade_anim" data-delay=".3">
                                 <h3 className="px-pd-4-title">{portfolio?.title}</h3>
                             </div>
-                            <div className="px-pd-4-heading-bottom d-flex justify-content-between tp_fade_anim" data-delay=".5">
+                            <div className="px-pd-4-heading-bottom flex justify-between tp_fade_anim" data-delay=".5">
                                 <div className="px-pd-2-bottom-item mb-30">
                                     <span>Client</span>
                                     <h6>{portfolio?.client}</h6>
@@ -59,9 +59,9 @@ const PortfolioDetailsVarientTwo = ({ id }: IdProps) => {
 
             {/* portfolio details next prv start  */}
             <div className="px-pd-4-np-ptb pt-40 pb-120">
-                <div className="container container-1230">
-                    <div className="row justify-content-md-center">
-                        <div className="col-lg-8">
+                <div className="mx-auto w-full max-w-[1230px] px-3">
+                    <div className="grid grid-cols-12 gap-x-6 md:justify-center">
+                        <div className="col-span-12 lg:col-span-8">
                             <div className="px-pd-4-np-box hover-reveal-item p-relative">
                                 <Link href="#" className="px-pd-4-np-content z-index-5 text-center">
                                     <span>next</span>

@@ -56,10 +56,10 @@ const BlogMain = () => {
 
     return (
         <div className="in-blog-list-area px-orange-style pb-90">
-            <div className="container container-1750">
+            <div className="mx-auto w-full max-w-[1750px] px-3">
                 <div className="in-blog-list-category-wrap">
-                    <div className="row align-items-center">
-                        <div className="col-xl-10">
+                    <div className="grid grid-cols-12 gap-x-6 items-center">
+                        <div className="col-span-12 xl:col-span-10">
                             <div className="in-blog-list-category">
                                 {categories.map((cat) => (
                                     <button
@@ -74,8 +74,8 @@ const BlogMain = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className="col-xl-2">
-                            <div className="in-blog-list-search d-flex justify-content-xl-end">
+                        <div className="col-span-12 xl:col-span-2">
+                            <div className="in-blog-list-search flex xl:justify-end">
                                 <BlogSearchForm onSearch={setSearchQuery} />
                             </div>
                         </div>
@@ -92,7 +92,7 @@ const BlogMain = () => {
                         animate="visible"
                         exit="exit"
                     >
-                        <div className="row gx-30">
+                        <div className="grid grid-cols-12 gap-x-[30px]">
                             {filteredBlogs.map((item) => (
                                 <BlogCard key={item.id} {...item} />
                             ))}

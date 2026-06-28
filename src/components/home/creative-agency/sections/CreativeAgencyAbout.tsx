@@ -4,9 +4,9 @@ import { HeroArrowIcon } from "@/svg/ArrowIcons";
 const CreativeAgencyAbout = () => {
     return (
         <div className="px-about-4-area px-about-5-style pt-150 pb-70">
-            <div className="container container-1550">
-                <div className="row">
-                    <div className="col-xl-10">
+            <div className="mx-auto w-full max-w-[1550px] px-3">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 xl:col-span-10">
                         <div className="px-about-4-title-box mb-55">
                             <h3 className="px-section-title ff-thunder fs-130">
                                 Let&apos;s create a <br />brand that defies <br />Gravity
@@ -14,8 +14,8 @@ const CreativeAgencyAbout = () => {
                         </div>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="offset-xl-5 col-xl-5">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="xl:col-start-6 col-span-12 xl:col-span-5">
                         <div className="px-about-4-content">
                             <p>
                                 <span>Our focus is on creating functional,</span> fast, & <br />

@@ -17,20 +17,20 @@ const MinimalPortfolioService = () => {
 
     return (
         <div className="bf-service-area pt-155 pb-160" style={{ backgroundColor: serviceClasses.sectionBg }}>
-            <div className="container container-1350">
+            <div className="mx-auto w-full max-w-[1350px] px-3">
                 <div className="bf-service-title-wrap mb-45">
-                    <div className="row">
-                        <div className="col-xl-6">
+                    <div className="grid grid-cols-12 gap-x-6">
+                        <div className="col-span-12 xl:col-span-6">
                             <div className="bf-service-subtitle-box mb-40">
                                 <h2 className="bf-section-title fs-75 text-white">Let&apos;s create a brand that do defies Gravity</h2>
                             </div>
                         </div>
-                        <div className="col-xl-6">
+                        <div className="col-span-12 xl:col-span-6">
                             <div className="bf-service-title-box pt-200 mb-40">
                                 <p className="bf-service-dec mb-45">We transform complex digital challenges into elegant, functional solutions
                                     by prioritizing clarity and purpose. Exceptional digital experiences start
                                     with understanding your unique business</p>
-                                <SmartLink href="/service-1" className="tp-btn tp-btn-xl bf-btn-white-border d-inline-flex align-items-center">
+                                <SmartLink href="/service-1" className="tp-btn tp-btn-xl bf-btn-white-border inline-flex items-center">
                                     <span>
                                         <span className="text-1">View all Services</span>
                                         <span className="text-2">View all Services</span>

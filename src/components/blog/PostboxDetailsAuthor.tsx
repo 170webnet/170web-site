@@ -23,7 +23,7 @@ const socialLinks = [
 
 const PostboxDetailsAuthor = () => {
     return (
-        <div className="sidebar-widget-author d-flex align-items-start">
+        <div className="sidebar-widget-author flex items-start">
 
             {/* Author Image */}
             <div className="sidebar-widget-author-img">

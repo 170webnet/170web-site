@@ -8,10 +8,10 @@ const MinimalPortfolioBlog = () => {
 
     return (
         <div className="tp-blog-area pt-150 pb-120">
-            <div className="container container-1350">
+            <div className="mx-auto w-full max-w-[1350px] px-3">
                 {/* Header */}
-                <div className="row align-items-center">
-                    <div className="col-lg-6 col-md-6 col-sm-8">
+                <div className="grid grid-cols-12 gap-x-6 items-center">
+                    <div className="col-span-12 sm:col-span-8 md:col-span-6 lg:col-span-6">
                         <div className="tp-blog-tittle-wrap">
                             <h2 className="tp-section-tittle reveal-text mb-50">
                                 Blog insight
@@ -19,11 +19,11 @@ const MinimalPortfolioBlog = () => {
                         </div>
                     </div>
 
-                    <div className="col-lg-6 col-md-6 col-sm-4">
-                        <div className="tp-blog-btn text-sm-end mb-45">
+                    <div className="col-span-12 sm:col-span-4 md:col-span-6 lg:col-span-6">
+                        <div className="tp-blog-btn sm:text-right mb-45">
                             <SmartLink
                                 href="/blog"
-                                className="tp-btn d-inline-flex align-items-center"
+                                className="tp-btn inline-flex items-center"
                             >
                                 <span>
                                     <span className="text-1">View All</span>
@@ -35,7 +35,7 @@ const MinimalPortfolioBlog = () => {
                 </div>
 
                 {/* Blog Items */}
-                <div className="row">
+                <div className="grid grid-cols-12 gap-x-6">
                     {displayBlogItems.map((blog) => (
                         <MinimalPortfolioBlogItem {...blog} key={blog.id} />
                     ))}

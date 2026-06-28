@@ -6,9 +6,9 @@ import Image from "next/image";
 const DigitalStudioServiceItem: React.FC<ServiceItemDT> = ({ image, title, categories }) => {
     return (
         <div className="bf-service-item-3 fix">
-            <div className="row gx-0">
-                <div className="col-lg-6">
-                    <div className="bf-service-item-3-wrap d-flex align-items-center">
+            <div className="grid grid-cols-12 gap-x-0">
+                <div className="col-span-12 lg:col-span-6">
+                    <div className="bf-service-item-3-wrap flex items-center">
                         <div className="bf-service-item-3-thumb">
                             <SmartLink href="/service-1">
                                 <Image className="img-fluid" width={290} height={202} src={image} alt="service image" />
@@ -24,7 +24,7 @@ const DigitalStudioServiceItem: React.FC<ServiceItemDT> = ({ image, title, categ
                     </div>
                 </div>
 
-                <div className="col-lg-6">
+                <div className="col-span-12 lg:col-span-6">
                     <div className="bf-service-item-3-wrapper p-relative fix">
                         <div className="bf-service-item-3-btn">
                             <SmartLink href="/service-1">

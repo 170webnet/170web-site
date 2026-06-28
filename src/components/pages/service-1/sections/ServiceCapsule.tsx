@@ -7,9 +7,9 @@ const ServiceCapsule = () => {
 
     return (
         <div className="px-capsule-area">
-            <div className="container container-1550">
-                <div className="row">
-                    <div className="col-xl-12">
+            <div className="mx-auto w-full max-w-[1550px] px-3">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 xl:col-span-12">
                         <div className="px-capsule-inner p-relative">
                             <div className="px-capsule-top-wrapper p-relative" data-px-throwable-scene="true" ref={sceneRef}>
                                 <div className="px-capsule-title-wrapper">

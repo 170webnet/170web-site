@@ -34,10 +34,10 @@ const PostboxDetailsForm = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="postbox-details-form-wrapper">
           <div className="postbox-details-form-inner">
-            <div className="row">
+            <div className="grid grid-cols-12 gap-x-6">
               
               {/* Name */}
-              <div className="col-xl-6">
+              <div className="col-span-12 xl:col-span-6">
                 <div className="postbox-details-input-box">
                   <div className="postbox-details-input">
                    <div className="mb-25">
@@ -57,7 +57,7 @@ const PostboxDetailsForm = () => {
               </div>
 
               {/* Email */}
-              <div className="col-xl-6">
+              <div className="col-span-12 xl:col-span-6">
                 <div className="postbox-details-input-box">
                   <div className="postbox-details-input">
                     <div className="mb-25">
@@ -82,7 +82,7 @@ const PostboxDetailsForm = () => {
               </div>
 
               {/* Website */}
-              <div className="col-xl-12">
+              <div className="col-span-12 xl:col-span-12">
                 <div className="postbox-details-input-box">
                   <div className="postbox-details-input">
                     <div className="mb-25">
@@ -97,7 +97,7 @@ const PostboxDetailsForm = () => {
               </div>
 
               {/* Comment */}
-              <div className="col-xl-12">
+              <div className="col-span-12 xl:col-span-12">
                 <div className="postbox-details-input-box">
                   <div className="postbox-details-input">
                     <div className="mb-25">

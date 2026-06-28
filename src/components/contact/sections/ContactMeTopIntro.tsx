@@ -3,9 +3,9 @@ import Image from "next/image";
 const ContactMeTopIntro = () => {
     return (
         <div className="in-team-hero-area px-contact-me-style pt-150 pb-100">
-            <div className="container container-1550">
-                <div className="row justify-content-center">
-                    <div className="col-xl-9">
+            <div className="mx-auto w-full max-w-[1550px] px-3">
+                <div className="grid grid-cols-12 gap-x-6 justify-center">
+                    <div className="col-span-12 xl:col-span-9">
                         <div className="in-team-hero-content">
                             <span className="px-section-subtitle mb-30">CONTACT ME</span>
                             <h2 className="in-team-hero-title">Let's <span>discuss</span> <br />

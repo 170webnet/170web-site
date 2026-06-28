@@ -30,7 +30,7 @@ const SocialLinks = () => {
 const TeamCard: React.FC<TeamItemDT> = ({ id, image, name, role, animation }) => {
 
     return (
-        <div className={`col-xxl-3 col-lg-4 col-md-6 col-sm-6 ${animation}`}>
+        <div className={`col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4 2xl:col-span-3 ${animation}`}>
             <div className="px-team-item mb-30">
                 <div className="px-team-thumb p-relative">
                     <div className="ripple-image">
@@ -38,7 +38,7 @@ const TeamCard: React.FC<TeamItemDT> = ({ id, image, name, role, animation }) =>
                         <div className="px-team-social">
                             <SocialLinks />
                         </div>
-                        <Image className="img-fluid w-100 h-auto" width={362} height={420} src={image} alt={name} />
+                        <Image className="img-fluid w-full h-auto" width={362} height={420} src={image} alt={name} />
                     </div>
                 </div>
 

@@ -8,7 +8,7 @@ interface PortfolioPropsItem extends PortfolioProjectDT {
 
 const PortfolioTwoItem: React.FC<PortfolioPropsItem> = ({ id, image, type, title, video, description, categories, isFirstItem }) => {
     return (
-        <div className={isFirstItem ? "col-xl-12" : "col-lg-6"}>
+        <div className={isFirstItem ? "col-span-12 xl:col-span-12" : "col-span-12 lg:col-span-6"}>
             <div className={`px-project-3-item ${isFirstItem ? "mb-65" : "mb-75"}`}>
                 <SmartLink href={`/portfolio-details-2/${id}`}>
                     {type === "video" ? (
@@ -21,7 +21,7 @@ const PortfolioTwoItem: React.FC<PortfolioPropsItem> = ({ id, image, type, title
                         <div className="px-project-3-thumb">
                             <div className="ripple-image">
                                 <Image
-                                    className="img-fluid w-100 h-auto"
+                                    className="img-fluid w-full h-auto"
                                     width={905}
                                     height={680}
                                     src={image}
@@ -32,7 +32,7 @@ const PortfolioTwoItem: React.FC<PortfolioPropsItem> = ({ id, image, type, title
                     )}
                 </SmartLink>
 
-                <div className="px-project-3-content d-flex justify-content-between align-items-start">
+                <div className="px-project-3-content flex justify-between items-start">
                     <div className="px-project-3-inner-box">
                         <h4 className="px-project-3-title">
                             <SmartLink href={`/portfolio-details-2/${id}`}>

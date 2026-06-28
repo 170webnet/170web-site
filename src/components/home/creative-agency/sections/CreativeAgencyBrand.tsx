@@ -25,12 +25,12 @@ const CreativeAgencyBrand = () => {
 
 	return (
 		<div className="px-brand-area px-brand-style-5 pt-120 pb-120">
-			<div className="container container-1550">
-				<div className="row gx-0">
+			<div className="mx-auto w-full max-w-[1550px] px-3">
+				<div className="grid grid-cols-12 gap-x-[0px]">
 					{brands.map((img, index) => (
 						<div
 							key={img}
-							className="col-xl-2 col-lg-4 col-md-6 col-sm-6"
+							className="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4 xl:col-span-2"
 						>
 							<div className="px-brand-item">
 								<Image className="img-fluid" width={90} height={40} src={img} alt={`brand-${index + 1}`} />

@@ -16,9 +16,9 @@ export default function Error({
     return (
         <main>
             <div className="tp-error-area pt-190 pb-120">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-xl-12">
+                <div className="container-px">
+                    <div className="grid grid-cols-12 gap-x-6">
+                        <div className="col-span-12 xl:col-span-12">
                             <div className="tp-error-wrapper text-center">
                                 <Image width={650} height={400} className='img-fluid w-auto h-auto' src="/assets/img/error/fixing-bugs.jpg" alt="error" />
                                 <h1 className="title">Something went wrong</h1>

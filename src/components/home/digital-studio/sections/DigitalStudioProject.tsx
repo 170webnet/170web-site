@@ -18,13 +18,13 @@ const DigitalStudioProject = () => {
 
     return (
         <div className="bf-portfolio-3-area pt-160 pb-75 title-box">
-            <div className="container-fluid container-1650">
+            <div className="w-full mx-auto max-w-[1650px] px-3">
                 <div className="bf-portfolio-3-title-wrap mb-120">
-                    <div className="row">
-                        <div className="col-xl-8 col-lg-9 col-md-9">
+                    <div className="grid grid-cols-12 gap-x-6">
+                        <div className="col-span-12 md:col-span-9 lg:col-span-9 xl:col-span-8">
                             <div className="bf-portfolio-3-title-box">
                                 <h2 className="bf-portfolio-3-sectitle mb-45">
-                                    <span className="tp-text-right-scroll d-inline-block reveal-text">
+                                    <span className="tp-text-right-scroll inline-block reveal-text">
                                         recent
                                     </span>{" "}
                                     <br />
@@ -37,13 +37,13 @@ const DigitalStudioProject = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="col-xl-4 col-lg-3 col-md-3">
+                        <div className="col-span-12 md:col-span-3 lg:col-span-3 xl:col-span-4">
                             <div className="bf-portfolio-3-shape mt-20">
                                 <Image className="img-fluid" width={442} height={296} src="/assets/img/update/portfolio/port-3/cat.png" alt="cat" />
-                                <div className="bf-portfolio-3-btn pt-90 text-start text-md-end">
+                                <div className="bf-portfolio-3-btn pt-90 text-left md:text-right">
                                     <SmartLink
                                         href="/portfolio-1"
-                                        className="tp-btn tp-btn-border tp-btn-xl d-inline-flex align-items-center"
+                                        className="tp-btn tp-btn-border tp-btn-xl inline-flex items-center"
                                     >
                                         <span>
                                             <span className="text-1">Explore Work</span>

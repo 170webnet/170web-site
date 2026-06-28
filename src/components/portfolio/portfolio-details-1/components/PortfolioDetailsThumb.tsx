@@ -13,9 +13,9 @@ const images = [
 const PortfolioDetailsThumb = () => {
     return (
         <div className="px-pd-2-slider-ptb pb-120">
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="col-lg-12">
+            <div className="w-full px-3">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 lg:col-span-12">
                         <div className="px-pd-2-slider-wrapper">
                             <div className="px-pd-2-active">
                                 <Swiper

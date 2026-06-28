@@ -43,9 +43,9 @@ const SecondaryOffcanvas = ({ menuOpenTemp }: { menuOpenTemp: boolean }) => {
         <div id="offcanvasMenu" className={`px-offcanvas-2-area tp-offcanvas-2-area p-relative ${isSecondarySidebarOpen ? "menu-open" : ""} ${menuOpenTemp ? "menu-open-temp" : ""}`}>
             <div className="offcanvas-bg" id="offcanvasBg"></div>
             <div className="px-offcanvas-2-wrapper offcanvas-menu">
-                <div className="container-fluid">
-                    <div className="row align-items-end">
-                        <div className="col-lg-6">
+                <div className="w-full px-3">
+                    <div className="grid grid-cols-12 gap-x-6 items-end">
+                        <div className="col-span-12 lg:col-span-6">
                             <div className="px-offcanvas-2-left">
                                 <div className="tp-offcanvas-menu counter-row">
                                     <nav>
@@ -122,9 +122,9 @@ const SecondaryOffcanvas = ({ menuOpenTemp }: { menuOpenTemp: boolean }) => {
                                         </ul>
                                     </nav>
                                 </div>
-                                <div className="px-offcanvas-2-left-btn-box d-none d-lg-flex d-flex align-items-center">
-                                    <div className="px-offcanvas-2-left-btn w-100">
-                                        <Link className="tp-btn-yellow-border postbox-btn w-100 text-center" href="#">
+                                <div className="px-offcanvas-2-left-btn-box hidden lg:flex flex items-center">
+                                    <div className="px-offcanvas-2-left-btn w-full">
+                                        <Link className="tp-btn-yellow-border postbox-btn w-full text-center" href="#">
                                             <span>
                                                 <span className="text-1">Buy Template</span>
                                                 <span className="text-2">Buy Template</span>
@@ -135,8 +135,8 @@ const SecondaryOffcanvas = ({ menuOpenTemp }: { menuOpenTemp: boolean }) => {
                                             </i>
                                         </Link>
                                     </div>
-                                    <div className="px-offcanvas-2-left-btn w-100">
-                                        <SmartLink className="tp-btn-yellow-border postbox-btn active w-100 text-center" href="/contact-us">
+                                    <div className="px-offcanvas-2-left-btn w-full">
+                                        <SmartLink className="tp-btn-yellow-border postbox-btn active w-full text-center" href="/contact-us">
                                             <span>
                                                 <span className="text-1">Contact us</span>
                                                 <span className="text-2">Contact us</span>
@@ -150,7 +150,7 @@ const SecondaryOffcanvas = ({ menuOpenTemp }: { menuOpenTemp: boolean }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-6 d-none d-lg-block">
+                        <div className="col-span-12 lg:col-span-6 hidden lg:block">
                             <div className="px-offcanvas-2-right">
                                 <div className="px-offcanvas-2-social tp-offcanvas-social mb-20">
                                     <ul>

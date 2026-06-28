@@ -5,7 +5,7 @@ import React from 'react';
 
 const BlogCard: React.FC<blogDt> = ({ id, title, image, date }) => {
     return (
-        <div key={id} className="col-xl-4 col-lg-6">
+        <div key={id} className="col-span-12 lg:col-span-6 xl:col-span-4">
             <div className="px-blog-item mb-40">
                 <SmartLink href={`/blog-details/${id}`}>
                     <div className="px-blog-thumb ripple-image">

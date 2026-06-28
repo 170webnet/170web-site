@@ -19,14 +19,14 @@ const DigitalStudioInstagram = () => {
                 {instagramImages.map((img, index) => (
                     <div
                         key={img}
-                        className={`bf-instagram-thumb-inner-${index + 1} d-none d-xl-block`}
+                        className={`bf-instagram-thumb-inner-${index + 1} hidden xl:block`}
                     >
                         <img src={img} alt={`instagram-${index + 1}`} />
                     </div>
                 ))}
 
                 {/* Instagram Icon */}
-                <div className="bf-instagram-thumb-inner-8 d-none d-xl-block">
+                <div className="bf-instagram-thumb-inner-8 hidden xl:block">
                     <Link href="#">
                         <i className="fa-brands fa-instagram"></i>
                     </Link>
@@ -38,7 +38,7 @@ const DigitalStudioInstagram = () => {
                 </div>
 
                 {/* Content */}
-                <div className="bf-instagram-content-wrap text-start">
+                <div className="bf-instagram-content-wrap text-left">
                     <div className="bf-instagram-title-box">
                         <span className="bf-instagram-subtitle">INSTAGRAM</span>
                         <h4 className="bf-instagram-title">@Pixoraagency</h4>
@@ -48,7 +48,7 @@ const DigitalStudioInstagram = () => {
                         <p>
                             Become a part of our stories! <br /> Join the adventure.
                         </p>
-                        <Link href="#" className="tp-btn d-inline-flex align-items-center">
+                        <Link href="#" className="tp-btn inline-flex items-center">
                             <span>
                                 <span className="text-1">Follow Us</span>
                                 <span className="text-2">Follow Us</span>

@@ -21,8 +21,8 @@ const BlogStandardPostItem = ({ post }: blogPropsDt) => {
             {/* IMAGE */}
             {post.type === "image" && (
                 <>
-                    <div className="postbox-author-wrap d-flex align-items-center justify-content-between mb-30">
-                        <div className="postbox-author-box d-flex align-items-center ">
+                    <div className="postbox-author-wrap flex items-center justify-between mb-30">
+                        <div className="postbox-author-box flex items-center ">
                             <div className="postbox-author-img">
                                 <Image width={42} height={42} src="/assets/img/avater/avater-1.png" alt="author image" />
                             </div>
@@ -40,7 +40,7 @@ const BlogStandardPostItem = ({ post }: blogPropsDt) => {
                     </div>
                     <div className="postbox-thumb mb-35">
                         <Link href={`/blog-details/${post.id}`}>
-                            <Image className="img-fluid w-100 h-auto" width={704} height={402} src={post.image} alt="Blog Image" />
+                            <Image className="img-fluid w-full h-auto" width={704} height={402} src={post.image} alt="Blog Image" />
                         </Link>
                     </div>
                     <div className="postbox-content">
@@ -69,8 +69,8 @@ const BlogStandardPostItem = ({ post }: blogPropsDt) => {
             {/* VIDEO */}
             {post.type === "video" && (
                 <>
-                    <div className="postbox-author-wrap d-flex align-items-center justify-content-between mb-30">
-                        <div className="postbox-author-box d-flex align-items-center">
+                    <div className="postbox-author-wrap flex items-center justify-between mb-30">
+                        <div className="postbox-author-box flex items-center">
                             <div className="postbox-author-img">
                                 <Image width={42} height={42} src="/assets/img/avater/avater-1.png" alt="author image" />
                             </div>
@@ -126,8 +126,8 @@ const BlogStandardPostItem = ({ post }: blogPropsDt) => {
 
             {post.type === "quote" && (
                 <>
-                    <div className="postbox-author-wrap d-flex align-items-center justify-content-between mb-30">
-                        <div className="postbox-author-box d-flex align-items-center">
+                    <div className="postbox-author-wrap flex items-center justify-between mb-30">
+                        <div className="postbox-author-box flex items-center">
                             <div className="postbox-author-img">
                                 <Image width={42} height={42} src={post.authorImg} alt="Author Image" />
                             </div>
@@ -172,8 +172,8 @@ const BlogStandardPostItem = ({ post }: blogPropsDt) => {
             {/* SLIDER */}
             {post.type === "slider" && (
                 <>
-                    <div className="postbox-author-wrap d-flex align-items-center justify-content-between mb-30">
-                        <div className="postbox-author-box d-flex align-items-center ">
+                    <div className="postbox-author-wrap flex items-center justify-between mb-30">
+                        <div className="postbox-author-box flex items-center ">
                             <div className="postbox-author-img">
                                 <Image width={42} height={42} src="/assets/img/avater/avater-1.png" alt="author image" />
                             </div>
@@ -199,7 +199,7 @@ const BlogStandardPostItem = ({ post }: blogPropsDt) => {
                                     {post?.images?.map((img: string, i: number) => (
                                         <SwiperSlide key={`${img}-${i}`}>
                                             <div className="postbox-slider-item">
-                                                <Image width={1137} height={668} className="img-fluid w-100" src={img} alt="image" />
+                                                <Image width={1137} height={668} className="img-fluid w-full" src={img} alt="image" />
                                             </div>
                                         </SwiperSlide>
                                     ))}

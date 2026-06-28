@@ -32,10 +32,10 @@ const SERVICES = [
 const CreativeAgencyService = () => {
 	return (
 		<div className="px-service-5-area">
-			<div className="container container-1550">
-				<div className="row">
+			<div className="mx-auto w-full max-w-[1550px] px-3">
+				<div className="grid grid-cols-12 gap-x-6">
 					{SERVICES.map((service) => (
-						<div className="col-xl-3 col-lg-4 col-md-6" key={service.id}>
+						<div className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3" key={service.id}>
 							<div className="px-service-5-item mb-25 px-fade-anim">
 
 								{/* ICON */}

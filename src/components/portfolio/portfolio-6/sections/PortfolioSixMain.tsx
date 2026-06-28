@@ -7,13 +7,13 @@ const PortfolioSixMain = () => {
 
     return (
         <div className="px-portfolio-area pb-80">
-            <div className="container-fluid">
+            <div className="w-full px-3">
                 <div className="px-portfolio-wrap">
-                    <div className="px-project-inner-6-top d-flex justify-content-between align-items-center pb-40">
+                    <div className="px-project-inner-6-top flex justify-between items-center pb-40">
                         <div className="px-project-inner-6-text">
                             <span>Web & Digital Experiences <br /> Design, Development, Brand Identity</span>
                         </div>
-                        <div className="px-project-inner-6-text text-md-end">
+                        <div className="px-project-inner-6-text md:text-right">
                             <span>Philadelphia, PA <br /> 2026</span>
                         </div>
                     </div>

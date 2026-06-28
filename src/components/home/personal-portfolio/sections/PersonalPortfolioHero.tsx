@@ -36,10 +36,10 @@ const PersonalPortfolioHero = () => {
                 backgroundImage: `url(/assets/img/hero/hero-6/hero-bg-shape.png)`,
             }}
         >
-            <div className="container">
-                <div className="row align-items-end">
+            <div className="container-px">
+                <div className="grid grid-cols-12 gap-x-6 items-end">
                     {/* LEFT */}
-                    <div className="col-xl-4 col-lg-5 order-1 order-lg-0">
+                    <div className="col-span-12 lg:col-span-5 xl:col-span-4 order-1 lg:order-0">
                         <div className="px-hero-6-left">
                             <div className="px-hero-6-info">
                                 <p>
@@ -74,7 +74,7 @@ const PersonalPortfolioHero = () => {
                     </div>
 
                     {/* IMAGE */}
-                    <div className="col-xl-5 col-lg-7 order-0 order-lg-1">
+                    <div className="col-span-12 lg:col-span-7 xl:col-span-5 order-0 lg:order-1">
                         <div className="px-hero-6-thumb">
                             <Image
                                 className="img-fluid"
@@ -87,8 +87,8 @@ const PersonalPortfolioHero = () => {
                     </div>
 
                     {/* CATEGORY */}
-                    <div className="col-xl-3 order-lg-1">
-                     <div className="px-hero-6-category text-xl-end mb-50">
+                    <div className="col-span-12 xl:col-span-3 lg:order-1">
+                     <div className="px-hero-6-category xl:text-right mb-50">
                            <span >Web design</span><br/>
                            <span style={{marginRight:"5px"}}>Art Direction</span>
                            <span>HTML</span><br/>

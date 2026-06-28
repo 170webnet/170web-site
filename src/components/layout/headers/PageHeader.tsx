@@ -41,18 +41,18 @@ const PageHeader: React.FC<headerPropsDt> = ({ containerSize = "container-1870",
       <>
          <header>
             <div className={headerClasses}>
-               <div className={`container ${containerSize}`}>
-                  <div className="row align-items-center">
-                     <div className="col-lg-4 col-md-3 col-6">
+               <div className={`mx-auto w-full px-3 ${containerSize}`}>
+                  <div className="grid grid-cols-12 gap-x-6 items-center">
+                     <div className="col-span-6 md:col-span-3 lg:col-span-4">
                         <div className={`px-header-logo ${logoClassName}`}>
                            <Link href="/">
                               <Image width={90} height={31} src={`${pathName === "/about-us" ? "/assets/img/logo/logo-red-uppercase.png" : "/assets/img/logo/logo-orange.png"}`} alt="logo" />
                            </Link>
                         </div>
                      </div>
-                     <div className="col-lg-8 col-md-9 col-6">
-                        <div className="px-header-box d-flex justify-content-end align-items-center">
-                           <div className={`px-header-menu tp-header-dropdown px-megamenu-style ${dropdownBackgroundCls} d-none d-xl-block`}>
+                     <div className="col-span-6 md:col-span-9 lg:col-span-8">
+                        <div className="px-header-box flex justify-end items-center">
+                           <div className={`px-header-menu tp-header-dropdown px-megamenu-style ${dropdownBackgroundCls} hidden xl:block`}>
                               <nav className="tp-mobile-menu-active">
                                  <HeaderMenu />
                               </nav>

@@ -9,7 +9,7 @@ const page = () => {
         <main>
             <DesignStudioHero />
             <DesignStudioTextMarquee />
-            <DesignStudioBanner src="/assets/img/banner/banner-1.jpg" imageClass="w-100" />
+            <DesignStudioBanner src="/assets/img/banner/banner-1.jpg" imageClass="w-full" />
             <DesignStudioAbout />
             <DesignStudioService />
             <DesignStudioPortfolio />

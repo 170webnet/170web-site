@@ -7,10 +7,10 @@ const PersonalPortfolioAward = () => {
 
     return (
         <div className="px-award-area pb-120">
-            <div className="container">
+            <div className="container-px">
                 <div className="px-award-title-wrap mb-45">
-                    <div className="row">
-                        <div className="col-xl-9">
+                    <div className="grid grid-cols-12 gap-x-6">
+                        <div className="col-span-12 xl:col-span-9">
                             <div className="px-award-content">
                                 <h3 className="px-section-title ff-thunder fs-130 mb-25">
                                     Awards & <br /> recognitions.

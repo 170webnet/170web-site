@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 const page = () => {
     return (
         <div className="tp-error-area pt-190">
-            <div className="container">
-                <div className="row">
-                    <div className="col-xl-12">
+            <div className="container-px">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 xl:col-span-12">
                         <div className="tp-error-wrapper text-center">
                             <Image className="img-fluid" width={866} height={340} src="/assets/img/error/error.png" alt="error image" />
                             <div className="tp-error-content">

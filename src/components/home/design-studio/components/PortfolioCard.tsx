@@ -13,7 +13,7 @@ const PortfolioCard = ({
         <div className="px-portfolio-item px-portfolio-panel p-relative mb-30">
             <Link href={`/portfolio-details-2/${id}`}>
                 <div className="px-portfolio-thumb p-relative ripple-image">
-                    <Image width={1820} height={820} className="img-fluid w-100 h-100" src={image} alt={title} />
+                    <Image width={1820} height={820} className="img-fluid w-full h-full" src={image} alt={title} />
                 </div>
                 <div className="px-portfolio-category">
                     {categories.map((cat) => (

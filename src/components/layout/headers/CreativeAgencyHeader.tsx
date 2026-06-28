@@ -19,26 +19,26 @@ const CreativeAgencyHeader = () => {
         <>
             <header>
                 <div className="px-header-area px-header-style-black header-fixed px-header-ptb">
-                    <div className="container container-1870">
-                        <div className="row align-items-start">
-                            <div className="col-xl-6 col-lg-4 col-md-3 col-6">
+                    <div className="mx-auto w-full max-w-[1870px] px-3">
+                        <div className="grid grid-cols-12 gap-x-6 items-start">
+                            <div className="col-span-6 md:col-span-3 lg:col-span-4 xl:col-span-6">
                                 <div className="px-header-logo pt-30">
                                     <Link href="/">
                                         <Image
                                             width={735}
                                             height={256}
-                                            className="px-header-logo-anim d-none d-xl-block img-fluid"
+                                            className="px-header-logo-anim hidden xl:block img-fluid"
                                             src="/assets/img/logo/logo-orange.png"
                                             alt="logo"
                                             style={{ width: "735px", height: "auto" }}
                                         />
-                                        <Image width={95} height={100} className="d-xl-none img-fluid" src="/assets/img/logo/logo-orange.png" alt="logo" />
+                                        <Image width={95} height={100} className="xl:hidden img-fluid" src="/assets/img/logo/logo-orange.png" alt="logo" />
                                     </Link>
                                 </div>
                             </div>
-                            <div className="col-xl-6 col-lg-8 col-md-9 col-6">
-                                <div className="px-header-box d-flex justify-content-end align-items-center">
-                                    <div className={`px-header-menu tp-header-dropdown px-megamenu-style ${dropdownBackgroundCls} d-none d-xl-block`}>
+                            <div className="col-span-6 md:col-span-9 lg:col-span-8 xl:col-span-6">
+                                <div className="px-header-box flex justify-end items-center">
+                                    <div className={`px-header-menu tp-header-dropdown px-megamenu-style ${dropdownBackgroundCls} hidden xl:block`}>
                                         <nav className="tp-mobile-menu-active">
                                             <HeaderMenu />
                                         </nav>

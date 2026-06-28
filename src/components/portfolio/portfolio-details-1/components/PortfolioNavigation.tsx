@@ -4,10 +4,10 @@ import Link from "next/link";
 const PortfolioNavigation = () => {
   return (
     <div className="px-pd-2-np-ptb px-pd-style pb-120">
-      <div className="container container-1230">
-        <div className="row">
-          <div className="col-lg-12">
-            <div className="px-pd-2-np-content d-flex justify-content-center align-items-center flex-wrap">
+      <div className="mx-auto w-full max-w-[1230px] px-3">
+        <div className="grid grid-cols-12 gap-x-6">
+          <div className="col-span-12 lg:col-span-12">
+            <div className="px-pd-2-np-content flex justify-center items-center flex-wrap">
 
               <div
                 className="tp_fade_anim"

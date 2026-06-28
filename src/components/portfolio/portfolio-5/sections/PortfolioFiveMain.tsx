@@ -44,10 +44,10 @@ const PortfolioFiveMain = () => {
 
     return (
         <div className="px-project-inner-5-ptb px-orange-style pb-90">
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-12">
-                        <div className="px-project-inner-5-top d-flex justify-content-between align-items-center">
+            <div className="container-px">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 lg:col-span-12">
+                        <div className="px-project-inner-5-top flex justify-between items-center">
                             {/* FILTER BUTTONS */}
                             <div className="px-project-inner-5-tab">
                                 <div className="masonary-menu filter-button-group">
@@ -75,7 +75,7 @@ const PortfolioFiveMain = () => {
                 </div>
 
                 {/* PROJECT ITEMS */}
-                <div className="row gx-20 grid" data-show="6">
+                <div className="grid grid-cols-12 gap-x-[20px]" data-show="6">
                     {filteredItems.map((item) => (
                         <PortfolioFiveItem key={item.id} {...item} />
                     ))}

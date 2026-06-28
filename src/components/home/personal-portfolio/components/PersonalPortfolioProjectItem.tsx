@@ -28,18 +28,18 @@ const PersonalPortfolioProjectItem: React.FC<Props> = ({
       data-index-number={index} 
     >
       <Link href="/portfolio-details-2">
-        <div className="container-fluid">
-          <div className="row justify-content-center">
-            <div className="col-xl-9">
-              <div className="row align-items-center">
-                <div className="col-lg-7">
-                  <div className="px-project-6-content d-flex">
+        <div className="w-full px-3">
+          <div className="grid grid-cols-12 gap-x-6 justify-center">
+            <div className="col-span-12 xl:col-span-9">
+              <div className="grid grid-cols-12 gap-x-6 items-center">
+                <div className="col-span-12 lg:col-span-7">
+                  <div className="px-project-6-content flex">
                     <span>({String(project.id).padStart(2, "0")})</span>
                     <h4 className="px-project-6-title">{project.title}</h4>
                   </div>
                 </div>
-                <div className="col-lg-5">
-                  <div className="px-project-6-content text-lg-end">
+                <div className="col-span-12 lg:col-span-5">
+                  <div className="px-project-6-content lg:text-right">
                     <p>{project.category}</p>
                   </div>
                 </div>

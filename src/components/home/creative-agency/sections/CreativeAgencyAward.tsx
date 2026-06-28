@@ -34,17 +34,17 @@ const AWARDS = [
 const CreativeAgencyAward = () => {
     return (
         <div className="px-award-area px-award-inner-ptb pt-140 pb-120">
-            <div className="container">
+            <div className="container-px">
 
                 {/* TITLE */}
                 <div className="px-award-title-wrap mb-50">
-                    <div className="row align-items-center">
+                    <div className="grid grid-cols-12 gap-x-6 items-center">
 
-                        <div className="col-xl-4">
+                        <div className="col-span-12 xl:col-span-4">
                             <h3 className="px-section-subtitle">Awards</h3>
                         </div>
 
-                        <div className="col-xl-8">
+                        <div className="col-span-12 xl:col-span-8">
                             <h3 className="px-section-title ff-thunder fs-100">
                                 Awards & <br /> recognitions.
                             </h3>
@@ -57,17 +57,17 @@ const CreativeAgencyAward = () => {
                 <div className="px-award-wrapper">
                     {AWARDS.map((award) => (
                         <div key={award.id} className="px-award-item px-fade-anim">
-                            <div className="row align-items-center">
+                            <div className="grid grid-cols-12 gap-x-6 items-center">
 
                                 {/* NUMBER */}
-                                <div className="col-xl-3 col-lg-2 col-md-1">
+                                <div className="col-span-12 md:col-span-1 lg:col-span-2 xl:col-span-3">
                                     <div className="px-award-num">
                                         <span>({award.id})</span>
                                     </div>
                                 </div>
 
                                 {/* CATEGORY */}
-                                <div className="col-xl-3 col-lg-4 col-md-5">
+                                <div className="col-span-12 md:col-span-5 lg:col-span-4 xl:col-span-3">
                                     <div className="px-award-category">
                                         <Image width={20} height={20} src={award.image} alt={award.title} />
                                         <span>{award.title}</span>
@@ -75,15 +75,15 @@ const CreativeAgencyAward = () => {
                                 </div>
 
                                 {/* ORGANIZATION */}
-                                <div className="col-xl-3 col-lg-4 col-md-5">
+                                <div className="col-span-12 md:col-span-5 lg:col-span-4 xl:col-span-3">
                                     <div className="px-award-nomination">
                                         <span>{award.org}</span>
                                     </div>
                                 </div>
 
                                 {/* YEAR */}
-                                <div className="col-xl-3 col-lg-2 col-md-1">
-                                    <div className="px-award-year text-md-end">
+                                <div className="col-span-12 md:col-span-1 lg:col-span-2 xl:col-span-3">
+                                    <div className="px-award-year md:text-right">
                                         <span>{award.year}</span>
                                     </div>
                                 </div>

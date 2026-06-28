@@ -30,10 +30,10 @@ const SKILLS = [
 const AboutMeSkill = () => {
     return (
         <div className="am-skill-area am-skill-bdr pt-60 pb-40">
-            <div className="container">
-                <div className="row">
+            <div className="container-px">
+                <div className="grid grid-cols-12 gap-x-6">
                     {/* Left Title */}
-                    <div className="col-lg-5">
+                    <div className="col-span-12 lg:col-span-5">
                         <div className="am-skill-title-box">
                             <span className="px-section-subtitle text-uppercase pb-30">
                                 About
@@ -43,8 +43,8 @@ const AboutMeSkill = () => {
                     </div>
 
                     {/* Skills Grid */}
-                    <div className="col-lg-7">
-                        <div className="row">
+                    <div className="col-span-12 lg:col-span-7">
+                        <div className="grid grid-cols-12 gap-x-6">
                             {SKILLS.map((skill) => (
                                 <AboutMeSkillItem
                                     key={skill.id}

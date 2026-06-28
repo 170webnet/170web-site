@@ -20,11 +20,11 @@ const ServiceCard = ({
 }: ServiceItemProps) => {
     return (
         <div className={`px-service-2-element ${isActive ? "active" : ""}`}>
-            <div className="row">
-                <div className="col-xl-3 col-lg-4">
+            <div className="grid grid-cols-12 gap-x-6">
+                <div className="col-span-12 lg:col-span-4 xl:col-span-3">
                     <div className="px-service-2-info">
                         <div className="px-service-2-thumb">
-                            <Image width={350} height={263} className="w-100 img-fluid" src={image} alt={title} />
+                            <Image width={350} height={263} className="w-full img-fluid" src={image} alt={title} />
                         </div>
                         <div className="px-service-2-content">
                             <span>{title}</span>
@@ -33,7 +33,7 @@ const ServiceCard = ({
                     </div>
                 </div>
 
-                <div className="offset-xl-3 col-xl-6 col-lg-8">
+                <div className="col-span-12 lg:col-span-8 xl:col-span-6 xl:col-start-4">
                     <div className="px-service-2-wrap">
                         <div className="px-service-2-item">
                             <h4

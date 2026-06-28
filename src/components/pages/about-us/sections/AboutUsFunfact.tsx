@@ -33,10 +33,10 @@ const funfacts = [
 const AboutUsFunfact = () => {
     return (
         <div className="ar-funfact-area px-funfact-inner-style pb-100 px-fade-anim">
-            <div className="container">
-                <div className="row">
+            <div className="container-px">
+                <div className="grid grid-cols-12 gap-x-6">
                     {funfacts.map((item) => (
-                        <div className="col-xl-3 col-lg-4 col-sm-6" key={item.id}>
+                        <div className="col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-3" key={item.id}>
                             <div className="ar-funfact-item mb-45 tp_fade_anim"
                                 data-delay={item.delay}
                             >

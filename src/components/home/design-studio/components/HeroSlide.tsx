@@ -28,8 +28,8 @@ const HeroSlide = () => {
         <div className="px-hero-2-slider-wrap pb-100">
 
             {/* Top Slides */}
-            <div className="row justify-content-center">
-                <div className="col-lg-8">
+            <div className="grid grid-cols-12 gap-x-6 justify-center">
+                <div className="col-span-12 lg:col-span-8">
                     <Swiper
                         modules={[Navigation, Controller]}
                         slidesPerView={1}
@@ -64,8 +64,8 @@ const HeroSlide = () => {
             </div>
 
             {/* Bottom Thumbnails */}
-            <div className="row justify-content-center">
-                <div className="col-lg-6">
+            <div className="grid grid-cols-12 gap-x-6 justify-center">
+                <div className="col-span-12 lg:col-span-6">
                     <Swiper
                         modules={[Controller]}
                         onSwiper={(swiper) => {

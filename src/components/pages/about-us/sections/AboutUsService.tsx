@@ -26,28 +26,28 @@ const services = [
 const AboutUsService = () => {
     return (
         <div className="aus-service-area pt-80 px-fade-anim">
-            <div className="container container-1550">
-                <div className="row">
+            <div className="mx-auto w-full max-w-[1550px] px-3">
+                <div className="grid grid-cols-12 gap-x-6">
 
                     {/* Left Title */}
-                    <div className="col-lg-4">
+                    <div className="col-span-12 lg:col-span-4">
                         <div className="aus-service-subtitle-box">
                             <span className="px-section-subtitle">OUR SOLUTIONS</span>
                         </div>
                     </div>
 
                     {/* Right Content */}
-                    <div className="col-lg-8">
+                    <div className="col-span-12 lg:col-span-8">
                         <div className="aus-service-content-wrap">
 
                             {/* Header Row */}
-                            <div className="row">
-                                <div className="col-sm-6">
+                            <div className="grid grid-cols-12 gap-x-6">
+                                <div className="col-span-12 sm:col-span-6">
                                     <div className="aus-service-content">
                                         <label className="pl-20">Services</label>
                                     </div>
                                 </div>
-                                <div className="col-sm-6">
+                                <div className="col-span-12 sm:col-span-6">
                                     <div className="aus-service-content">
                                         <label>Info</label>
                                     </div>

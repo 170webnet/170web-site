@@ -9,16 +9,16 @@ const ServiceTwoBannerIntro = () => {
 
     return (
         <div className="px-inner-service-ptb pt-60" style={{ backgroundColor: sectionBackground }}>
-            <div className="container">
-                <div className="row align-items-center">
-                    <div className="col-lg-6 order-2 order-lg-1">
+            <div className="container-px">
+                <div className="grid grid-cols-12 gap-x-6 items-center">
+                    <div className="col-span-12 lg:col-span-6 order-2 lg:order-1">
                         <div className="px-inner-service-video">
                             <video loop muted autoPlay playsInline>
                                 <source src="https://html.aqlova.com/videos/pixora/step-video.mp4" type="video/mp4" />
                             </video>
                         </div>
                     </div>
-                    <div className="col-lg-6 order-1 order-lg-2">
+                    <div className="col-span-12 lg:col-span-6 order-1 lg:order-2">
                         <div className="px-inner-service-heading">
                             <h4 className="px-inner-service-title">Stand Out in <br /> The Digital World.</h4>
                             <div className="px-inner-service-btn">
@@ -33,9 +33,9 @@ const ServiceTwoBannerIntro = () => {
                     </div>
                 </div>
             </div>
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="col-lg-12">
+            <div className="w-full px-3">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 lg:col-span-12">
                         <div className="px-inner-service-bottom text-center">
                             <h3 className="px-inner-service-big-text">
                                 Our Services

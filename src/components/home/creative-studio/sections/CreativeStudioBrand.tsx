@@ -40,10 +40,10 @@ const Brand = () => {
 
     return (
         <div className="px-brand-area px-brand-style-3 pb-110 px-fade-anim">
-            <div className="container container-1750">
+            <div className="mx-auto w-full max-w-[1750px] px-3">
                 {/* Subtitle */}
-                <div className="row">
-                    <div className="col-xl-3">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 xl:col-span-3">
                         <div className="px-brand-subtitle-box mb-20">
                             <span className="px-section-subtitle">Our Clients</span>
                         </div>

@@ -20,9 +20,9 @@ const headingLines = [
 const PortfolioDetailsSlider = () => {
     return (
         <section className="px-pd-4-slider-ptb px-pd-style pb-110">
-            <div className="container container-1230">
-                <div className="row justify-content-center">
-                    <div className="col-xl-9">
+            <div className="mx-auto w-full max-w-[1230px] px-3">
+                <div className="grid grid-cols-12 gap-x-6 justify-center">
+                    <div className="col-span-12 xl:col-span-9">
                         <div className="px-pd-4-slider-heading design-social-title-box title-box text-center mb-120">
                             <h4 className="px-section-title ff-thunder fs-130">
                                 {headingLines.map((item, index) => (

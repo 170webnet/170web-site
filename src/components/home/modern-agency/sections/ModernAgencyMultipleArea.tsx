@@ -6,7 +6,7 @@ import Brand from "./ModernAgencyBrand";
 const MultipleArea = () => {
     return (
         <div id="project" className="px-multiple-section-area">
-            <div className="container container-1870">
+            <div className="mx-auto w-full max-w-[1870px] px-3">
                 <div className="px-wrapper-box pt-120 pb-120 ma-multiple-area-bg">
                     <About />
                     <Service />

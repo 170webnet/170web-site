@@ -7,15 +7,15 @@ const MinimalPortfolio = () => {
 
     return (
         <div className="bf-portfolio-area bf-portfolio-sticky-area pt-140 pb-130">
-            <div className="container container-1350">
-                <div className="row">
-                    <div className="col-lg-12">
+            <div className="mx-auto w-full max-w-[1350px] px-3">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 lg:col-span-12">
                         <div className="bf-portfolio-wrap text-center">
                             <h2 className="bf-portfolio-title bf-portfolio-text-sticky mb-0">
                                 recent work
                             </h2>
                             <div className="bf-portfolio-wrapper">
-                                <div className="d-grid">
+                                <div className="grid">
                                     {displayProjectData.map((item) => (
                                         <MinimalPortfolioItem key={item.id} {...item} />
                                     ))}

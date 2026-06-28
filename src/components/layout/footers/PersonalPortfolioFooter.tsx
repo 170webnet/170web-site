@@ -14,9 +14,9 @@ const PersonalPortfolioFooter = () => {
                 {/* Slider Area */}
                 <PersonalPortTextSlider />
 
-                <div className="container">
-                    <div className="row">
-                        <div className="offset-xl-4 col-xl-8">
+                <div className="container-px">
+                    <div className="grid grid-cols-12 gap-x-6">
+                        <div className="xl:col-start-5 col-span-12 xl:col-span-8">
                             <div className="px-footer-3-box">
 
                                 {/* Contact Info */}

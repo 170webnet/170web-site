@@ -44,10 +44,10 @@ const PortfolioFourMain = () => {
 
     return (
         <div className="px-project-inner-4-ptb pb-90">
-            <div className="container-fluid">
+            <div className="w-full px-3">
                 <div className="px-project-inner-4-box">
-                    <div className="row">
-                        <div className="col-lg-12">
+                    <div className="grid grid-cols-12 gap-x-6">
+                        <div className="col-span-12 lg:col-span-12">
                             {/* FILTER BUTTONS */}
                             <div className="px-project-inner-4-tab-wrap mb-60">
                                 <div className="masonary-menu filter-button-group text-center">
@@ -66,7 +66,7 @@ const PortfolioFourMain = () => {
                             </div>
 
                             {/* PROJECT ITEMS */}
-                            <div className="row grid" data-show="6">
+                            <div className="grid grid-cols-12 gap-x-6 grid" data-show="6">
                                 {filteredItems.map((item) => (
                                     <PortfolioFourItem
                                         key={item.id}

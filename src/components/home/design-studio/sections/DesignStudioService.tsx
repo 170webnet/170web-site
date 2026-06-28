@@ -10,18 +10,18 @@ const Service = () => {
 
     return (
         <div className="px-service-2-area pb-75">
-            <div className="container container-1750">
+            <div className="mx-auto w-full max-w-[1750px] px-3">
                 {/* top */}
                 <div className="px-service-2-top mb-50">
-                    <div className="row">
-                        <div className="col-xl-3 col-lg-3 col-md-4 col-4">
+                    <div className="grid grid-cols-12 gap-x-6">
+                        <div className="col-span-4 md:col-span-4 lg:col-span-3 xl:col-span-3">
                             <div className="px-service-2-subtitle-box">
                                 <span className="px-section-subtitle">[ Services ]</span>
                             </div>
                         </div>
 
-                        <div className="offset-xl-3 col-xl-6 offset-lg-3 col-lg-6 col-md-8 col-8">
-                            <div className="px-service-2-wrap text-end">
+                        <div className="col-span-8 md:col-span-8 lg:col-span-6 lg:col-start-4 xl:col-span-6 xl:col-start-4">
+                            <div className="px-service-2-wrap text-right">
                                 <label>Solutions That We Deliver</label>
                             </div>
                         </div>

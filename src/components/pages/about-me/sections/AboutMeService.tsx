@@ -8,9 +8,9 @@ const AboutMeService = () => {
 
     return (
         <div className="px-capsule-area am-capsule-style">
-            <div className="container">
-                <div className="row">
-                    <div className="col-xl-12">
+            <div className="container-px">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 xl:col-span-12">
                         <div className="px-capsule-inner p-relative">
                             <div className="px-capsule-top-wrapper p-relative">
                                 {/* Title */}

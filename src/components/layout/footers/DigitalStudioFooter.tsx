@@ -31,13 +31,13 @@ const contacts = [
 ];
 /* ------------------ COMPONENTS ------------------ */
 const FooterTop = () => (
-    <div className="row align-items-end">
-        <div className="col-lg-7 col-md-8">
+    <div className="grid grid-cols-12 gap-x-6 items-end">
+        <div className="col-span-12 md:col-span-8 lg:col-span-7">
             <div className="tp-footer-tittle-wrap p-relative mb-50">
                 <Image
                     width={76}
                     height={80}
-                    className="tp-footer-shape d-none d-lg-block"
+                    className="tp-footer-shape hidden lg:block"
                     src="/assets/img/update/footer/shape.png"
                     alt="shape"
                 />
@@ -47,8 +47,8 @@ const FooterTop = () => (
             </div>
         </div>
 
-        <div className="col-lg-5 col-md-4">
-            <div className="tp-footer-social mb-70 d-flex justify-content-md-end">
+        <div className="col-span-12 md:col-span-4 lg:col-span-5">
+            <div className="tp-footer-social mb-70 flex md:justify-end">
                 {socialLinks.map((item) => (
                     <span key={item.id}>
                         <Link href={item.href}>
@@ -62,11 +62,11 @@ const FooterTop = () => (
 );
 const FooterMiddle = () => (
     <div className="tp-footer-middle mb-30">
-        <div className="row">
+        <div className="grid grid-cols-12 gap-x-6">
 
             {/* Location */}
             {locations.map((loc) => (
-                <div className="col-lg-3 col-md-6 col-sm-6" key={loc.id}>
+                <div className="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-3" key={loc.id}>
                     <div className="tp-footer-widget mb-40">
                         <h5 className="tp-footer-tittle mb-15">{loc.title}</h5>
                         <Link className="tp-footer-link" href="#">
@@ -77,7 +77,7 @@ const FooterMiddle = () => (
             ))}
 
             {/* Contact */}
-            <div className="col-lg-4 col-md-6 col-sm-6">
+            <div className="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4">
                 <div className="tp-footer-widget tp-footer-border p-relative mb-40">
                     <h5 className="tp-footer-tittle mb-15">Contact</h5>
                     {contacts.map((item, i) => (
@@ -91,7 +91,7 @@ const FooterMiddle = () => (
             </div>
 
             {/* Subscribe */}
-            <div className="col-lg-5">
+            <div className="col-span-12 lg:col-span-5">
                 <div className="tp-footer-widget tp-footer-subscribe-form mb-40">
                     <form action="#" className="p-relative">
                         <input
@@ -111,16 +111,16 @@ const FooterMiddle = () => (
 
 const FooterBottom = () => (
     <div className="tp-footer-copyright-wrap">
-        <div className="row align-items-center">
-            <div className="col-lg-6 col-md-6 col-sm-8">
+        <div className="grid grid-cols-12 gap-x-6 items-center">
+            <div className="col-span-12 sm:col-span-8 md:col-span-6 lg:col-span-6">
                 <div className="tp-footer-copyright">
                     <p>
                         © {getCurrentYear()} <Link href="#">Pixora.</Link> All rights reserved.
                     </p>
                 </div>
             </div>
-            <div className="col-lg-6 col-md-6 col-sm-4">
-                <div className="tp-footer-scroll text-sm-end mb-15">
+            <div className="col-span-12 sm:col-span-4 md:col-span-6 lg:col-span-6">
+                <div className="tp-footer-scroll sm:text-right mb-15">
                     <ScrollLink target="#hero" aria-label="Back to top">
                         Back to top
                     </ScrollLink>
@@ -134,7 +134,7 @@ const DigitalStudioFooter = () => {
     return (
         <footer className="bf-footer-2-top-spacing pb-30">
             <div className="tp-footer-area bf-footer-topspacing bf-service-3-rounded tp-black-bg pt-110">
-                <div className="container container-1350">
+                <div className="mx-auto w-full max-w-[1350px] px-3">
                     <FooterTop />
                     <FooterMiddle />
                     <FooterBottom />

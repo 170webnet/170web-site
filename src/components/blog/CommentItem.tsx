@@ -19,7 +19,7 @@ const CommentItem = ({
 }: CommentItemProps) => {
     return (
         <li className={isReply ? "children" : ""}>
-            <div className="postbox__comment-box d-flex">
+            <div className="postbox__comment-box flex">
                 <div className="postbox__comment-info">
                     <div className="postbox__comment-avater mr-30">
                         <Image className="img-fluid" width={70} height={70} src={avatar} alt={name} />
@@ -27,7 +27,7 @@ const CommentItem = ({
                 </div>
 
                 <div className="postbox__comment-text">
-                    <div className="postbox__comment-name d-flex justify-content-between align-items-center">
+                    <div className="postbox__comment-name flex justify-between items-center">
                         <h5>By {name}</h5>
                         <span className="post-meta">{date}</span>
                     </div>

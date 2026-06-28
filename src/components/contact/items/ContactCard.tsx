@@ -13,13 +13,13 @@ const ContactCard = ({
     extraClass,
 }: ContactLocation) => {
     return (
-        <div className="col-xl-4 col-lg-4 col-md-6 mb-30">
+        <div className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-4 mb-30">
             <div
                 className={`tp-contact-us-content text-center ${extraClass ?? ""}`}
                 data-speed={speed}
             >
-                <div className="tp-contact-us-thumb d-flex justify-content-center">
-                    <Image className="img-fluid w-100 h-auto" width={356} height={244} src={image} alt={city} />
+                <div className="tp-contact-us-thumb flex justify-center">
+                    <Image className="img-fluid w-full h-auto" width={356} height={244} src={image} alt={city} />
                 </div>
 
                 <div className="tp-contact-us-bottom">
@@ -32,7 +32,7 @@ const ContactCard = ({
 
                     <div className="tp-contact-us-btn">
                         <Link
-                            className={`tp-btn-yellow-green w-100 ${isActive ? "active" : ""
+                            className={`tp-btn-yellow-green w-full ${isActive ? "active" : ""
                                 }`}
                             target="_blank"
                             href={mapLink}

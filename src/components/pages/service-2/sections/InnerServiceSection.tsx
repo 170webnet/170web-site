@@ -4,9 +4,9 @@ import InnerServiceItem from "../components/InnerServiceItem";
 const InnerServiceSection = () => {
     return (
         <div className="tp-inner-service-area px-inner-service-style pt-120 pb-120">
-            <div className="container container-1830">
-                <div className="row">
-                    <div className="col-lg-3">
+            <div className="mx-auto w-full max-w-[1830px] px-3">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 lg:col-span-3">
                         <div className="inner-service-1-left">
                             <span>Services</span>
                             <ul>
@@ -20,7 +20,7 @@ const InnerServiceSection = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className="col-lg-9">
+                    <div className="col-span-12 lg:col-span-9">
                         {innerServices.map((service, index) => (
                             <InnerServiceItem
                                 key={service.id}

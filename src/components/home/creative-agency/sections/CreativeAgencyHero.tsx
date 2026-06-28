@@ -38,14 +38,14 @@ const CreativeAgencyHero = () => {
 			className="px-hero-5-area px-hero-5-style px-hero-5-pt pb-40"
 			style={{ backgroundColor: heroStyles.sectionBackground || undefined }}
 		>
-			<div className="container container-1870">
-				<div className="row align-items-end">
+			<div className="mx-auto w-full max-w-[1870px] px-3">
+				<div className="grid grid-cols-12 gap-x-6 items-end">
 
 					{/* LEFT IMAGES */}
-					<div className="col-xxl-3 col-xl-2 col-lg-3 d-none d-md-block">
+					<div className="col-span-12 lg:col-span-3 xl:col-span-2 2xl:col-span-3 hidden md:block">
 						<div className="px-hero-5-thumb-wrap">
 							{HERO_IMAGES.map((item) => (
-								<div key={item.src} className="px-hero-5-thumb mt-30 d-flex align-items-end">
+								<div key={item.src} className="px-hero-5-thumb mt-30 flex items-end">
 									<SmartLink href="/portfolio-2">
 										<Image width={120} height={100} src={item.src} alt="hero image" />
 									</SmartLink>
@@ -56,7 +56,7 @@ const CreativeAgencyHero = () => {
 					</div>
 
 					{/* MAIN CONTENT */}
-					<div className="col-xxl-7 col-xl-7 col-lg-9">
+					<div className="col-span-12 lg:col-span-9 xl:col-span-7 2xl:col-span-7">
 						<div className="px-hero-5-content">
 							<p>
 								Pixora is a creative studio <br />
@@ -66,17 +66,17 @@ const CreativeAgencyHero = () => {
 							</p>
 
 							<div className="px-hero-5-list">
-								<div className="row row-cols-xl-3 row-cols-md-3 row-cols-2">
+								<div className="flex flex-wrap row-cols-xl-3 row-cols-md-3 row-cols-2">
 
 									{/* YEAR */}
-									<div className="col-md-4 col-12 order-md-0 order-1">
+									<div className="col-span-12 md:col-span-4 md:order-0 order-1">
 										<div className="px-hero-5-content mb-20">
 											<span>©{currentYear} Modern Studio</span>
 										</div>
 									</div>
 
 									{/* SERVICES */}
-									<div className="col order-0">
+									<div className="flex-1 order-0">
 										<div className="px-hero-5-category-wrap mb-20">
 											{SERVICES.map((service) => (
 												<div key={service} className="px-hero-5-category">
@@ -92,7 +92,7 @@ const CreativeAgencyHero = () => {
 									</div>
 
 									{/* SOCIAL */}
-									<div className="col order-0">
+									<div className="flex-1 order-0">
 										<div className="px-hero-5-social-wrap mb-20">
 											{SOCIALS.map((social) => (
 												<div key={social.name} className="px-hero-5-social">
@@ -114,10 +114,10 @@ const CreativeAgencyHero = () => {
 					</div>
 
 					{/* VIDEO */}
-					<div className="col-xxl-2 col-xl-3">
-						<div className="px-hero-4-video-wrap d-flex justify-content-end">
+					<div className="col-span-12 xl:col-span-3 2xl:col-span-2">
+						<div className="px-hero-4-video-wrap flex justify-end">
 							<div className="px-hero-4-video">
-								<div className="text-end d-none d-xl-block mb-50">
+								<div className="text-right hidden xl:block mb-50">
 									<Image className="img-fluid" width={171} height={60} src="/assets/img/shape/shape-1.png" alt="shape" />
 								</div>
 

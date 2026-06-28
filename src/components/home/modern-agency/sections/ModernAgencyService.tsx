@@ -43,9 +43,9 @@ const services: ServiceDT[] = [
 const Service = () => {
     return (
         <section className="px-service-4-area pt-120 pb-120">
-            <div className="container">
-                <div className="row">
-                    <div className="col-xl-4">
+            <div className="container-px">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 xl:col-span-4">
                         <div className="px-service-4-subtitle-box pt-50">
                             <span className="px-section-subtitle text-white">
                                 OUR SOLUTIONS
@@ -53,7 +53,7 @@ const Service = () => {
                         </div>
                     </div>
 
-                    <div className="col-xl-8">
+                    <div className="col-span-12 xl:col-span-8">
                         <div className="px-service-4-wrap">
                             {services.map((service) => (
                                 <ServiceItem key={service.id} {...service} />

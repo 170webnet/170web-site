@@ -5,9 +5,9 @@ import Link from "next/link";
 const BlogBreadcurmb = () => {
     return (
         <div className="px-breadcrumb-area px-breadcrumb-ptb ">
-            <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-xxl-12">
+            <div className="container-px">
+                <div className="grid grid-cols-12 gap-x-6 justify-center">
+                    <div className="col-span-12 2xl:col-span-12">
                         <div className="px-breadcrumb-content text-center">
                             <h3 className="px-breadcrumb-title">Expert Insights</h3>
                             <div className="px-breadcrumb-list mb-5">

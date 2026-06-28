@@ -46,7 +46,7 @@ const CreativeAgencyStep = ({ sectionSpacing = "" }) => {
 
             {/* TOP SECTION */}
             <div
-                className="px-step-item d-flex flex-column justify-content-end p-relative"
+                className="px-step-item flex flex-col justify-end p-relative"
                 style={{ backgroundColor: sectionBackground }}
             >
                 <div className="px-step-video">
@@ -64,18 +64,18 @@ const CreativeAgencyStep = ({ sectionSpacing = "" }) => {
                     </div>
                 </div>
 
-                <div className="container-fluid">
+                <div className="w-full px-3">
                     <div
                         className="px-step-bottom z-index-10"
                         style={{ backgroundColor: sectionBackground }}
                     >
-                        <div className="row">
-                            <div className="col-xl-8 col-lg-6">
+                        <div className="grid grid-cols-12 gap-x-6">
+                            <div className="col-span-12 lg:col-span-6 xl:col-span-8">
                                 <div className="px-step-bottom-text">
                                     <span>How we works</span>
                                 </div>
                             </div>
-                            <div className="col-xl-4 col-lg-6">
+                            <div className="col-span-12 lg:col-span-6 xl:col-span-4">
                                 <div className="px-step-bottom-text">
                                     <span className="text-2">
                                         Crafting unique stories for brands
@@ -89,8 +89,8 @@ const CreativeAgencyStep = ({ sectionSpacing = "" }) => {
 
             {/* STEP CARDS */}
             <div className="px-step-card-wrap mr-60">
-                <div className="container-fluid">
-                    <div className="row">
+                <div className="w-full px-3">
+                    <div className="grid grid-cols-12 gap-x-6">
                         {STEPS.map((step) => (
                             <CAStepItem key={step.number}  {...step} />
                         ))}

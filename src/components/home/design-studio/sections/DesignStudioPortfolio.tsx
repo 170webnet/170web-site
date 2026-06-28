@@ -7,7 +7,7 @@ const Portfolio = () => {
 
     return (
         <div className="px-portfolio-area pt-75">
-            <div className="container-fluid">
+            <div className="w-full px-3">
                 <div className="px-portfolio-wrap">
                     {displayPortfolioData.map((item) => (
                         <PortfolioCard key={item.id} {...item} />

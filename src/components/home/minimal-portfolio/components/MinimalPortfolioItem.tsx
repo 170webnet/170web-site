@@ -12,7 +12,7 @@ const MinimalPortfolioItem: React.FC<PortfolioProjectDT> = ({ id, title, year, i
                         <div className="video-container">
                             <SmartLink href={`/portfolio-details-1/${id}`}>
                                 <Image width={1350} height={720}
-                                    className="w-100 img-fluid"
+                                    className="w-full img-fluid"
                                     src={image}
                                     alt={title}
                                 />

@@ -4,9 +4,9 @@ import { TextArrowIcon } from "@/svg";
 const About = () => {
     return (
         <div className="px-about-4-area">
-            <div className="container">
-                <div className="row">
-                    <div className="col-xl-12">
+            <div className="container-px">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 xl:col-span-12">
                         <div className="px-about-4-title-box mb-55">
                             <h3 className="px-section-title ff-inter text-effect">
                                 Let&apos;s create a <br />brand that defies <br />Gravity
@@ -14,8 +14,8 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="offset-xl-5 col-xl-5">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="xl:col-start-6 col-span-12 xl:col-span-5">
                         <div className="px-about-4-content">
                             <p>
                                 Pixora is a creative  studio based in Portugal, <br />

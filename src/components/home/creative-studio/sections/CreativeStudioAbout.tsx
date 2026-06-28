@@ -3,21 +3,21 @@ import SmartLink from "@/components/common/SmartLink";
 const About = () => {
     return (
         <div className="px-about-3-area pt-120 pb-150">
-            <div className="container container-1750">
-                <div className="row">
-                    <div className="col-xl-12">
+            <div className="mx-auto w-full max-w-[1750px] px-3">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 xl:col-span-12">
                         <div className="px-about-3-text px-fade-anim" data-delay=".3">
                             <h2 className="px-about-3-bigtext">About pixora</h2>
                         </div>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-xl-5">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 xl:col-span-5">
                         <div className="px-about-3-subtitle-box">
                             <span className="px-section-subtitle">About us</span>
                         </div>
                     </div>
-                    <div className="col-xl-7">
+                    <div className="col-span-12 xl:col-span-7">
                         <div className="px-about-3-content">
                             <div className="px-fade-anim" data-delay=".3">
                                 <p>

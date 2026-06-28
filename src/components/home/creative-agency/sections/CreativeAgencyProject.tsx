@@ -9,11 +9,11 @@ const CreativeAgencyProject = () => {
 
     return (
         <div className="px-project-5-area pt-150 pb-70">
-            <div className="container container-1870">
+            <div className="mx-auto w-full max-w-[1870px] px-3">
 
                 {/* TITLE */}
-                <div className="row">
-                    <div className="col-xl-12">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 xl:col-span-12">
                         <div className="px-project-5-title-box p-relative mb-65">
                             <h2 className="px-project-5-title text-center text-effect">
                                 Recent <span>projects</span>
@@ -37,7 +37,7 @@ const CreativeAgencyProject = () => {
                 </div>
 
                 {/* PROJECT GRID */}
-                <div className="row">
+                <div className="grid grid-cols-12 gap-x-6">
                     {projectItems.map((project) => (
                         <CAProjectItem key={project.id} {...project} />
                     ))}

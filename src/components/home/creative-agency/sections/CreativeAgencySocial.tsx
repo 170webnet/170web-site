@@ -38,10 +38,10 @@ const CreativeAgencySocial = () => {
             </span>
 
             <div className="px-social-bg" style={{ backgroundColor: "#ff471d" }}>
-                <div className="container container-1550">
-                    <div className="row align-items-center">
+                <div className="mx-auto w-full max-w-[1550px] px-3">
+                    <div className="grid grid-cols-12 gap-x-6 items-center">
                         {/* EMAIL */}
-                        <div className="col-md-6">
+                        <div className="col-span-12 md:col-span-6">
                             <div className="px-social-mail">
                                 <Link className="px-line-lr" href={`mailto:${EMAIL}`}>
                                     <span>
@@ -53,8 +53,8 @@ const CreativeAgencySocial = () => {
                         </div>
 
                         {/* SOCIAL LINKS */}
-                        <div className="col-md-6">
-                            <div className="px-social-icon text-md-end">
+                        <div className="col-span-12 md:col-span-6">
+                            <div className="px-social-icon md:text-right">
                                 {SOCIAL_LINKS.map((item) => (
                                     <Link key={item.label} href={item.href} style={{ marginLeft: "4px" }}>
                                         <Image width={52} height={52} src={item.icon} alt={item.label} />

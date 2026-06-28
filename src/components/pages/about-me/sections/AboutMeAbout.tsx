@@ -15,9 +15,9 @@ const InlineImage = ({ src }: { src: string }) => (
 const AboutMeAbout = () => {
     return (
         <div className="am-about-area am-about-inner-ptb pt-70 pb-120">
-            <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-xl-9">
+            <div className="container-px">
+                <div className="grid grid-cols-12 gap-x-6 justify-center">
+                    <div className="col-span-12 xl:col-span-9">
                         <div className="am-about-content text-center px-fade-anim">
                             <p>
                                 I'm <InlineImage src={ABOUT_IMAGES[0]} /> passionate about

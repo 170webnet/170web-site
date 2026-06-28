@@ -9,7 +9,7 @@ const contactInfoData = [
         title: "inquires",
         content: "contact@pixora.com",
         href: "mailto:contact@pixora.com",
-        colClass: "col-lg-12 col-md-4 col-sm-6",
+        colClass: "col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-12",
     },
     {
         id: 2,
@@ -18,7 +18,7 @@ const contactInfoData = [
 Raleigh, NC 27603 
 919-833.6413`,
         href: "#",
-        colClass: "col-xl-6 col-lg-12 col-md-4 col-sm-6",
+        colClass: "col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-12 xl:col-span-6",
     },
     {
             id: 3,
@@ -27,7 +27,7 @@ Raleigh, NC 27603
 Raleigh, NC 27603 
 919-833.6413`,
         href: "#",
-        colClass: "col-xl-6 col-lg-12 col-md-4 col-sm-6",
+        colClass: "col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-12 xl:col-span-6",
     },
 ];
 
@@ -41,9 +41,9 @@ const ContactArea = () => {
     return (
         <div className="px-contact-ptb pt-200 pb-140">
             {/* Heading */}
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="col-lg-12">
+            <div className="w-full px-3">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 lg:col-span-12">
                         <div className="px-contact-heading text-center">
                             <h4 className="px-contact-title">Get in touch</h4>
                         </div>
@@ -52,14 +52,14 @@ const ContactArea = () => {
             </div>
 
             {/* Content Area */}
-            <div className="container container-1550">
-                <div className="row align-items-center">
+            <div className="mx-auto w-full max-w-[1550px] px-3">
+                <div className="grid grid-cols-12 gap-x-6 items-center">
 
                     {/* Left Info Section */}
-                    <div className="col-lg-4">
+                    <div className="col-span-12 lg:col-span-4">
                         <div className="px-contact-wrap pb-50">
                             <div className="px-contact-inf-box">
-                                <div className="row">
+                                <div className="grid grid-cols-12 gap-x-6">
                                     {contactInfoData.map((item) => (
                                         <ContactInfoItem key={item.id} {...item} />
                                     ))}
@@ -76,7 +76,7 @@ const ContactArea = () => {
                     </div>
 
                     {/* Right Form Section */}
-                    <div className="col-lg-8">
+                    <div className="col-span-12 lg:col-span-8">
                         <div className="px-contact-wrapper">
                             <ContactForm />
                         </div>

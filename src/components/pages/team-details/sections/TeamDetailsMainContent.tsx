@@ -11,11 +11,11 @@ const TeamDetailsMainContent = ({ id }: IdProps) => {
 
     return (
         <section className="tp-team-details-area px-team-details-style tp-team-details-ptb pt-100 pb-70">
-            <div className="container container-1230">
-                <div className="row">
+            <div className="mx-auto w-full max-w-[1230px] px-3">
+                <div className="grid grid-cols-12 gap-x-6">
 
                     {/* Left Side */}
-                    <div className="col-lg-6">
+                    <div className="col-span-12 lg:col-span-6">
                         <div className="tp-team-details-wrap">
 
                             {/* image */}
@@ -29,7 +29,7 @@ const TeamDetailsMainContent = ({ id }: IdProps) => {
                             </div>
 
                             {/* contact + social */}
-                            <div className="tp-team-details-info d-flex justify-content-between align-items-center flex-wrap gap-20">
+                            <div className="tp-team-details-info flex justify-between items-center flex-wrap gap-20">
 
                                 <div className="tp-team-details-info-contact">
 
@@ -87,7 +87,7 @@ const TeamDetailsMainContent = ({ id }: IdProps) => {
                     </div>
 
                     {/* Right Side */}
-                    <div className="col-lg-6">
+                    <div className="col-span-12 lg:col-span-6">
 
                         <div className="tp-team-details-wrapper">
 

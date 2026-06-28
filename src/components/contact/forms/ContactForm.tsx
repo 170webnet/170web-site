@@ -21,10 +21,10 @@ const ContactForm = () => {
 
     return (
         <form id="contact-form" onSubmit={handleSubmit(onSubmit)}>
-            <div className="row">
+            <div className="grid grid-cols-12 gap-x-6">
 
                 {/* Email */}
-                <div className="col-lg-12">
+                <div className="col-span-12">
                     <div className="tp-contact-form-input mb-20">
                         <input
                             placeholder="Your email *"
@@ -38,7 +38,7 @@ const ContactForm = () => {
                 </div>
 
                 {/* Name */}
-                <div className="col-lg-6">
+                <div className="col-span-12 lg:col-span-6">
                     <div className="tp-contact-form-input mb-20">
                         <input
                             placeholder="Your name *"
@@ -52,7 +52,7 @@ const ContactForm = () => {
                 </div>
 
                 {/* Phone */}
-                <div className="col-lg-6">
+                <div className="col-span-12 lg:col-span-6">
                     <div className="tp-contact-form-input mb-20">
                         <input
                             placeholder="Your phone *"
@@ -66,7 +66,7 @@ const ContactForm = () => {
                 </div>
 
                 {/* Company */}
-                <div className="col-lg-6">
+                <div className="col-span-12 lg:col-span-6">
                     <div className="tp-contact-form-input mb-20">
                         <input
                             placeholder="Company name"
@@ -77,7 +77,7 @@ const ContactForm = () => {
                 </div>
 
                 {/* Budget */}
-                <div className="col-lg-6">
+                <div className="col-span-12 lg:col-span-6">
                     <div className="tp-contact-form-input mb-20">
                         <input
                             placeholder="Budget"
@@ -88,7 +88,7 @@ const ContactForm = () => {
                 </div>
 
                 {/* Message */}
-                <div className="col-lg-12">
+                <div className="col-span-12">
                     <div className="tp-contact-form-input mb-20">
                         <textarea
                             placeholder="Message *"
@@ -102,7 +102,7 @@ const ContactForm = () => {
                     </div>
 
                     <div className="tp-contact-form-btn">
-                        <button className="w-100" type="submit" aria-label="Send contact message">
+                        <button className="w-full" type="submit" aria-label="Send contact message">
                             <span>
                                 <span className="text-1">Send Message</span>
                                 <span className="text-2">Send Message</span>

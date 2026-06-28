@@ -22,18 +22,18 @@ const DesignStudioHeader = () => {
     return (
         <>
             <div className="px-header-2-area header-fixed pt-40">
-                <div className="container container-1830">
-                    <div className="row align-items-center">
-                        <div className="col-6">
+                <div className="mx-auto w-full max-w-[1830px] px-3">
+                    <div className="grid grid-cols-12 gap-x-6 items-center">
+                        <div className="col-span-6">
                             <div className="px-header-logo">
                                 <Link href="/"><Image width={110} height={39} src="/assets/img/logo/logo-red-uppercase.png" alt="logo" /></Link>
                             </div>
-                            <nav className="tp-mobile-menu-active d-none">
+                            <nav className="tp-mobile-menu-active hidden">
                                 <HeaderMenu />
                             </nav>
                         </div>
-                        <div className="col-6">
-                            <div className="px-header-2-bar text-end">
+                        <div className="col-span-6">
+                            <div className="px-header-2-bar text-right">
                                 <button
                                     type="button"
                                     onClick={handleClose}

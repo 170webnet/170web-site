@@ -2,7 +2,7 @@ import { GeometricFlowerIcon } from "@/svg";
 
 const ServiceTextSlideItem = ({ item }: { item: string }) => {
     return (
-        <div className="px-text-slider-item d-flex align-items-center">
+        <div className="px-text-slider-item flex items-center">
             <span>{item}</span>
 
             <div className="px-btn-zikzak text-center p-relative ml-40">

@@ -6,7 +6,7 @@ interface skillProps {
 }
 const AboutMeSkillItem: React.FC<skillProps> = ({ title, delay, items }) => {
     return (
-        <div className="col-sm-6">
+        <div className="col-span-12 sm:col-span-6">
             <div className="am-skill-item mb-45 px-fade-anim" data-delay={delay}>
                 <h4>{title}</h4>
                 <ul>

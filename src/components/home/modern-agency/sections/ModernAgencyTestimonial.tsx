@@ -8,31 +8,31 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const Testimonial = () => {
     return (
         <section className="px-testimonial-area pt-120">
-            <div className="container">
+            <div className="container-px">
                 {/* Top Header */}
-                <div className="row">
-                    <div className="col-md-4">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 md:col-span-4">
                         <div className="px-testimonial-top-content mb-5">
                             <span>CLIENT APPROVAL</span>
                         </div>
                     </div>
 
-                    <div className="col-md-5">
+                    <div className="col-span-12 md:col-span-5">
                         <div className="px-testimonial-top-content mb-5">
                             <span>CREATIVE AS BUNDLED PROJECTS</span>
                         </div>
                     </div>
 
-                    <div className="col-md-3">
-                        <div className="px-testimonial-top-content mb-5 text-md-end">
+                    <div className="col-span-12 md:col-span-3">
+                        <div className="px-testimonial-top-content mb-5 md:text-right">
                             <span>(BO® — 04)</span>
                         </div>
                     </div>
                 </div>
 
                 {/* Slider */}
-                <div className="row">
-                    <div className="offset-xl-4 col-xl-8">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="xl:col-start-5 col-span-12 xl:col-span-8">
                         <div className="px-testimonial-slider pt-110">
                             <div className="px-testimonial-active">
                                 <Swiper

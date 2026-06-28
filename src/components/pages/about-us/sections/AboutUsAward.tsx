@@ -7,14 +7,14 @@ const AboutUsAward = () => {
 
     return (
         <div className="px-award-area px-award-inner-ptb pt-140 pb-120">
-            <div className="container">
+            <div className="container-px">
                 {/* TITLE */}
                 <div className="px-award-title-wrap mb-50">
-                    <div className="row align-items-center">
-                        <div className="col-xl-4">
+                    <div className="grid grid-cols-12 gap-x-6 items-center">
+                        <div className="col-span-12 xl:col-span-4">
                             <h3 className="px-section-subtitle">Awards</h3>
                         </div>
-                        <div className="col-xl-8">
+                        <div className="col-span-12 xl:col-span-8">
                             <h3 className="px-section-title ff-thunder fs-100">
                                 Awards & <br /> recognitions.
                             </h3>

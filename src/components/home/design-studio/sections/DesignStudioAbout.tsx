@@ -5,9 +5,9 @@ import Image from "next/image";
 const About = () => {
     return (
         <div className="px-about-2-area pt-160 pb-110">
-            <div className="container container-1750">
-                <div className="row align-items-end">
-                    <div className="col-xl-9">
+            <div className="mx-auto w-full max-w-[1750px] px-3">
+                <div className="grid grid-cols-12 gap-x-6 items-end">
+                    <div className="col-span-12 xl:col-span-9">
                         <div className="px-about-2-title-box p-relative">
                             <h3 className="px-about-2-title"><b className="text-effect">We are</b> <i>The Creative</i> <br />
                                 <em className="text-effect">
@@ -18,8 +18,8 @@ const About = () => {
                             </h3>
                         </div>
                     </div>
-                    <div className="col-xl-3">
-                        <div className="px-about-2-subtitle-box text-end">
+                    <div className="col-span-12 xl:col-span-3">
+                        <div className="px-about-2-subtitle-box text-right">
                             <SmartLink className="px-btn-zikzak text-center p-relative mb-90" href="/about-us">
                                 <span className="btn-text text-pos-1">
                                     About <br /> Us

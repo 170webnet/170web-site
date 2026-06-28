@@ -6,10 +6,10 @@ const FooterContactForm = () => {
     return (
         <form method="POST">
             <div className="px-footer-3-input-box">
-                <div className="row">
+                <div className="grid grid-cols-12 gap-x-6">
 
                     {/* Select */}
-                    <div className="col-xl-4">
+                    <div className="col-span-12 xl:col-span-4">
                         <div className="px-footer-3-select mb-10">
                             <NiceSelect
                                 className="nice-select px-select current"
@@ -27,22 +27,22 @@ const FooterContactForm = () => {
                     </div>
 
                     {/* Name */}
-                    <div className="col-xl-4">
+                    <div className="col-span-12 xl:col-span-4">
                         <div className="px-footer-3-input mb-15">
                             <input type="text" placeholder="Your name" />
                         </div>
                     </div>{" "}
 
                     {/* Email */}
-                    <div className="col-xl-4">
+                    <div className="col-span-12 xl:col-span-4">
                         <div className="px-footer-3-input mb-15">
                             <input type="email" placeholder="Your email" />
                         </div>
                     </div>{" "}
 
                     {/* Message */}
-                    <div className="col-xl-12">
-                        <div className="px-footer-3-input mb-15 position-relative">
+                    <div className="col-span-12 xl:col-span-12">
+                        <div className="px-footer-3-input mb-15 relative">
                             <input
                                 type="text"
                                 placeholder="How may I help you?"

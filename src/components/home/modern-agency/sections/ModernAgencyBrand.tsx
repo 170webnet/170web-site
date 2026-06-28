@@ -8,7 +8,7 @@ import { brands } from "@/data/brand-data";
 const Brand = () => {
     return (
         <section className="px-brand-area px-brand-style-4 pt-90">
-            <div className="container">
+            <div className="container-px">
                 <div className="px-brand-slider-wrap">
                     <div className="px-brand-3-active tp-slider-transtion">
                         <Swiper

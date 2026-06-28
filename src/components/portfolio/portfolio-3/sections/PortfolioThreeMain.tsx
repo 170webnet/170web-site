@@ -62,18 +62,18 @@ const PortfolioThreeMain = () => {
 
             {/* HEADER */}
             <div className="px-project-inner-top-ptb">
-                <div className="container-fluid">
-                    <div className="row justify-content-center">
-                        <div className="col-xl-9">
+                <div className="w-full px-3">
+                    <div className="grid grid-cols-12 gap-x-6 justify-center">
+                        <div className="col-span-12 xl:col-span-9">
                             <div className="px-project-inner-top-wrap">
-                                <div className="row">
-                                    <div className="col-lg-7">
+                                <div className="grid grid-cols-12 gap-x-6">
+                                    <div className="col-span-12 lg:col-span-7">
                                         <div className="px-project-inner-header">
                                             <span>Client</span>
                                         </div>
                                     </div>
-                                    <div className="col-lg-5">
-                                        <div className="px-project-inner-header d-flex justify-content-between">
+                                    <div className="col-span-12 lg:col-span-5">
+                                        <div className="px-project-inner-header flex justify-between">
                                             <span>Services</span>
                                             <span>Year</span>
                                         </div>

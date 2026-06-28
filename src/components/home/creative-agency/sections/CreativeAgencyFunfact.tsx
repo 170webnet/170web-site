@@ -43,10 +43,10 @@ const CreativeAgencyFunfact = () => {
 			className="ar-funfact-area ar-funfact-bg"
 			style={{ backgroundImage: `url(${funfactStyles.sectionBackgroundShape})` }}
 		>
-			<div className="container container-1330">
-				<div className="row">
+			<div className="mx-auto w-full max-w-[1330px] px-3">
+				<div className="grid grid-cols-12 gap-x-6">
 					{FUNFACTS.map((item) => (
-						<div className="col-lg-3 col-md-4" key={item.id}>
+						<div className="col-span-12 md:col-span-4 lg:col-span-3" key={item.id}>
 							<div
 								className="ar-funfact-item text-center mb-45 tp_fade_anim"
 								data-delay={item.delay}

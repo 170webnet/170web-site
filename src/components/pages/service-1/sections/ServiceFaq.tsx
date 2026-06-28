@@ -34,9 +34,9 @@ const ServiceFaq = () => {
     const [activeId, setActiveId] = useState<number>(1);
     return (
         <div className="px-inner-service-2-faq-ptb pt-190 pb-140">
-            <div className="container">
-                <div className="row">
-                    <div className="col-xl-6 col-lg-5">
+            <div className="container-px">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 lg:col-span-5 xl:col-span-6">
                         <div className="px-inner-service-2-heading mb-40">
                             <span className="px-capsule-subtitle">
                                 Digital Services
@@ -48,7 +48,7 @@ const ServiceFaq = () => {
                         </div>
                     </div>
 
-                    <div className="col-xl-6 col-lg-7">
+                    <div className="col-span-12 lg:col-span-7 xl:col-span-6">
                         <div className="px-inner-service-2-faq">
                             <div className="px-service-accordion-wrap">
                                 <div

@@ -13,9 +13,9 @@ const CreativeAgencyTestimonial = () => {
 
 	return (
 		<div className="ar-testimonial-area pt-120 pb-120">
-			<div className="container container-1330">
-				<div className="row justify-content-center">
-					<div className="col-xl-8">
+			<div className="mx-auto w-full max-w-[1330px] px-3">
+				<div className="grid grid-cols-12 gap-x-6 justify-center">
+					<div className="col-span-12 xl:col-span-8">
 						<div className="ar-testimonial-slider-wrap p-relative">
 
 							<div className="ar-testimonial-active fix">

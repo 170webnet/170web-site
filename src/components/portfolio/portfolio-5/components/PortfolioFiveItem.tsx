@@ -4,9 +4,9 @@ import Image from "next/image";
 
 const PortfolioFiveItem: React.FC<PortfolioProjectDT> = ({ id, filters, title, year, image }) => {
     return (
-        <div className={`col-lg-6 grid-item ${filters?.join(" ")}`}>
+        <div className={`col-span-12 lg:col-span-6 grid-item ${filters?.join(" ")}`}>
             <div className="px-project-item mb-20">
-                <div className="px-project-content d-flex align-items-center justify-content-between">
+                <div className="px-project-content flex items-center justify-between">
                     <h4 className="px-project-title">
                         <SmartLink href={`/portfolio-details-2/${id}`}>
                             {title}

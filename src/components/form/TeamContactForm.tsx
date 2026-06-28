@@ -36,10 +36,10 @@ const TeamContactForm = () => {
                 onSubmit={handleSubmit(onSubmit)}
                 className="tp-team-details-input-content"
             >
-                <div className="row gx-20">
+                <div className="grid grid-cols-12 gap-x-[20px]">
                     {/* Name */}
 
-                    <div className="col-lg-6">
+                    <div className="col-span-12 lg:col-span-6">
                         <div className="mb-20">
                             <input
                                 type="text"
@@ -63,7 +63,7 @@ const TeamContactForm = () => {
 
                     {/* Email */}
 
-                    <div className="col-lg-6">
+                    <div className="col-span-12 lg:col-span-6">
                         <div className="mb-20">
                             <input
                                 type="email"
@@ -87,7 +87,7 @@ const TeamContactForm = () => {
                     </div>
 
                     {/* Website */}
-                    <div className="col-lg-12">
+                    <div className="col-span-12 lg:col-span-12">
                         <div className="mb-20">
                             <input
                                 type="url"
@@ -111,7 +111,7 @@ const TeamContactForm = () => {
                     </div>
 
                     {/* Message */}
-                    <div className="col-lg-12">
+                    <div className="col-span-12 lg:col-span-12">
                         <div className="mb-20">
                             <textarea
                                 placeholder="Message"

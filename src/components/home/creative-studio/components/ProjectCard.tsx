@@ -5,7 +5,7 @@ import React from 'react';
 
 const ProjectCard: React.FC<PortfolioProjectDT> = ({ id, image, title, categories }) => {
     return (
-        <div key={id} className="col-lg-6">
+        <div key={id} className="col-span-12 lg:col-span-6">
             <div className="px-project-3-item mb-55">
                 <SmartLink href={`/portfolio-details-2/${id}`}>
                     <div className="px-project-3-thumb ripple-image">
@@ -18,7 +18,7 @@ const ProjectCard: React.FC<PortfolioProjectDT> = ({ id, image, title, categorie
                         />
                     </div>
                 </SmartLink>
-                <div className="px-project-3-content d-flex justify-content-between align-items-center">
+                <div className="px-project-3-content flex justify-between items-center">
                     <h4 className="px-project-3-title">
                         <SmartLink href={`/portfolio-details-2/${id}`}>{title}</SmartLink>
                     </h4>

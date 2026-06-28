@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const PortfolioOneItem: React.FC<PortfolioProjectDT> = ({ id, type, video, image, title, categories }) => {
     return (
-        <div className="col-lg-6">
+        <div className="col-span-12 lg:col-span-6">
             <div className="px-project-3-item mb-55">
                 <SmartLink href={`/portfolio-details-1/${id}`}>
                     <div className="px-project-3-thumb">
@@ -15,7 +15,7 @@ const PortfolioOneItem: React.FC<PortfolioProjectDT> = ({ id, type, video, image
                         ) : (
                             <div className="ripple-image">
                                 <Image
-                                    className="img-fluid w-100 h-auto"
+                                    className="img-fluid w-full h-auto"
                                     width={905}
                                     height={680}
                                     src={image}
@@ -25,7 +25,7 @@ const PortfolioOneItem: React.FC<PortfolioProjectDT> = ({ id, type, video, image
                         )}
                     </div>
                 </SmartLink>
-                <div className="px-project-3-content d-flex justify-content-between align-items-center">
+                <div className="px-project-3-content flex justify-between items-center">
                     <h4 className="px-project-3-title">
                         <SmartLink href={`/portfolio-details-1/${id}`}>
                             {title}

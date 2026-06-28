@@ -15,14 +15,14 @@ const MinimalPortfolioHero = () => {
             className="bf-hero-area bf-hero-spacing bg-position z-index-1 tp-image-distortion"
             data-background="/assets/img/update/hero/thumb.jpg"
         >
-            <div className="container-fluid container-1650">
+            <div className="w-full px-3 mx-auto max-w-[1650px]">
 
                 {/* Top Section */}
                 <div className="bf-hero-top">
-                    <div className="row">
+                    <div className="grid grid-cols-12 gap-x-6">
 
                         {/* Video */}
-                        <div className="col-lg-6 col-md-6">
+                        <div className="col-span-12 md:col-span-6 lg:col-span-6">
                             <div className="bf-hero-video mb-30 ml-150">
                                 <video loop muted autoPlay playsInline>
                                     <source
@@ -34,7 +34,7 @@ const MinimalPortfolioHero = () => {
                         </div>
 
                         {/* Services */}
-                        <div className="col-lg-6 col-md-6">
+                        <div className="col-span-12 md:col-span-6 lg:col-span-6">
                             <div className="bf-hero-right-content mb-30">
                                 <ul>
                                     {services.map((service) => (
@@ -54,10 +54,10 @@ const MinimalPortfolioHero = () => {
                 </div>
 
                 {/* Bottom Section */}
-                <div className="row align-items-end">
+                <div className="grid grid-cols-12 gap-x-6 items-end">
 
                     {/* Left Content */}
-                    <div className="col-lg-4">
+                    <div className="col-span-12 lg:col-span-4">
                         <div className="bf-hero-bottom-content ml-150 mb-30">
                             <p className="mb-30">
                                 Elevating Brands Through <br />
@@ -67,7 +67,7 @@ const MinimalPortfolioHero = () => {
 
                             <SmartLink
                                 href="/portfolio-1"
-                                className="tp-btn tp-btn-xl bf-btn-red d-inline-flex align-items-center"
+                                className="tp-btn tp-btn-xl bf-btn-red inline-flex items-center"
                             >
                                 <span>
                                     <span className="text-1">Discover Work</span>
@@ -78,7 +78,7 @@ const MinimalPortfolioHero = () => {
                     </div>
 
                     {/* Scrolling Words */}
-                    <div className="col-lg-8">
+                    <div className="col-span-12 lg:col-span-8">
                         <div className="bf-hero-bottom-title-wrap mb-30">
                             <div className="bf-hero-scrolling-words">
                                 <ul>

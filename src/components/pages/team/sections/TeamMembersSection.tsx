@@ -7,8 +7,8 @@ const TeamMembersSection = () => {
 
     return (
         <div className="px-team-area px-about-5-style pb-90">
-            <div className="container container-1550">
-                <div className="row">
+            <div className="mx-auto w-full max-w-[1550px] px-3">
+                <div className="grid grid-cols-12 gap-x-6">
                   {teamItems.map((member) => (
                        <TeamCard key={member.id} {...member}/>
                     ))}

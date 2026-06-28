@@ -72,7 +72,7 @@ const DigitalStudioContactForm = () => {
                 <button
                     type="submit"
                     aria-label="Send contact message"
-                    className="tp-btn tp-btn-xl d-inline-flex align-items-center justify-content-center w-100"
+                    className="tp-btn tp-btn-xl inline-flex items-center justify-center w-full"
                 >
                     <span>
                         <span className="text-1">Send Message</span>

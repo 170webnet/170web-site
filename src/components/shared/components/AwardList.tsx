@@ -9,15 +9,15 @@ const AwardList:React.FC<AwardItemProps> = ({id, image, title, nomination, year}
             className="px-award-item px-fade-anim"
             data-delay={""}
         >
-            <div className="row">
-                <div className="col-xl-3 col-lg-2 col-md-1">
+            <div className="grid grid-cols-12 gap-x-6">
+                <div className="col-span-12 md:col-span-1 lg:col-span-2 xl:col-span-3">
                     <div className="px-award-num">
                         <span>({String(id).padStart(3, "0")})</span>
                     </div>
                 </div>
 
-                <div className="col-xl-3 col-lg-4 col-md-5">
-                    <div className="px-award-category d-flex align-items-center gap-2">
+                <div className="col-span-12 md:col-span-5 lg:col-span-4 xl:col-span-3">
+                    <div className="px-award-category flex items-center gap-2">
                         <Image
                             src={image}
                             alt={title}
@@ -28,14 +28,14 @@ const AwardList:React.FC<AwardItemProps> = ({id, image, title, nomination, year}
                     </div>
                 </div>
 
-                <div className="col-xl-3 col-lg-4 col-md-5">
+                <div className="col-span-12 md:col-span-5 lg:col-span-4 xl:col-span-3">
                     <div className="px-award-nomination">
                         <span>{nomination}</span>
                     </div>
                 </div>
 
-                <div className="col-xl-3 col-lg-2 col-md-1">
-                    <div className="px-award-year text-md-end">
+                <div className="col-span-12 md:col-span-1 lg:col-span-2 xl:col-span-3">
+                    <div className="px-award-year md:text-right">
                         <span>{year}</span>
                     </div>
                 </div>

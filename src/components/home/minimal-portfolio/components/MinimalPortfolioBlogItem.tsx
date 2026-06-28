@@ -5,18 +5,18 @@ import Image from "next/image";
 
 const MinimalPortfolioBlogItem: React.FC<blogDt> = ({ id, image, title, category, date }) => {
     return (
-        <div className="col-lg-4 col-md-6">
+        <div className="col-span-12 md:col-span-6 lg:col-span-4">
             <div className="tp-blog-item mb-30">
                 <div className="tp-blog-thumb fix mb-25">
                     <Image width={426} height={446}
-                        className="w-100 img-fluid"
+                        className="w-full img-fluid"
                         src={image}
                         alt={title}
                     />
                 </div>
 
                 <div className="tp-blog-content">
-                    <div className="tp-blog-tag-inner d-flex align-items-center mb-20">
+                    <div className="tp-blog-tag-inner flex items-center mb-20">
                         <span className="tp-blog-tag mr-20">
                             {category}
                         </span>

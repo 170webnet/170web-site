@@ -7,7 +7,7 @@ export default function ModernAgencyLayout({ children }: {
 }) {
     return (
         <ClientProviders>
-            <PageHeader containerSize="container-1870" />
+            <PageHeader containerSize="max-w-[1870px]" />
             <div id="smooth-wrapper">
                 <div id="smooth-content">
                     {children}

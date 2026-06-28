@@ -88,7 +88,7 @@ const BlogSidebar = () => {
                     </div>
 
                     <div className="sidebar-widget-author-btn">
-                        <Link className="tp-btn-px sidebar-btn w-100" href="#">
+                        <Link className="tp-btn-px sidebar-btn w-full" href="#">
                             <span>
                                 <span className="text-1">Pixora Theme</span>
                                 <span className="text-2">Pixora Theme</span>
@@ -107,7 +107,7 @@ const BlogSidebar = () => {
                         {categories.map((item) => (
                             <li key={item.id}>
                                 <Link
-                                    className="d-flex align-items-center justify-content-between"
+                                    className="flex items-center justify-between"
                                     href="#"
                                 >
                                     {item.name}
@@ -124,10 +124,10 @@ const BlogSidebar = () => {
                 <h3 className="sidebar-widget-title">Latest Posts</h3>
                 <div className="rc-post-wrap">
                     {latestPosts.map((post) => (
-                        <div key={post.id} className="rc-post d-flex align-items-center">
+                        <div key={post.id} className="rc-post flex items-center">
                             <div className="rc-post-thumb">
                                 <Link href="#">
-                                    <Image className="img-fluid w-100 h-auto" width={140} height={140} src={post.img} alt="post" />
+                                    <Image className="img-fluid w-full h-auto" width={140} height={140} src={post.img} alt="post" />
                                 </Link>
                             </div>
 

@@ -19,9 +19,9 @@ const PortfolioDetailsVarientOne = ({ id }: IdProps) => {
     return (
         <>
             <div className="px-pd-2-ptb px-pd-style pt-200 pb-80">
-                <div className="container container-1230">
-                    <div className="row justify-content-center">
-                        <div className="col-lg-10">
+                <div className="mx-auto w-full max-w-[1230px] px-3">
+                    <div className="grid grid-cols-12 gap-x-6 justify-center">
+                        <div className="col-span-12 lg:col-span-10">
                             {/* Categories + Title */}
                             <div className="px-pd-2-top pb-70 text-center">
                                 <div
@@ -39,7 +39,7 @@ const PortfolioDetailsVarientOne = ({ id }: IdProps) => {
                             </div>
                             {/* Meta Info */}
                             <div
-                                className="px-pd-2-bottom d-flex justify-content-between tp_fade_anim"
+                                className="px-pd-2-bottom flex justify-between tp_fade_anim"
                                 data-delay=".7"
                             >
                                 <div className="px-pd-2-bottom-item text-center">

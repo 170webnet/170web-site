@@ -57,17 +57,17 @@ const ArrowIcon = () => (
 const PortfolioDetailsWorkReview = () => {
     return (
         <section className="px-pd-4-work-ptb px-pd-style pb-130">
-            <div className="container container-1230">
+            <div className="mx-auto w-full max-w-[1230px] px-3">
                 {/* Top Section */}
                 <div className="px-pd-4-work-top pb-70">
-                    <div className="row">
-                        <div className="col-lg-12">
+                    <div className="grid grid-cols-12 gap-x-6">
+                        <div className="col-span-12 lg:col-span-12">
                             <div className="px-pd-4-work-heading pb-60">
                                 <h2 className="px-pd-4-work-title">Work Overview</h2>
                             </div>
                         </div>
 
-                        <div className="col-lg-4">
+                        <div className="col-span-12 lg:col-span-4">
                             <div className="px-pd-4-work-heading">
                                 <span className="px-pd-4-about-title">
                                     OUR <br /> APPROACH <ArrowIcon />
@@ -75,7 +75,7 @@ const PortfolioDetailsWorkReview = () => {
                             </div>
                         </div>
 
-                        <div className="col-lg-8">
+                        <div className="col-span-12 lg:col-span-8">
                             <div className="px-pd-4-work-content pl-20">
                                 <p>
                                     Our journey has been marked by countless successful
@@ -89,9 +89,9 @@ const PortfolioDetailsWorkReview = () => {
                 </div>
 
                 {/* Stats Section */}
-                <div className="row">
+                <div className="grid grid-cols-12 gap-x-6">
                     {stats.map((stat) => (
-                        <div className="col-lg-6" key={stat.id}>
+                        <div className="col-span-12 lg:col-span-6" key={stat.id}>
                             <StatCard value={stat.value} label={stat.label} />
                         </div>
                     ))}

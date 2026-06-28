@@ -23,12 +23,12 @@ const PersonalPortfolioAbout = () => {
             className="px-about-6-area pt-110 pb-110"
             style={{ backgroundColor: aboutConfig.sectionBg }}
         >
-            <div className="container">
+            <div className="container-px">
                 {/* TOP */}
                 <div className="px-about-6-top mb-100">
-                    <div className="row align-items-center">
+                    <div className="grid grid-cols-12 gap-x-6 items-center">
                         {/* TITLE */}
-                        <div className="col-xl-5 col-lg-6">
+                        <div className="col-span-12 lg:col-span-6 xl:col-span-5">
                             <div className="px-about-6-title-box">
                                 <span className="px-section-subtitle mb-35">About me</span>
                                 <h4 className="px-section-title ff-thunder fs-130">
@@ -40,7 +40,7 @@ const PersonalPortfolioAbout = () => {
                         {/* SLIDER */}
 
                         {/* SLIDER */}
-                        <div className="offset-xl-1 col-xl-6 col-lg-6">
+                        <div className="xl:col-start-2 col-span-12 lg:col-span-6 xl:col-span-6">
                             <div className="px-service-6-wrap pt-15">
                                 <div className="px-service-6-slide-wrap fix">
                                     <Swiper
@@ -69,9 +69,9 @@ const PersonalPortfolioAbout = () => {
                 </div>
 
                 {/* CONTENT */}
-                <div className="row">
+                <div className="grid grid-cols-12 gap-x-6">
                     {/* IMAGE */}
-                    <div className="col-xl-5 col-lg-5">
+                    <div className="col-span-12 lg:col-span-5 xl:col-span-5">
                         <div className="px-about-6-thumb pt-25">
                             <Image
                                 className="img-fluid"
@@ -84,7 +84,7 @@ const PersonalPortfolioAbout = () => {
                     </div>
 
                     {/* TEXT */}
-                    <div className="offset-xl-1 col-xl-6 col-lg-7">
+                    <div className="xl:col-start-2 col-span-12 lg:col-span-7 xl:col-span-6">
                         <div className="px-about-6-content">
                         <p>
                               {`I'm`} a French digital designer and web

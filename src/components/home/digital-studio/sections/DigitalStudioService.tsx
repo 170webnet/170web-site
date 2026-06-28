@@ -10,9 +10,9 @@ const DigitalStudioService = () => {
             className="bf-service-area bf-service-3-rounded pt-150 pb-160"
             style={{ backgroundColor: "#151515" }}
         >
-            <div className="container container-1320">
-                <div className="row">
-                    <div className="col-lg-5">
+            <div className="mx-auto w-full max-w-[1320px] px-3">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 lg:col-span-5">
                         <div
                             className="bf-service-heading mb-60 tp_fade_anim"
                             data-delay=".3"
@@ -22,7 +22,7 @@ const DigitalStudioService = () => {
                             </span>
                         </div>
                     </div>
-                    <div className="col-lg-7">
+                    <div className="col-span-12 lg:col-span-7">
                         <div className="bf-service-heading mb-60">
                             <h3
                                 className="bf-section-title-3 text-white mb-20 tp_fade_anim"

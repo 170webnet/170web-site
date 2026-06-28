@@ -7,7 +7,7 @@ const Testimonialtem: React.FC<TestimonialItemProps> = ({ quote, avatar, name, d
             <p>
                 {quote}
             </p>
-            <div className="px-testimonial-client d-flex align-items-center">
+            <div className="px-testimonial-client flex items-center">
                 <div className="px-testimonial-avater mr-20">
                     <Image
                         src={avatar}

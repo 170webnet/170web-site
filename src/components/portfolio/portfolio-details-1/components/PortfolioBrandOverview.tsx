@@ -2,14 +2,14 @@
 const PortfolioBrandOverview = () => {
     return (
         <div className="px-pd-2-overview-ptb px-pd-style pb-70">
-            <div className="container container-1230">
-                <div className="row">
-                    <div className="col-lg-6">
+            <div className="mx-auto w-full max-w-[1230px] px-3">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 lg:col-span-6">
                         <div className="px-pd-2-overview-heading tp_fade_anim" data-delay=".3">
                             <h3 className="px-pd-2-overview-title">Brand overview</h3>
                         </div>
                     </div>
-                    <div className="col-lg-6">
+                    <div className="col-span-12 lg:col-span-6">
                         <div className="px-pd-2-overview-wrap">
                             <p>Solfeggio Obscuro is a music event shaped by the pulse of the underground,
                                 where rhythm moves the body and sound opens the mind. Obscuro suggests

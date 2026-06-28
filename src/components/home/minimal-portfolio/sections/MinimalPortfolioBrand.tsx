@@ -12,20 +12,20 @@ const brandLogos = [
 const MinimalPortfolioBrand = () => {
     return (
         <div className="bf-brands-area">
-            <div className="container container-1350">
-                <div className="row">
-                    <div className="col-12">
+            <div className="mx-auto w-full max-w-[1350px] px-3">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12">
                         <div className="bf-brands-wrap">
-                            <span className="bf-brands-title mb-30 d-inline-block">
+                            <span className="bf-brands-title mb-30 inline-block">
                                 Trusted by these amazing companies
                             </span>
                             <div className="bf-brands-item-wrap">
-                                <div className="row gx-5">
+                                <div className="grid grid-cols-12 gap-x-[5px]">
 
                                     {brandLogos.map((logo,index) => (
                                         <div
                                             key={logo}
-                                            className="col-lg-2 col-md-4 col-sm-4 col-6"
+                                            className="col-span-6 sm:col-span-4 md:col-span-4 lg:col-span-2"
                                         >
                                             <div className="bf-brands-item mb-5">
                                                 <Image width={128} height={30} className="img-fluid w-auto h-auto"

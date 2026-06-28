@@ -63,7 +63,7 @@ const PortfolioMixSlicerMain = () => {
                             <div className="tp-portfolio-mix-slider-item">
                                 {/* Image */}
                                 <div className="tp-portfolio-mix-slider-image">
-                                    <Image className="img-fluid w-100 h-auto" width={1920} height={1080} src={slide.img} alt={slide.title} />
+                                    <Image className="img-fluid w-full h-auto" width={1920} height={1080} src={slide.img} alt={slide.title} />
                                     <PhotoView key={slide.id} src={slide.img}>
                                         <div className="popup-image">
                                             <i className="fa-regular fa-arrows-maximize"></i>
@@ -87,7 +87,7 @@ const PortfolioMixSlicerMain = () => {
             </PhotoProviderWrapper>
             {/* Navigation */}
             <div className="tp-portfolio-mix-slider-navigation overflow-hidden">
-                <div className="container-fluid container-1750">
+                <div className="mx-auto w-full max-w-[1750px] px-3">
                     <div className="slider-nav">
                         <div className="tp-portfolio-mix-button-prev nav-icon">
                             <i className="fa-solid fa-angle-left"></i>Prev

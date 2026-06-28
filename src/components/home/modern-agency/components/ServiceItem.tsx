@@ -6,9 +6,9 @@ const ServiceItem: React.FC<ServiceDT> = ({ id, href, title, images }) => {
     return (
         <div
             key={id}
-            className="px-service-4-item d-flex justify-content-between align-items-center"
+            className="px-service-4-item flex justify-between items-center"
         >
-            <div className="px-service-4-content d-flex align-items-center">
+            <div className="px-service-4-content flex items-center">
                 <span>[0{id}]</span>
 
                 <SmartLink href={href}>
@@ -19,7 +19,7 @@ const ServiceItem: React.FC<ServiceDT> = ({ id, href, title, images }) => {
                 </SmartLink>
             </div>
 
-            <div className="px-service-4-thumb d-none d-md-block px-3d-anim">
+            <div className="px-service-4-thumb hidden md:block px-3d-anim">
                 {images.map((img, index) => (
                     <span key={`${img}-${index}`}>
                         <Image

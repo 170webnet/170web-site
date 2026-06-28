@@ -10,7 +10,7 @@ interface CAStepItemProps {
 const CAStepItem: React.FC<CAStepItemProps> = ({ bg, number, desc, title }) => {
     return (
         <div
-            className="offset-xxl-8 col-xxl-4 offset-xl-7 col-xl-5 col-lg-6"
+            className="col-span-12 2xl:col-start-9 2xl:col-span-4 xl:col-start-8 xl:col-span-5 lg:col-span-6"
         >
             <div
                 className="px-step-card"
@@ -19,7 +19,7 @@ const CAStepItem: React.FC<CAStepItemProps> = ({ bg, number, desc, title }) => {
                 <div className="px-step-card-badge">
                     <span>Step</span>
                 </div>
-                <div className="px-step-card-content text-end">
+                <div className="px-step-card-content text-right">
                     <span>{number}</span>
                     <p>
                         {desc.split("\n").map((line, i) => (

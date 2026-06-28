@@ -6,10 +6,10 @@ const Service = () => {
             className="px-service-area px-service-3-style pt-120 z-index-1"
             style={{ backgroundColor: "#000000" }}
         >
-            <div className="container container-1750">
+            <div className="mx-auto w-full max-w-[1750px] px-3">
                 {/* Title */}
-                <div className="row">
-                    <div className="col-xl-12">
+                <div className="grid grid-cols-12 gap-x-6">
+                    <div className="col-span-12 xl:col-span-12">
                         <div
                             className="px-service-text text-center mb-50 px-fade-anim"
                             data-delay=".3"
@@ -21,9 +21,9 @@ const Service = () => {
                     </div>
                 </div>
 
-                <div className="row align-items-start">
+                <div className="grid grid-cols-12 gap-x-6 items-start">
                     {/* Video */}
-                    <div className="col-xl-6 d-none d-xl-block">
+                    <div className="col-span-12 xl:col-span-6 hidden xl:block">
                         <div className="px-service-3-video">
                             <video width={650} loop muted autoPlay playsInline>
                                 <source
@@ -35,7 +35,7 @@ const Service = () => {
                     </div>
 
                     {/* Accordion */}
-                    <div className="col-xl-6">
+                    <div className="col-span-12 xl:col-span-6">
                         <div className="px-service-accordion-wrap">
                             <div className="accordion" id="accordionExample1">
                                 {services.map((service, index) => {
