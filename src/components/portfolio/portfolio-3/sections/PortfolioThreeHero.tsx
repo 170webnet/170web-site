@@ -21,7 +21,6 @@ const PortfolioThreeHero = () => {
                                 <Link href="#">Linkedin</Link>
                                 <Link href="#">Instagram</Link>
                                 <Link href="#">Dribbble</Link>
-                                <Link href="#">Behance</Link>
                             </div>
                         </div>
                     </div>

@@ -1,3 +1,4 @@
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
 const BlogPagination = () => {
@@ -7,7 +8,7 @@ const BlogPagination = () => {
                 <ul>
                     <li>
                         <Link href="/blog-standard">
-                            <i className="fa-regular fa-angle-left"></i>
+                            <ChevronLeft size={18} aria-hidden="true" />
                         </Link>
                     </li>
                     <li>
@@ -18,7 +19,7 @@ const BlogPagination = () => {
                     </li>
                     <li>
                         <Link href="/blog-standard">
-                            <i className="fa-regular fa-angle-right"></i>
+                            <ChevronRight size={18} aria-hidden="true" />
                         </Link>
                     </li>
                 </ul>

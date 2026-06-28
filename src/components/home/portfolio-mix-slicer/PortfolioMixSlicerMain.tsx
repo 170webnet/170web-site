@@ -4,6 +4,7 @@ import { PhotoProviderWrapper } from "@/components/wrappers";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { SmartLink } from "@/components/common";
 import { PhotoView } from "react-photo-view";
+import { Maximize2, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
 const slides = [
@@ -66,7 +67,7 @@ const PortfolioMixSlicerMain = () => {
                                     <Image className="max-w-full h-auto w-full h-auto" width={1920} height={1080} src={slide.img} alt={slide.title} />
                                     <PhotoView key={slide.id} src={slide.img}>
                                         <div className="popup-image">
-                                            <i className="fa-regular fa-arrows-maximize"></i>
+                                            <Maximize2 aria-hidden="true" />
                                         </div>
                                     </PhotoView>
                                 </div>
@@ -89,11 +90,11 @@ const PortfolioMixSlicerMain = () => {
             <div className="tp-portfolio-mix-slider-navigation overflow-hidden">
                 <div className="mx-auto w-full max-w-[1750px] px-3">
                     <div className="slider-nav">
-                        <div className="tp-portfolio-mix-button-prev nav-icon">
-                            <i className="fa-solid fa-angle-left"></i>Prev
+                        <div className="tp-portfolio-mix-button-prev nav-icon inline-flex items-center gap-1">
+                            <ChevronLeft size={18} aria-hidden="true" />Prev
                         </div>
-                        <div className="tp-portfolio-mix-button-next nav-icon">
-                            Next<i className="fa-solid fa-angle-right"></i>
+                        <div className="tp-portfolio-mix-button-next nav-icon inline-flex items-center gap-1">
+                            Next<ChevronRight size={18} aria-hidden="true" />
                         </div>
                     </div>
                 </div>

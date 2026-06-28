@@ -1,5 +1,6 @@
 import { getCurrentYear } from "@/utils/getCurrentYear";
 import { ArrowRightIcon } from "@/svg/FooterIcons";
+import { InstragramIcon, DribbleIcon, YoutubeIcon } from "@/svg/SocialIcons";
 import { ScrollLink } from "@/components/common";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,10 +8,9 @@ import Image from "next/image";
 /* ------------------ DATA ------------------ */
 
 const socialLinks = [
-    { id: "instagram", icon: "fa-instagram", href: "#" },
-    { id: "dribbble", icon: "fa-dribbble", href: "#" },
-    { id: "behance", icon: "fa-behance", href: "#" },
-    { id: "youtube", icon: "fa-youtube", href: "#" },
+    { id: "instagram", Icon: InstragramIcon, href: "#" },
+    { id: "dribbble", Icon: DribbleIcon, href: "#" },
+    { id: "youtube", Icon: YoutubeIcon, href: "#" },
 ];
 
 const locations = [
@@ -51,8 +51,8 @@ const FooterTop = () => (
             <div className="tp-footer-social mb-70 flex md:justify-end">
                 {socialLinks.map((item) => (
                     <span key={item.id}>
-                        <Link href={item.href}>
-                            <i className={`fa-brands ${item.icon}`}></i>
+                        <Link href={item.href} className="inline-flex transition-transform duration-200 hover:scale-110">
+                            <item.Icon aria-hidden="true" />
                         </Link>
                     </span>
                 ))}

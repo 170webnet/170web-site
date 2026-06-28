@@ -6,7 +6,6 @@ import Link from "next/link";
 const socialLinks = [
     {id:1, label: "Twitter", href: "#" },
     {id:2, label: "Instagram", href: "#" },
-    {id:3, label: "Behance", href: "#" },
     {id:4, label: "Dribbble", href: "#" },
 ];
 

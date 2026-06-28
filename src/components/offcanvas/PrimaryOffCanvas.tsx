@@ -1,5 +1,5 @@
 "use client";
-import { BehanceIcon, CroseIcon, DribbleIcon, InstragramIcon, YoutubeIcon } from "@/svg";
+import { CroseIcon, DribbleIcon, InstragramIcon, YoutubeIcon } from "@/svg";
 import { PhotoProviderWrapper } from "../wrappers";
 import useGlobalContext from "@/hooks/useContext";
 import { usePathname } from "next/navigation";
@@ -86,9 +86,6 @@ const PrimaryOffCanvas = () => {
                                 </li>
                                 <li>
                                     <Link href="#"><DribbleIcon /></Link>
-                                </li>
-                                <li>
-                                    <Link href="#"><BehanceIcon /></Link>
                                 </li>
                                 <li>
                                     <Link href="#"><YoutubeIcon /></Link>

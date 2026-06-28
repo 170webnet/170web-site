@@ -21,15 +21,14 @@
                     &.has-dropdown{
                         & > a{
                             &::after {
-                                content: "\f107";
+                                content: "\25BE";
                                 font-size: 16px;
                                 font-weight: 400;
                                 margin-left: 5px;
                                 display: inline-block;
                                 color: var(--tp-common-px-black);
                                 transition: all 0.3s 0s ease-out;
-                                font-family: var(--tp-ff-fontawesome);   
-                            }
+                                font-family: inherit;}
                         }
                         &:hover > a {
                             &::after {

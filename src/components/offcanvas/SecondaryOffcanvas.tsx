@@ -3,6 +3,7 @@ import { offcanvasMenu } from "@/data/MenuRenderer/offcanvas-menu";
 import useGlobalContext from "@/hooks/useContext";
 import { BlogBtnArrowIcon } from "@/svg";
 import { SmartLink } from "../common";
+import { Plus } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 
@@ -109,9 +110,10 @@ const SecondaryOffcanvas = ({ menuOpenTemp }: { menuOpenTemp: boolean }) => {
                                                                     aria-label={isOpen ? "Close submenu" : "Open submenu"}
                                                                     aria-expanded={isOpen}
                                                                 >
-                                                                    <i
-                                                                        className={`fa-solid ${isOpen ? "fa-minus" : "fa-plus"}`}
+                                                                    <Plus
+                                                                        size={18}
                                                                         aria-hidden="true"
+                                                                        className={`transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}
                                                                     />
                                                                 </button>
                                                             </>

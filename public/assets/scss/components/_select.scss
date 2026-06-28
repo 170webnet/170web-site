@@ -24,7 +24,7 @@
     }
     &::after {
         position: absolute;
-        content: "\f107";
+        content: "\25BE";
         top: 50%;
         right: 20px;
         margin-top: 0;
@@ -35,8 +35,7 @@
         transform-origin: center;
         transform: translateY(-50%);
         color: rgba(255, 255, 255, 0.70);
-        font-family: var(--tp-ff-fontawesome);
-    }
+        font-family: inherit;}
     &.open{
         border-color: var(--tp-common-px-white);
         &::after{
