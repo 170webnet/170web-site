@@ -122,7 +122,7 @@ export default function ShadcnDemoPage() {
         {/* Accordion */}
         <section className="space-y-3">
           <h2 className="text-xl font-medium">Accordion</h2>
-          <Accordion className="w-full">
+          <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
               <AccordionTrigger>É acessível?</AccordionTrigger>
               <AccordionContent>Sim. Segue padrões WAI-ARIA.</AccordionContent>
