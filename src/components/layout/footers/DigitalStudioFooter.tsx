@@ -1,6 +1,6 @@
 import { getCurrentYear } from "@/utils/getCurrentYear";
 import { ArrowRightIcon } from "@/svg/FooterIcons";
-import { InstragramIcon, DribbleIcon, YoutubeIcon } from "@/svg/SocialIcons";
+import { SiInstagram, SiDribbble, SiYoutube } from "react-icons/si";
 import { ScrollLink } from "@/components/common";
 import Link from "next/link";
 import Image from "next/image";
@@ -8,9 +8,9 @@ import Image from "next/image";
 /* ------------------ DATA ------------------ */
 
 const socialLinks = [
-    { id: "instagram", Icon: InstragramIcon, href: "#" },
-    { id: "dribbble", Icon: DribbleIcon, href: "#" },
-    { id: "youtube", Icon: YoutubeIcon, href: "#" },
+    { id: "instagram", Icon: SiInstagram, href: "#" },
+    { id: "dribbble", Icon: SiDribbble, href: "#" },
+    { id: "youtube", Icon: SiYoutube, href: "#" },
 ];
 
 const locations = [

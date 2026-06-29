@@ -1,4 +1,5 @@
-import { DribbleIcon, FacebookIcon, InstragramIconTwo, TwittorIcon } from "@/svg/SocialIcons";
+import { SiFacebook, SiX, SiDribbble, SiInstagram } from "react-icons/si";
+
 import { BlogCommentIcon, BlogEditIcon, BlogQuoteIcon, BlogTimeIcon } from "@/svg";
 import PostboxDetailsForm from "@/components/form/PostboxDetailsForm";
 import PostboxDetailsAuthor from "../PostboxDetailsAuthor";
@@ -18,10 +19,10 @@ const tags = [
     { id: "theme", name: "Theme" },
 ];
 const socialLinks = [
-    { id: "facebook", icon: <FacebookIcon />, link: "#" },
-    { id: "twitter", icon: <TwittorIcon />, link: "#" },
-    { id: "dribbble", icon: <DribbleIcon />, link: "#" },
-    { id: "instagram", icon: <InstragramIconTwo />, link: "#" },
+    { id: "facebook", icon: <SiFacebook />, link: "#" },
+    { id: "twitter", icon: <SiX />, link: "#" },
+    { id: "dribbble", icon: <SiDribbble />, link: "#" },
+    { id: "instagram", icon: <SiInstagram />, link: "#" },
 ];
 
 const BlogDetailsArea = ({ id }: IdProps) => {

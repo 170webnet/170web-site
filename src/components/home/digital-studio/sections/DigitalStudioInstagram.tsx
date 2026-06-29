@@ -1,5 +1,6 @@
+import { SiInstagram } from "react-icons/si";
 /* eslint-disable @next/next/no-img-element */
-import { InstragramIcon } from "@/svg/SocialIcons";
+
 import Link from "next/link";
 
 const instagramImages = [
@@ -29,7 +30,7 @@ const DigitalStudioInstagram = () => {
                 {/* Instagram Icon */}
                 <div className="bf-instagram-thumb-inner-8 hidden xl:block">
                     <Link href="#" className="inline-flex transition-transform duration-200 hover:scale-110">
-                        <InstragramIcon />
+                        <SiInstagram />
                     </Link>
                 </div>
 

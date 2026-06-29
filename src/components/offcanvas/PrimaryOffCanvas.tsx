@@ -1,5 +1,6 @@
 "use client";
-import { CroseIcon, DribbleIcon, InstragramIcon, YoutubeIcon } from "@/svg";
+import { SiDribbble, SiInstagram, SiYoutube } from "react-icons/si";
+import { CroseIcon } from "@/svg";
 import { PhotoProviderWrapper } from "../wrappers";
 import useGlobalContext from "@/hooks/useContext";
 import { usePathname } from "next/navigation";
@@ -82,13 +83,13 @@ const PrimaryOffCanvas = () => {
                             <h3 className="tp-offcanvas-title sm">Follow Us</h3>
                             <ul>
                                 <li>
-                                    <Link href="#"><InstragramIcon /></Link>
+                                    <Link href="#"><SiInstagram /></Link>
                                 </li>
                                 <li>
-                                    <Link href="#"><DribbleIcon /></Link>
+                                    <Link href="#"><SiDribbble /></Link>
                                 </li>
                                 <li>
-                                    <Link href="#"><YoutubeIcon /></Link>
+                                    <Link href="#"><SiYoutube /></Link>
                                 </li>
                             </ul>
                         </div>

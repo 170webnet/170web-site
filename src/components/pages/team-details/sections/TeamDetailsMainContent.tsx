@@ -1,4 +1,5 @@
-import { DribbleIcon, FacebookIcon, TwittorIcon } from "@/svg/SocialIcons";
+import { SiFacebook, SiX, SiDribbble } from "react-icons/si";
+
 import TeamContactForm from "@/components/form/TeamContactForm";
 import { team_members } from "@/data/team-data";
 import { EmailIcon, PhoneIcon } from "@/svg";
@@ -54,7 +55,7 @@ const TeamDetailsMainContent = ({ id }: IdProps) => {
                                         {team?.social_links?.facebook && (
                                             <Link href={team?.social_links.facebook}>
                                                 <span>
-                                                    <FacebookIcon />
+                                                    <SiFacebook />
                                                 </span>
                                             </Link>
                                         )}
@@ -62,21 +63,15 @@ const TeamDetailsMainContent = ({ id }: IdProps) => {
                                         {team?.social_links?.twitter && (
                                             <Link href={team?.social_links.twitter}>
                                                 <span>
-                                                    <TwittorIcon />
+                                                    <SiX />
                                                 </span>
                                             </Link>
                                         )}
 
-                                        {(team?.social_links?.dribbble || team?.social_links?.behance) && (
-                                            <Link
-                                                href={
-                                                    team?.social_links?.dribbble ||
-                                                    team?.social_links?.behance ||
-                                                    "#"
-                                                }
-                                            >
+                                        {team?.social_links?.dribbble && (
+                                            <Link href={team?.social_links?.dribbble || "#"}>
                                                 <span>
-                                                    <DribbleIcon />
+                                                    <SiDribbble />
                                                 </span>
                                             </Link>
                                         )}

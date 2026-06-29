@@ -1,9 +1,5 @@
-import {
-    BlogDribbleIcon,
-    BlogFacebookIcon,
-    BlogInstragramIcon,
-    BlogTwittorIcon,
-} from "@/svg/BlogIcons";
+import { SiFacebook, SiX, SiDribbble, SiInstagram } from "react-icons/si";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,10 +11,10 @@ const authorData = {
 };
 
 const socialLinks = [
-    { id: "facebook", icon: <BlogFacebookIcon />, link: "#" },
-    { id: "twitter", icon: <BlogTwittorIcon />, link: "#" },
-    { id: "dribbble", icon: <BlogDribbleIcon />, link: "#" },
-    { id: "instagram", icon: <BlogInstragramIcon />, link: "#" },
+    { id: "facebook", icon: <SiFacebook />, link: "#" },
+    { id: "twitter", icon: <SiX />, link: "#" },
+    { id: "dribbble", icon: <SiDribbble />, link: "#" },
+    { id: "instagram", icon: <SiInstagram />, link: "#" },
 ];
 
 const PostboxDetailsAuthor = () => {

@@ -1,4 +1,5 @@
-import { DribbleIcon, FacebookIcon, TwittorIcon, YoutubeIcon } from "@/svg/SocialIcons";
+import { SiFacebook, SiX, SiDribbble, SiYoutube } from "react-icons/si";
+
 import { offcanvasMenu } from "@/data/MenuRenderer/offcanvas-menu";
 import useGlobalContext from "@/hooks/useContext";
 import { BlogBtnArrowIcon } from "@/svg";
@@ -11,22 +12,22 @@ const socialLinks = [
     {
         id: "facebook",
         href: "#",
-        icon: <FacebookIcon />,
+        icon: <SiFacebook />,
     },
     {
         id: "dribbble",
         href: "#",
-        icon: <DribbleIcon />,
+        icon: <SiDribbble />,
     },
     {
         id: "twitter",
         href: "#",
-        icon: <TwittorIcon />,
+        icon: <SiX />,
     },
     {
         id: "youtube",
         href: "#",
-        icon: <YoutubeIcon />,
+        icon: <SiYoutube />,
     },
 ];
 

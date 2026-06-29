@@ -1,5 +1,5 @@
 import { SocialShape } from "@/svg/ShapeIcons";
-import { MailIcon } from "@/svg/SocialIcons";
+import { Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -45,7 +45,7 @@ const CreativeAgencySocial = () => {
                             <div className="px-social-mail">
                                 <Link className="px-line-lr" href={`mailto:${EMAIL}`}>
                                     <span>
-                                        <MailIcon />
+                                        <Mail size={18} />
                                     </span>
                                     {EMAIL}
                                 </Link>

@@ -1,5 +1,6 @@
+import { SiFacebook, SiX, SiInstagram } from "react-icons/si";
 
-import { FacebookIconTwo, InstragramIconThree, TwittorIconTwo } from "@/svg/SocialIcons";
+
 import { SmartLink } from "@/components/common";
 import { TeamItemDT } from "@/types";
 import Image from "next/image";
@@ -10,17 +11,17 @@ const SocialLinks = () => {
         <div className="px-team-social-icon">
             <Link href="#">
                 <span>
-                    <FacebookIconTwo />
+                    <SiFacebook />
                 </span>
             </Link>
             <Link href="#">
                 <span>
-                    <TwittorIconTwo />
+                    <SiX />
                 </span>
             </Link>
             <Link href="#">
                 <span>
-                    <InstragramIconThree />
+                    <SiInstagram />
                 </span>
             </Link>
         </div>

@@ -1,8 +1,5 @@
-import {
-    BlogDribbleIcon,
-    BlogInstragramIcon,
-    BlogTwittorIcon,
-} from "@/svg/BlogIcons";
+import { SiX, SiDribbble, SiInstagram } from "react-icons/si";
+
 import BlogStandardSearchForm from "../form/BlogStandardSearchForm";
 import Link from "next/link";
 import Image from "next/image";
@@ -48,9 +45,9 @@ const tags = [
 ];
 
 const socialLinks = [
-    { id: "twitter", icon: <BlogTwittorIcon />, link: "#" },
-    { id: "dribbble", icon: <BlogDribbleIcon />, link: "#" },
-    { id: "instagram", icon: <BlogInstragramIcon />, link: "#" },
+    { id: "twitter", icon: <SiX />, link: "#" },
+    { id: "dribbble", icon: <SiDribbble />, link: "#" },
+    { id: "instagram", icon: <SiInstagram />, link: "#" },
 ];
 
 const BlogSidebar = () => {
