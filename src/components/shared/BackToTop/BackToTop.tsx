@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from "react";
-import { BackToTopArrow } from "@/svg";
+import { ChevronUp } from "lucide-react";
 
 export default function BackToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -40,7 +40,7 @@ export default function BackToTop() {
       aria-label="Back to top"
     >
       <span className="back-to-top-trigger">
-        <BackToTopArrow />
+        <ChevronUp size={20} strokeWidth={2.5} />
       </span>
     </button>
   );

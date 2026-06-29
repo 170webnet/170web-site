@@ -30,19 +30,16 @@
 }
 
 .back-to-top-trigger{
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	width: 44px;
 	height: 44px;
-	line-height: 44px;
-	text-align: center;
 	background: var(--tp-common-px-white);
 	box-shadow: 0px 8px 16px rgba(3, 4, 28, 0.3);
 	color: var(--tp-common-px-black);
 	border-radius: 50%;
 	@include tp-transition(all, .3s);
-	& svg{
-		@include tp-transform(translateY(-2px));
-	}
 
 	&:hover{
 		@include tp-transform(translateY(-4px));
