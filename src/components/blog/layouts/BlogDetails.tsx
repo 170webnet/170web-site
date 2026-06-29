@@ -1,6 +1,7 @@
+import { Clock, MessageCircle, Quote, SquarePen } from "lucide-react";
 import { SiFacebook, SiX, SiDribbble, SiInstagram } from "react-icons/si";
 
-import { BlogCommentIcon, BlogEditIcon, BlogQuoteIcon, BlogTimeIcon } from "@/svg";
+
 import PostboxDetailsForm from "@/components/form/PostboxDetailsForm";
 import PostboxDetailsAuthor from "../PostboxDetailsAuthor";
 import BlogRelatedCard from "../BlogRelatedCard";
@@ -45,7 +46,7 @@ const BlogDetailsArea = ({ id }: IdProps) => {
                                         <div className="postbox-tag postbox-details-tag justify-center">
                                             <span>
                                                 <i>
-                                                    <BlogEditIcon />
+                                                    <SquarePen />
                                                 </i>
                                                 Inspiration
                                             </span>
@@ -63,13 +64,13 @@ const BlogDetailsArea = ({ id }: IdProps) => {
                                             </div>
                                             <div className="postbox-meta">
                                                 <i>
-                                                    <BlogTimeIcon />
+                                                    <Clock />
                                                 </i>
                                                 <span>{blog?.date || "April 15, 2026"}</span>
                                             </div>
                                             <div className="postbox-meta">
                                                 <i>
-                                                    <BlogCommentIcon />
+                                                    <MessageCircle />
                                                 </i>
                                                 <span>{blog?.comment || "0 comments"}</span>
                                             </div>
@@ -125,7 +126,7 @@ const BlogDetailsArea = ({ id }: IdProps) => {
                                     <blockquote>
                                         <div className="postbox-details-quote-wrap flex items-start">
                                             <i>
-                                                <BlogQuoteIcon />
+                                                <Quote />
                                             </i>
                                             <div className="postbox-details-quote">
                                                 <p>

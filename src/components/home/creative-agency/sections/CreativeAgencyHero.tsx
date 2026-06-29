@@ -1,8 +1,9 @@
 "use client";
+import { Plus } from "lucide-react";
 import { useIsDarkRoute } from "@/hooks/useIsDarkRoute";
 import { HeroArrowIcon } from "@/svg/ArrowIcons";
 import { SmartLink } from "@/components/common";
-import { PlusIcon } from "@/svg";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -82,7 +83,7 @@ const CreativeAgencyHero = () => {
 												<div key={service} className="px-hero-5-category">
 													<SmartLink href="/service-1">
 														<span>
-															<PlusIcon strokeColor="#6D6868" />
+															<Plus />
 														</span>
 														{service}
 													</SmartLink>

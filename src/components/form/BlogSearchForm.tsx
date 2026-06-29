@@ -1,6 +1,7 @@
 "use client";
 
-import { BlogSearchIcon } from "@/svg";
+
+import { Search } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
 
@@ -33,7 +34,7 @@ const BlogSearchForm = ({ onSearch }: Props) => {
                 />
                 <div className="in-blog-list-search-icon">
                     <span>
-                        <BlogSearchIcon />
+                        <Search />
                     </span>
                 </div>
             </div>

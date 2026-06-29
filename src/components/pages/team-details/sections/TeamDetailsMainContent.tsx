@@ -1,8 +1,9 @@
+import { Mail, Phone } from "lucide-react";
 import { SiFacebook, SiX, SiDribbble } from "react-icons/si";
 
 import TeamContactForm from "@/components/form/TeamContactForm";
 import { team_members } from "@/data/team-data";
-import { EmailIcon, PhoneIcon } from "@/svg";
+
 import { IdProps } from "@/types/custom-dt";
 import Link from "next/link";
 import Image from "next/image";
@@ -36,14 +37,14 @@ const TeamDetailsMainContent = ({ id }: IdProps) => {
 
                                     {team?.phone && (
                                         <Link href={`tel:${team?.phone}`}>
-                                            <PhoneIcon />
+                                            <Phone />
                                             {team?.phone}
                                         </Link>
                                     )}
 
                                     {team?.email && (
                                         <Link href={`mailto:${team?.email}`}>
-                                            <EmailIcon fillColor="#FF5722" />
+                                            <Mail color="#FF5722" />
                                             {team?.email}
                                         </Link>
                                     )}

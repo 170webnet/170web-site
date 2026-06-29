@@ -1,7 +1,8 @@
 "use client";
+import { Mail } from "lucide-react";
 import { SmartLink } from "@/components/common";
 import { useIsDarkRoute } from "@/hooks/useIsDarkRoute";
-import { EmailIcon, ArrowScrollIcon } from "@/svg";
+import { ArrowScrollIcon } from "@/svg";
 import Link from "next/link";
 
 const CreativeAgencyFooter = () => {
@@ -43,7 +44,7 @@ const CreativeAgencyFooter = () => {
                                                      aria-label="Subscribe to newsletter"
                                                     className="design-footer-widget-input-icon hover-bg-orange"
                                                 >
-                                                    <EmailIcon />
+                                                    <Mail />
                                                 </button>
                                             </div>
                                         </div>

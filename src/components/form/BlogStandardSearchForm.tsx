@@ -1,8 +1,9 @@
 "use client";
 
+import { Search } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
-import { BlogSearchIconTwo } from "@/svg";
+
 
 type FormValues = {
   search: string;
@@ -42,7 +43,7 @@ const BlogStandardSearchForm = () => {
         />
 
         <button type="submit" className="search-btn" aria-label="Search blog posts">
-          <BlogSearchIconTwo />
+          <Search />
         </button>
       </div>
 

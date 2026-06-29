@@ -1,6 +1,7 @@
 "use client";
+import { Plus } from "lucide-react";
 import { useIsDarkRoute } from "@/hooks/useIsDarkRoute";
-import { PlusIcon } from "@/svg";
+
 import Image from "next/image";
 
 const brandImages = [
@@ -34,7 +35,7 @@ const Brand = () => {
                         <div className="px-brand-subtitle-box mb-40">
                             <span className="px-section-subtitle">
                                 <i>
-                                    <PlusIcon />
+                                    <Plus />
                                 </i>
                                 Our Projects
                             </span>

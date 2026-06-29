@@ -1,10 +1,11 @@
 "use client";
+import { Plus } from "lucide-react";
 import { useState } from "react";
 import StartupAgencyServiceItem from "../components/StartupAgencyServiceItem";
 import SmartLink from "@/components/common/SmartLink";
 import { servicesData } from "@/data/services-data";
 import { bgColorPropsDt } from "@/types/custom-dt";
-import { PlusIcon } from "@/svg";
+
 
 const Service: React.FC<bgColorPropsDt> = () => {
   // display service data
@@ -23,7 +24,7 @@ const Service: React.FC<bgColorPropsDt> = () => {
             <div className="col-span-12 xl:col-span-3">
               <div className="px-service-subtitle-box pt-40">
                 <span className="px-section-subtitle white-style">
-                  <i><PlusIcon strokeColor="currentcolor" /></i>
+                  <i><Plus /></i>
                   What we do
                 </span>
               </div>

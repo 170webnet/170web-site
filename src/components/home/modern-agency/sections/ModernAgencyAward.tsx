@@ -1,7 +1,8 @@
+import { Plus } from "lucide-react";
 
 import { AwardList } from "@/components/shared/components";
 import { awardData } from "@/data/award-data";
-import { PlusIcon } from "@/svg";
+
 
 const Award = () => {
     // Get top 4 awards for display
@@ -17,7 +18,7 @@ const Award = () => {
                             <div className="px-award-subtitle-box">
                                 <span className="px-section-subtitle pt-40">
                                     <i>
-                                        <PlusIcon />
+                                        <Plus />
                                     </i>
                                     Our Projects
                                 </span>

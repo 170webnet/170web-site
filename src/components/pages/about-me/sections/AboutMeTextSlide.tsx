@@ -1,6 +1,7 @@
 "use client";
+import { Star } from "lucide-react";
 import { text_slider_active } from "@/constant";
-import { StarIcon } from "@/svg/StarIcons";
+
 import { Autoplay, FreeMode } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -32,7 +33,7 @@ const AboutMeTextSlide = () => {
                             <div className="px-text-slider-item flex items-center">
                                 <span>{text}</span>
                                 <span className="pl-40">
-                                    <StarIcon fillColor="currentcolor"/>
+                                    <Star fill="currentColor" />
                                 </span>
                             </div>
                         </SwiperSlide>

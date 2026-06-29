@@ -1,6 +1,7 @@
 "use client";
-import { BlogBtnArrowIcon, BlogEditIcon, BlogTimeIcon, VideoPlayIcon } from "@/svg";
-import { BlockQuoteIcon, BlogNextPrevIcon } from "@/svg/BlogIcons";
+import { Clock, Play, Quote, SquarePen } from "lucide-react";
+import { BlogBtnArrowIcon } from "@/svg";
+import { BlogNextPrevIcon } from "@/svg/BlogIcons";
 import { useVideoModal } from "@/providers/VideoProvider";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { postbox_slider_params } from "@/constant";
@@ -33,7 +34,7 @@ const BlogStandardPostItem = ({ post }: blogPropsDt) => {
                         </div>
                         <div className="postbox-meta">
                             <i>
-                                <BlogTimeIcon />
+                                <Clock />
                             </i>
                             <span>{post.date}</span>
                         </div>
@@ -46,7 +47,7 @@ const BlogStandardPostItem = ({ post }: blogPropsDt) => {
                     <div className="postbox-content">
                         <span className="postbox-tag">
                             <i>
-                                <BlogEditIcon />
+                                <SquarePen />
                             </i>
                             Inspiration
                         </span>
@@ -81,7 +82,7 @@ const BlogStandardPostItem = ({ post }: blogPropsDt) => {
                         </div>
                         <div className="postbox-meta">
                             <i>
-                                <BlogTimeIcon />
+                                <Clock />
                             </i>
                             <span>April 15, 2026</span>
                         </div>
@@ -93,7 +94,7 @@ const BlogStandardPostItem = ({ post }: blogPropsDt) => {
                         <div className="postbox-play-btn z-index-1" style={{ cursor: "pointer" }}>
                             <button type="button" aria-label="Play video" onClick={() => post?.videoId && playVideo(post.videoId)} className="popup-video">
                                 <span aria-hidden="true">
-                                    <VideoPlayIcon />
+                                    <Play />
                                 </span>
                             </button>
                         </div>
@@ -101,7 +102,7 @@ const BlogStandardPostItem = ({ post }: blogPropsDt) => {
                     <div className="postbox-content">
                         <span className="postbox-tag">
                             <i>
-                                <BlogEditIcon />
+                                <SquarePen />
                             </i>
                             Inspiration
                         </span>
@@ -138,7 +139,7 @@ const BlogStandardPostItem = ({ post }: blogPropsDt) => {
                         </div>
                         <div className="postbox-meta">
                             <i>
-                                <BlogTimeIcon />
+                                <Clock />
                             </i>
                             <span>{post.date}</span>
                         </div>
@@ -147,7 +148,7 @@ const BlogStandardPostItem = ({ post }: blogPropsDt) => {
                         <blockquote>
                             <div className="postbox-blockquote-post">
                                 <span className="postbox-blockquote-icon">
-                                    <BlockQuoteIcon />
+                                    <Quote />
                                 </span>
                                 <div className="postbox-blockquote-paragraph">
                                     <p>
@@ -160,7 +161,7 @@ const BlogStandardPostItem = ({ post }: blogPropsDt) => {
                     <div className="postbox-content">
                         <span className="postbox-tag">
                             <i>
-                                <BlogEditIcon />
+                                <SquarePen />
                             </i>
                             Inspiration
                         </span>
@@ -184,7 +185,7 @@ const BlogStandardPostItem = ({ post }: blogPropsDt) => {
                         </div>
                         <div className="postbox-meta">
                             <i>
-                                <BlogTimeIcon />
+                                <Clock />
                             </i>
                             <span>{post.date}</span>
                         </div>
@@ -230,7 +231,7 @@ const BlogStandardPostItem = ({ post }: blogPropsDt) => {
                     <div className="postbox-content">
                         <span className="postbox-tag">
                             <i>
-                                <BlogEditIcon />
+                                <SquarePen />
                             </i>
                             Inspiration
                         </span>

@@ -1,7 +1,8 @@
+import { Plus } from "lucide-react";
 
 import { portfolioProjects } from "@/data/portfolio-projects";
 import ProjectSingleCard from "../components/ProjectSingleCard";
-import { PlusIcon } from "@/svg";
+
 
 const StartupAgencyProject = () => {
     // display project items
@@ -16,7 +17,7 @@ const StartupAgencyProject = () => {
                         <div className="col-span-12 xl:col-span-3">
                             <span className="px-section-subtitle pt-40">
                                 <i>
-                                    <PlusIcon />
+                                    <Plus />
                                 </i>
                                 Our Projects
                             </span>

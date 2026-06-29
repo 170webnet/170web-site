@@ -1,6 +1,7 @@
+import { Clock } from "lucide-react";
 import { SmartLink } from "@/components/common";
 import { blogDt } from "@/types/custom-dt";
-import { BlogTimeIcon } from "@/svg";
+
 import Image from "next/image";
 
 const MinimalPortfolioBlogItem: React.FC<blogDt> = ({ id, image, title, category, date }) => {
@@ -22,7 +23,7 @@ const MinimalPortfolioBlogItem: React.FC<blogDt> = ({ id, image, title, category
                         </span>
 
                         <span className="tp-blog-date">
-                            <BlogTimeIcon />
+                            <Clock />
                             {date}
                         </span>
                     </div>

@@ -1,9 +1,10 @@
 "use client";
+import { Star } from "lucide-react";
 import { Autoplay, FreeMode } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { text_slider_params } from "@/constant";
 import { SLIDER_TEXTS } from "@/data/site-data";
-import { StarIcon } from "@/svg/StarIcons";
+
 
 const TextMarquee = () => {
     return (
@@ -20,7 +21,7 @@ const TextMarquee = () => {
                             <div className="px-text-slider-item flex items-center">
                                 <span>{item.text}</span>
                                 <span className="pl-40">
-                                    <StarIcon />
+                                    <Star fill="currentColor" />
                                 </span>
                             </div>
                         </SwiperSlide>

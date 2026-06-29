@@ -1,6 +1,7 @@
 "use client";
+import { X } from "lucide-react";
 import { SiDribbble, SiInstagram, SiYoutube } from "react-icons/si";
-import { CroseIcon } from "@/svg";
+
 import { PhotoProviderWrapper } from "../wrappers";
 import useGlobalContext from "@/hooks/useContext";
 import { usePathname } from "next/navigation";
@@ -43,7 +44,7 @@ const PrimaryOffCanvas = () => {
                                 aria-label="Close sidebar"
                             >
                                 <span aria-hidden="true">
-                                    <CroseIcon />
+                                    <X />
                                 </span>
                             </button>
                         </div>

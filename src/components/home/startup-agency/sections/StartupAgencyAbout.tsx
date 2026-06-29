@@ -1,8 +1,9 @@
 "use client";
+import { Plus } from "lucide-react";
 import { Autoplay, FreeMode } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { brand_slider_params } from "@/constant";
-import { PlusIcon, TextArrowIcon } from "@/svg";
+import { TextArrowIcon } from "@/svg";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -51,7 +52,7 @@ const StartupAgencyAbout = () => {
                     <div className="col-span-12 xl:col-span-3">
                         <span className="px-section-subtitle px-about-subtitle-box">
                             <i>
-                                <PlusIcon />
+                                <Plus />
                             </i>
                             What we do
                         </span>

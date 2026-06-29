@@ -1,5 +1,6 @@
 "use client";
-import { ArrowScrollIcon, EmailIcon, FooterSendMessageIcon } from "@/svg";
+import { Mail } from "lucide-react";
+import { ArrowScrollIcon, FooterSendMessageIcon } from "@/svg";
 import { ScrollLink, SmartLink } from "@/components/common";
 import { getCurrentYear } from "@/utils/getCurrentYear";
 import { useIsDarkRoute } from "@/hooks/useIsDarkRoute";
@@ -97,7 +98,7 @@ const ModernAgencyFooter = () => {
                                             <div className="design-footer-widget-input p-relative">
                                                 <input type="text" placeholder="Your email address" />
                                                 <button type="submit" className="design-footer-widget-input-icon">
-                                                    <EmailIcon />
+                                                    <Mail />
                                                 </button>
                                             </div>
                                         </div>
