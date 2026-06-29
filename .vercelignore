@@ -1,0 +1,9 @@
+.next
+node_modules
+.git
+docs
+.agents
+.claude
+skills-lock.json
+*.log
+.DS_Store
