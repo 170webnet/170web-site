@@ -913,11 +913,11 @@
         & a{
             height: 36px;
             width: 36px;
-            line-height: 33px;
-            text-align: center;
             margin-bottom: 10px;
             border-radius: 14px;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             color: rgba(0, 0, 0, 0.8);
             background-color: rgb(246, 246, 249);
             & svg{
