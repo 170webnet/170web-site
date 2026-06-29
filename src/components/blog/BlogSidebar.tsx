@@ -1,5 +1,3 @@
-import { SiX, SiDribbble, SiInstagram } from "react-icons/si";
-
 import BlogStandardSearchForm from "../form/BlogStandardSearchForm";
 import Link from "next/link";
 import Image from "next/image";
@@ -37,126 +35,93 @@ const latestPosts = [
 ];
 
 const tags = [
-  { id: "creative", name: "Creative" },
-  { id: "design-trends", name: "Design Trends" },
-  { id: "development", name: "Development" },
-  { id: "lifestyle", name: "Lifestyle" },
-  { id: "170web", name: "170web" },
+    { id: "creative", name: "Creative" },
+    { id: "design-trends", name: "Design Trends" },
+    { id: "development", name: "Development" },
+    { id: "lifestyle", name: "Lifestyle" },
+    { id: "170web", name: "170web" },
 ];
 
-const socialLinks = [
-    { id: "twitter", icon: <SiX />, link: "#" },
-    { id: "dribbble", icon: <SiDribbble />, link: "#" },
-    { id: "instagram", icon: <SiInstagram />, link: "#" },
-];
+const widgetTitle =
+    "mb-6 text-[1.1rem] font-bold uppercase tracking-[0.1em] text-px-black dark:text-white";
 
 const BlogSidebar = () => {
     return (
-        <div className="sidebar-wrapper">
-
+        <div className="flex flex-col gap-10">
             {/* Search */}
-            <div className="sidebar-widget mb-30">
-                <div className="sidebar-search">
-                    <BlogStandardSearchForm />
-                </div>
-            </div>
-
-            {/* Author */}
-            <div className="sidebar-widget mb-55">
-                <div className="sidebar-widget-author text-center">
-                    <div className="sidebar-widget-author-img">
-                        <Image width={60} height={60} src="/assets/img/avater/avater-2.png" alt="author" />
-                    </div>
-
-                    <div className="sidebar-widget-author-content">
-                        <h4 className="sidebar-widget-author-name">Richard Scott</h4>
-                        <span>Content writer at Kanik</span>
-                        <p>
-                            Crafting Digital Experiences <br /> with Purpose!
-                        </p>
-                    </div>
-
-                    <div className="sidebar-widget-author-social mb-30">
-                        {socialLinks.map((item) => (
-                            <Link key={item.id} href={item.link}>
-                                <span>{item.icon}</span>
-                            </Link>
-                        ))}
-                    </div>
-
-                    <div className="sidebar-widget-author-btn">
-                        <Link className="tp-btn-px sidebar-btn w-full" href="#">
-                            <span>
-                                <span className="text-1">170web Theme</span>
-                                <span className="text-2">170web Theme</span>
-                            </span>
-                        </Link>
-                    </div>
-                </div>
-            </div>
+            <BlogStandardSearchForm />
 
             {/* Categories */}
-            <div className="sidebar-widget mb-55">
-                <h3 className="sidebar-widget-title">Category</h3>
-
-                <div className="sidebar-widget-category">
-                    <ul>
-                        {categories.map((item) => (
-                            <li key={item.id}>
-                                <Link
-                                    className="flex items-center justify-between"
-                                    href="#"
-                                >
-                                    {item.name}
-                                    <span>{item.count}</span>
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+            <div>
+                <h3 className={widgetTitle}>Category</h3>
+                <ul className="flex flex-col">
+                    {categories.map((item) => (
+                        <li key={item.id} className="border-b border-px-border dark:border-white/10 last:border-0">
+                            <Link
+                                className="group flex items-center justify-between py-3.5 text-[15px] font-medium text-px-body dark:text-white/65 transition-colors hover:text-px-primary"
+                                href="#"
+                            >
+                                {item.name}
+                                <span className="inline-flex h-6 min-w-6 items-center justify-center rounded-full bg-px-grey-1 dark:bg-white/[0.06] px-2 text-[12px] font-semibold text-px-black dark:text-white transition-colors group-hover:bg-px-primary group-hover:text-white">
+                                    {item.count}
+                                </span>
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
             </div>
 
             {/* Latest Posts */}
-            <div className="sidebar-widget mb-55">
-                <h3 className="sidebar-widget-title">Latest Posts</h3>
-                <div className="rc-post-wrap">
+            <div>
+                <h3 className={widgetTitle}>Latest Posts</h3>
+                <div className="flex flex-col gap-5">
                     {latestPosts.map((post) => (
-                        <div key={post.id} className="rc-post flex items-center">
-                            <div className="rc-post-thumb">
-                                <Link href="#">
-                                    <Image className="max-w-full h-auto w-full h-auto" width={140} height={140} src={post.img} alt="post" />
+                        <div key={post.id} className="group flex items-center gap-4">
+                            <Link
+                                href="#"
+                                className="block h-18 w-18 shrink-0 overflow-hidden rounded-xl ring-1 ring-px-border dark:ring-white/10"
+                            >
+                                <Image
+                                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    width={140}
+                                    height={140}
+                                    src={post.img}
+                                    alt="post"
+                                />
+                            </Link>
+
+                            <div className="flex-1">
+                                <Link
+                                    href="#"
+                                    className="text-[11px] font-semibold uppercase tracking-[0.16em] text-px-primary"
+                                >
+                                    {post.category}
                                 </Link>
-                            </div>
-
-                            <div className="rc-post-content">
-                                <div className="rc-post-category">
-                                    <Link href="#">{post.category}</Link>
-                                </div>
-
-                                <h3 className="rc-post-title">
-                                    <Link href="#">{post.title}</Link>
+                                <h3 className="mt-1 text-[15px] font-bold leading-snug tracking-tight text-px-black dark:text-white">
+                                    <Link href="#" className="transition-colors hover:text-px-primary">
+                                        {post.title}
+                                    </Link>
                                 </h3>
-
-                                <div className="rc-post-meta">
-                                    <span>{post.date}</span>
-                                </div>
+                                <span className="mt-1 block text-[12px] text-px-body dark:text-white/65">{post.date}</span>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
 
-            {/* 🏷 Tags */}
-            <div className="sidebar-widget">
-                <h3 className="sidebar-widget-title">Tags</h3>
-                <div className="sidebar-widget-content">
-                    <div className="tagcloud">
-                        {tags.map((tag) => (
-                            <Link key={tag.id} href="#">
-                                {tag.name}
-                            </Link>
-                        ))}
-                    </div>
+            {/* Tags */}
+            <div>
+                <h3 className={widgetTitle}>Tags</h3>
+                <div className="flex flex-wrap gap-2.5">
+                    {tags.map((tag) => (
+                        <Link
+                            key={tag.id}
+                            href="#"
+                            className="rounded-full border border-px-border dark:border-white/10 px-4 py-2 text-[13px] font-medium text-px-body dark:text-white/65 transition-colors hover:border-px-primary hover:text-px-primary"
+                        >
+                            {tag.name}
+                        </Link>
+                    ))}
                 </div>
             </div>
         </div>

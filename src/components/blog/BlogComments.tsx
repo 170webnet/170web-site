@@ -27,12 +27,15 @@ const comments = [
 
 const BlogComments = () => {
     return (
-        <div className="postbox__comment pt-115 pb-50">
-            <h3 className="postbox__comment-title">
-                Comments ({comments.length.toString().padStart(2, "0")})
+        <div className="pt-16 pb-12 md:pt-20">
+            <h3 className="text-[1.8rem] font-bold tracking-tight text-px-black">
+                Comments{" "}
+                <span className="text-px-primary">
+                    ({comments.length.toString().padStart(2, "0")})
+                </span>
             </h3>
 
-            <ul>
+            <ul className="mt-8">
                 {comments.map((comment) => (
                     <CommentItem key={comment.id} {...comment} />
                 ))}

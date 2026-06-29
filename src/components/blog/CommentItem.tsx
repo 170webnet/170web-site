@@ -1,4 +1,4 @@
-import { TextArrowIcon } from "@/svg";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,38 +10,33 @@ type CommentItemProps = {
     isReply?: boolean;
 };
 
-const CommentItem = ({
-    name,
-    date,
-    text,
-    avatar,
-    isReply,
-}: CommentItemProps) => {
+const CommentItem = ({ name, date, text, avatar, isReply }: CommentItemProps) => {
     return (
-        <li className={isReply ? "children" : ""}>
-            <div className="postbox__comment-box flex">
-                <div className="postbox__comment-info">
-                    <div className="postbox__comment-avater mr-30">
-                        <Image className="max-w-full h-auto" width={70} height={70} src={avatar} alt={name} />
-                    </div>
-                </div>
+        <li className={isReply ? "mt-8 sm:ml-16" : "mt-8 first:mt-0"}>
+            <div className="flex gap-5 rounded-[18px] border border-px-border p-6 md:p-7">
+                <Image
+                    className="h-12 w-12 shrink-0 rounded-full object-cover ring-1 ring-px-border md:h-14 md:w-14"
+                    width={70}
+                    height={70}
+                    src={avatar}
+                    alt={name}
+                />
 
-                <div className="postbox__comment-text">
-                    <div className="postbox__comment-name flex justify-between items-center">
-                        <h5>By {name}</h5>
-                        <span className="post-meta">{date}</span>
+                <div className="flex-1">
+                    <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
+                        <h5 className="text-[1.05rem] font-bold tracking-tight text-px-black">{name}</h5>
+                        <span className="text-[13px] text-px-body">{date}</span>
                     </div>
 
-                    <p>{text}</p>
+                    <p className="mt-2.5 text-[15px] leading-relaxed text-px-body">{text}</p>
 
-                    <div className="postbox__comment-reply">
-                        <Link href="#">
-                            Reply
-                            <span>
-                                <TextArrowIcon/>
-                            </span>
-                        </Link>
-                    </div>
+                    <Link
+                        href="#"
+                        className="mt-4 inline-flex items-center gap-1 text-[13px] font-semibold uppercase tracking-[0.14em] text-px-black transition-colors hover:text-px-primary"
+                    >
+                        Reply
+                        <ArrowUpRight size={15} />
+                    </Link>
                 </div>
             </div>
         </li>

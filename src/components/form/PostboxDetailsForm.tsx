@@ -11,6 +11,11 @@ type FormValues = {
   remember: boolean;
 };
 
+const fieldClass =
+  "w-full rounded-xl border border-px-border dark:border-white/10 bg-white dark:bg-white/[0.06] px-4 py-3 text-[15px] text-px-black dark:text-white outline-none transition-colors placeholder:text-px-body/50 dark:placeholder:text-white/40 focus:border-px-primary";
+const labelClass = "mb-2 block text-[13px] font-semibold text-px-black dark:text-white";
+const errorClass = "mt-1.5 block text-[13px] text-px-red";
+
 const PostboxDetailsForm = () => {
   const {
     register,
@@ -25,132 +30,82 @@ const PostboxDetailsForm = () => {
   };
 
   return (
-    <div className="postbox-details-form">
-      <h3 className="postbox-details-form-title">Leave a Reply</h3>
-      <p>
+    <div className="rounded-[24px] border border-px-border dark:border-white/10 p-7 md:p-9">
+      <h3 className="text-[1.8rem] font-bold tracking-tight text-px-black dark:text-white">Leave a Reply</h3>
+      <p className="mt-2 text-[15px] text-px-body dark:text-white/65">
         Your email address will not be published. Required fields are marked *
       </p>
 
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="postbox-details-form-wrapper">
-          <div className="postbox-details-form-inner">
-            <div className="grid grid-cols-12 gap-x-6">
-              
-              {/* Name */}
-              <div className="col-span-12 xl:col-span-6">
-                <div className="postbox-details-input-box">
-                  <div className="postbox-details-input">
-                   <div className="mb-25">
-                     <label>Name *</label>
-                    <input
-                      type="text"
-                      {...register("name", {
-                        required: "Name is required",
-                      })}
-                    />
-                     {errors.name && (
-                      <span className="form-error">{errors.name.message}</span>
-                    )}
-                   </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Email */}
-              <div className="col-span-12 xl:col-span-6">
-                <div className="postbox-details-input-box">
-                  <div className="postbox-details-input">
-                    <div className="mb-25">
-                    <label>Email *</label>
-                    <input
-                      type="email"
-                      {...register("email", {
-                        required: "Email is required",
-                        pattern: {
-                          value:
-                            /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                          message: "Enter a valid email",
-                        },
-                      })}
-                    />
-                    {errors.email && (
-                      <span className="form-error">{errors.email.message}</span>
-                    )}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Website */}
-              <div className="col-span-12 xl:col-span-12">
-                <div className="postbox-details-input-box">
-                  <div className="postbox-details-input">
-                    <div className="mb-25">
-                    <label>Website</label>
-                    <input
-                      type="text"
-                      {...register("website")}
-                    />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Comment */}
-              <div className="col-span-12 xl:col-span-12">
-                <div className="postbox-details-input-box">
-                  <div className="postbox-details-input">
-                    <div className="mb-25">
-                    <label>Comment *</label>
-                    <textarea
-                      {...register("comment", {
-                        required: "Comment is required",
-                        minLength: {
-                          value: 10,
-                          message: "Minimum 10 characters required",
-                        },
-                      })}
-                    />
-                    {errors.comment && (
-                      <span className="form-error">
-                        {errors.comment.message}
-                      </span>
-                    )}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <form onSubmit={handleSubmit(onSubmit)} className="mt-8">
+        <div className="grid grid-cols-12 gap-x-6 gap-y-6">
+          {/* Name */}
+          <div className="col-span-12 md:col-span-6">
+            <label htmlFor="name" className={labelClass}>Name *</label>
+            <input
+              id="name"
+              type="text"
+              className={fieldClass}
+              {...register("name", { required: "Name is required" })}
+            />
+            {errors.name && <span className={errorClass}>{errors.name.message}</span>}
           </div>
 
-          {/* Remember */}
-          <div className="postbox-details-suggetions mb-20">
-            <div className="postbox-details-remeber">
-              <input
-                id="remember"
-                type="checkbox"
-                {...register("remember")}
-              />
-              <label htmlFor="remember">
-                Save my name, email, and website in this browser for the next time I comment.
-              </label>
-            </div>
+          {/* Email */}
+          <div className="col-span-12 md:col-span-6">
+            <label htmlFor="email" className={labelClass}>Email *</label>
+            <input
+              id="email"
+              type="email"
+              className={fieldClass}
+              {...register("email", {
+                required: "Email is required",
+                pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: "Enter a valid email" },
+              })}
+            />
+            {errors.email && <span className={errorClass}>{errors.email.message}</span>}
           </div>
 
-          {/* Submit */}
-          <div className="postbox-details-input-box">
-            <button
-              className="tp-btn-px sidebar-btn-style sidebar-btn"
-              type="submit"
-              aria-label="Post comment"
-            >
-              <span>
-                <span className="text-1">Post Comment</span>
-                <span className="text-2">Post Comment</span>
-              </span>
-            </button>
+          {/* Website */}
+          <div className="col-span-12">
+            <label htmlFor="website" className={labelClass}>Website</label>
+            <input id="website" type="text" className={fieldClass} {...register("website")} />
+          </div>
+
+          {/* Comment */}
+          <div className="col-span-12">
+            <label htmlFor="comment" className={labelClass}>Comment *</label>
+            <textarea
+              id="comment"
+              rows={6}
+              className={`${fieldClass} resize-none`}
+              {...register("comment", {
+                required: "Comment is required",
+                minLength: { value: 10, message: "Minimum 10 characters required" },
+              })}
+            />
+            {errors.comment && <span className={errorClass}>{errors.comment.message}</span>}
           </div>
         </div>
+
+        {/* Remember */}
+        <label htmlFor="remember" className="mt-6 flex cursor-pointer items-center gap-3 text-[14px] text-px-body dark:text-white/65">
+          <input
+            id="remember"
+            type="checkbox"
+            className="h-4 w-4 shrink-0 rounded border-px-border dark:border-white/10 text-px-primary accent-px-primary"
+            {...register("remember")}
+          />
+          Save my name, email, and website in this browser for the next time I comment.
+        </label>
+
+        {/* Submit */}
+        <button
+          type="submit"
+          aria-label="Post comment"
+          className="mt-8 inline-flex items-center justify-center rounded-full bg-px-black dark:bg-white px-8 py-3.5 text-[14px] font-semibold uppercase tracking-[0.12em] text-white dark:text-px-black transition-colors hover:bg-px-primary dark:hover:bg-px-primary dark:hover:text-white"
+        >
+          Post Comment
+        </button>
       </form>
     </div>
   );

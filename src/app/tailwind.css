@@ -21,7 +21,11 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@custom-variant dark (&:is(.dark *));
+/* Dark mode: o template usa a classe `.170web-dark` no <html> (ver src/app/dark/layout.tsx),
+   o shadcn usa `.dark`. Ligamos o variant `dark:` às duas — assim os utilitários `dark:`
+   dos nossos componentes reagem ao tema escuro do template. Nenhum componente de layout
+   compartilhado usa `dark:` (só src/components/ui/* shadcn, ausentes nas rotas /dark). */
+@custom-variant dark (&:is(.dark *, [class~="170web-dark"] *));
 
 @theme {
   /* Breakpoints alinhados ao template/Bootstrap (min-width), não aos defaults
