@@ -24,14 +24,15 @@ const MainFooter: React.FC<footerPropsDt> = ({ sectionBgClass = "#0A0A0A", copyr
                                     Helping<br />start-ups scale & grow.
                                 </h4>
 
-                                <div className="px-footer-widget-social">
+                                <div className="flex flex-wrap items-center gap-2">
                                     {socialLinks.map((item, index) => (
                                         <Link
                                             key={`${item.href}-${index}`}
-                                            style={{ marginRight: "5px" }}
                                             href={item.href}
+                                            aria-label={item.label}
+                                            className="inline-flex h-[42px] w-[42px] items-center justify-center rounded-full bg-white/10 text-white transition-colors duration-300 hover:bg-px-red"
                                         >
-                                            <span>{item.icon}</span>
+                                            {item.icon}
                                         </Link>
                                     ))}
                                 </div>

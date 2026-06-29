@@ -1,10 +1,12 @@
-import { DribbleIcon, FacebookIcon, InstragramIconTwo, TwittorIcon } from "@/svg/SocialIcons";
+import { SiFacebook, SiX, SiDribbble, SiInstagram } from "react-icons/si";
 
+// Ícones de marca uniformes (Simple Icons / react-icons, 1em quadrado) — o lucide
+// não fornece ícones de marca, então usamos o Simple Icons com a mesma estética.
 export const socialLinks = [
-  { icon: <FacebookIcon />, href: "#" },
-  { icon: <TwittorIcon />, href: "#" },
-  { icon: <DribbleIcon />, href: "#" },
-  { icon: <InstragramIconTwo />, href: "#" },
+  { label: "Facebook", icon: <SiFacebook size={17} />, href: "#" },
+  { label: "X", icon: <SiX size={17} />, href: "#" },
+  { label: "Dribbble", icon: <SiDribbble size={17} />, href: "#" },
+  { label: "Instagram", icon: <SiInstagram size={17} />, href: "#" },
 ];
 
 export const quickLinks = [
