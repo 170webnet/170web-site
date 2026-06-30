@@ -26,15 +26,15 @@ const Brand = () => {
     const brandImagesItems = isDarkTheme ? brandDarkImages : brandImages;
 
     return (
-        <section className="px-brand-area brand-skew-anim pb-160">
+        <section className="brand-skew-anim pb-[160px] max-lg:py-[80px] max-sm:pt-[40px]">
             <div className="mx-auto w-full max-w-[1550px] px-3">
 
                 {/* Section Title */}
                 <div className="grid grid-cols-12 gap-x-6">
                     <div className="col-span-12 xl:col-span-3">
-                        <div className="px-brand-subtitle-box mb-40">
-                            <span className="px-section-subtitle">
-                                <i>
+                        <div className="mb-[40px] max-lg:mb-0">
+                            <span className="inline-block text-[16px] font-medium tracking-[-0.03em] text-px-black dark:text-white max-lg:pb-[20px] max-lg:pt-0 max-md:mb-0">
+                                <i className="mr-[10px] inline-grid h-[20px] w-[20px] place-content-center rounded-full bg-[#e8e9e3] text-center text-px-black">
                                     <Plus />
                                 </i>
                                 Our Projects
@@ -44,13 +44,13 @@ const Brand = () => {
                 </div>
 
                 {/* Brand List */}
-                <div className="grid grid-cols-12 gap-x-1.25">
+                <div className="grid grid-cols-12 gap-x-[5px]">
                     {brandImagesItems.map((brand, index) => (
                         <div
                             key={`${brand.img}-${index}`}
                             className="col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-2"
                         >
-                            <div className="px-brand-item">
+                            <div className="grid min-h-[180px] w-full place-content-center rounded-[14px] bg-white p-[20px] text-center dark:bg-[#1C1D20] max-lg:mb-[5px]">
                                 <Image
                                     src={brand.img}
                                     width={brand.width}

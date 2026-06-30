@@ -24,7 +24,7 @@ const CreativeAgencyBrand = () => {
 	const brands = isDarkTheme ? brandLogosWhite : brandLogosDark
 
 	return (
-		<div className="px-brand-area px-brand-style-5 pt-120 pb-120">
+		<div className="pt-[40px] pb-[80px] lg:pt-[80px] lg:pb-[80px] xl:pt-[120px] xl:pb-[120px]">
 			<div className="mx-auto w-full max-w-[1550px] px-3">
 				<div className="grid grid-cols-12 gap-x-[0px]">
 					{brands.map((img, index) => (
@@ -32,7 +32,7 @@ const CreativeAgencyBrand = () => {
 							key={img}
 							className="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4 xl:col-span-2"
 						>
-							<div className="px-brand-item">
+							<div className="grid place-content-center text-center w-full min-h-[140px] p-[20px] mb-[5px] xl:mb-0 bg-transparent border border-[#ECECEC] dark:border-white/10">
 								<Image className="max-w-full h-auto" width={90} height={40} src={img} alt={`brand-${index + 1}`} />
 							</div>
 						</div>

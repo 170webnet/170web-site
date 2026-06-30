@@ -33,26 +33,25 @@ const FAQ_LIST = [
 const ServiceFaq = () => {
     const [activeId, setActiveId] = useState<number>(1);
     return (
-        <div className="px-inner-service-2-faq-ptb pt-190 pb-140">
+        <div className="pt-[190px] pb-[140px] max-lg:pt-0 max-lg:pb-[100px]">
             <div className="container-px">
                 <div className="grid grid-cols-12 gap-x-6">
                     <div className="col-span-12 lg:col-span-5 xl:col-span-6">
-                        <div className="px-inner-service-2-heading mb-40">
-                            <span className="px-capsule-subtitle">
+                        <div className="mb-[40px]">
+                            <span className="inline-block text-px-black dark:text-white">
                                 Digital Services
                             </span>
 
-                            <h3 className="px-section-title ff-thunder fs-100 mb-30">
+                            <h3 className="mb-[30px] font-thunder text-[100px] leading-[0.9] font-semibold tracking-[1px] uppercase text-px-black dark:text-white max-md:text-[75px] max-[575px]:text-[60px]">
                                 The answers <br /> to your questions.
                             </h3>
                         </div>
                     </div>
 
                     <div className="col-span-12 lg:col-span-7 xl:col-span-6">
-                        <div className="px-inner-service-2-faq">
-                            <div className="px-service-accordion-wrap">
+                        <div>
+                            <div>
                                 <div
-                                    className="accordion"
                                     id="serviceFaqAccordion"
                                 >
                                     {FAQ_ITEMS.map((item) => (

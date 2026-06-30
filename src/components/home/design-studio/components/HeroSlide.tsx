@@ -25,7 +25,7 @@ const HeroSlide = () => {
     const [topSwiper, setTopSwiper] = useState<SwiperType | null>(null);
 
     return (
-        <div className="px-hero-2-slider-wrap pb-100">
+        <div className="pb-[100px] max-[767px]:pb-[60px]">
 
             {/* Top Slides */}
             <div className="grid grid-cols-12 gap-x-6 justify-center">
@@ -34,7 +34,7 @@ const HeroSlide = () => {
                         modules={[Navigation, Controller]}
                         slidesPerView={1}
                         centeredSlides={true}
-                        loop={false} 
+                        loop={false}
                         navigation={{
                             nextEl: ".swiper-button-next",
                             prevEl: ".swiper-button-prev",
@@ -45,15 +45,15 @@ const HeroSlide = () => {
                         }}
                         controller={{ control: thumbsSwiper }}
                         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-                        className="px-hero-2-top-active mb-40"
+                        className="mb-[40px]"
                     >
                         {heroSlides.map((slide, index) => (
                             <SwiperSlide key={`${slide.title}-${index}`}>
-                                <div className="px-hero-2-contents text-center z-index-1">
-                                    <div className="fix">
+                                <div className="text-center relative z-[1] [&_span]:inline-block [&_span]:font-bold [&_span]:text-[25px] md:[&_span]:text-[45px] [&_span]:leading-[1.07] [&_span]:tracking-[-0.05em] [&_span]:uppercase [&_span]:text-px-black">
+                                    <div className="overflow-hidden">
                                         <span>{slide.title}</span>
                                     </div>
-                                    <div className="fix">
+                                    <div className="overflow-hidden">
                                         <span>{slide.subtitle}</span>
                                     </div>
                                 </div>
@@ -79,11 +79,11 @@ const HeroSlide = () => {
                         slideToClickedSlide={true}
                         controller={{ control: topSwiper }}
                         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-                        className="px-hero-2-bottom-active gallery-thumbs"
+                        className="gallery-thumbs [&_.swiper-slide-active_.px-hero-2-thumbs]:saturate-100"
                     >
                         {heroSlides.map((slide, index) => (
                             <SwiperSlide key={`${slide.title}-${index}`}>
-                                <div className={`px-hero-2-thumbs ${activeIndex === index ? "active" : ""}`}>
+                                <div className={`px-hero-2-thumbs transition-all duration-1000 ease-[cubic-bezier(.19,1,.22,1)] ${activeIndex === index ? "saturate-100" : "saturate-0"}`}>
                                     <Link href="#">
                                         <Image width={130} height={168} src={slide.img} alt={slide.title} />
                                     </Link>

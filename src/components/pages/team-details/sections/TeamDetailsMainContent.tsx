@@ -11,19 +11,27 @@ import Image from "next/image";
 const TeamDetailsMainContent = ({ id }: IdProps) => {
     const team = team_members.find((item) => item.id === Number(id));
 
+    // contact link: text-14/medium, divider on all but last
+    const contactLinkClass =
+        "inline-block text-[14px] font-medium tracking-[-0.28px] text-[#111013] dark:text-white [&>svg]:translate-y-[-2px] [&>svg]:mr-[5px] [&:not(:last-of-type)]:mr-[20px] [&:not(:last-of-type)]:pr-[20px] [&:not(:last-of-type)]:border-r [&:not(:last-of-type)]:border-[rgba(17,16,19,0.10)] dark:[&:not(:last-of-type)]:border-white/10";
+
+    // social: 42x42 circle, transparent bg + border, orange fill on hover
+    const socialLinkClass =
+        "inline-flex items-center justify-center h-[42px] w-[42px] mb-[8px] [&:not(:last-child)]:mr-[3px] rounded-full bg-transparent text-[#1e1e1e] dark:text-white border border-[rgba(17,16,19,0.08)] dark:border-white/10 transition-all hover:text-white hover:border-px-orange hover:bg-px-orange";
+
     return (
-        <section className="tp-team-details-area px-team-details-style tp-team-details-ptb pt-100 pb-70">
+        <section className="pt-[60px] lg:pt-[100px] pb-[70px]">
             <div className="mx-auto w-full max-w-[1230px] px-3">
                 <div className="grid grid-cols-12 gap-x-6">
 
                     {/* Left Side */}
                     <div className="col-span-12 lg:col-span-6">
-                        <div className="tp-team-details-wrap">
+                        <div className="mb-[30px] lg:mb-0">
 
                             {/* image */}
-                            <div className="tp-team-details-thumb mb-40">
+                            <div className="mb-[40px]">
                                 <div className="ripple-image">
-                                    {team?.image && <Image className="max-w-full h-auto" width={540} height={600}
+                                    {team?.image && <Image className="max-w-full h-auto w-full rounded-none" width={540} height={600}
                                         src={team?.image}
                                         alt={team?.name}
                                     />}
@@ -31,30 +39,30 @@ const TeamDetailsMainContent = ({ id }: IdProps) => {
                             </div>
 
                             {/* contact + social */}
-                            <div className="tp-team-details-info flex justify-between items-center flex-wrap gap-20">
+                            <div className="flex justify-between items-center flex-wrap gap-[20px]">
 
-                                <div className="tp-team-details-info-contact">
+                                <div className="py-[10px] mb-[20px] xl:mb-0 border-t border-b border-[rgba(17,16,19,0.10)] dark:border-white/10">
 
                                     {team?.phone && (
-                                        <Link href={`tel:${team?.phone}`}>
+                                        <Link href={`tel:${team?.phone}`} className={contactLinkClass}>
                                             <Phone />
                                             {team?.phone}
                                         </Link>
                                     )}
 
                                     {team?.email && (
-                                        <Link href={`mailto:${team?.email}`}>
+                                        <Link href={`mailto:${team?.email}`} className={contactLinkClass}>
                                             <Mail color="#FF5722" />
                                             {team?.email}
                                         </Link>
                                     )}
                                 </div>
 
-                                <div className="tp-team-details-info-social">
-                                    <div className="px-footer-widget-social">
+                                <div>
+                                    <div className="flex">
 
                                         {team?.social_links?.facebook && (
-                                            <Link href={team?.social_links.facebook}>
+                                            <Link href={team?.social_links.facebook} className={socialLinkClass}>
                                                 <span>
                                                     <SiFacebook />
                                                 </span>
@@ -62,7 +70,7 @@ const TeamDetailsMainContent = ({ id }: IdProps) => {
                                         )}
 
                                         {team?.social_links?.twitter && (
-                                            <Link href={team?.social_links.twitter}>
+                                            <Link href={team?.social_links.twitter} className={socialLinkClass}>
                                                 <span>
                                                     <SiX />
                                                 </span>
@@ -70,7 +78,7 @@ const TeamDetailsMainContent = ({ id }: IdProps) => {
                                         )}
 
                                         {team?.social_links?.dribbble && (
-                                            <Link href={team?.social_links?.dribbble || "#"}>
+                                            <Link href={team?.social_links?.dribbble || "#"} className={socialLinkClass}>
                                                 <span>
                                                     <SiDribbble />
                                                 </span>
@@ -85,34 +93,34 @@ const TeamDetailsMainContent = ({ id }: IdProps) => {
                     {/* Right Side */}
                     <div className="col-span-12 lg:col-span-6">
 
-                        <div className="tp-team-details-wrapper">
+                        <div className="pl-0 lg:pl-[50px] xl:pl-[70px]">
 
                             {/* heading */}
-                            <div className="tp-team-details-text mb-50">
+                            <div className="mb-[50px]">
 
-                                <span className="tp-team-details-text-sub mb-10">
+                                <span className="inline-block mb-[10px] text-[16px] font-normal text-[#525356] dark:text-white/60">
                                     {team?.role}
                                 </span>
 
-                                <h4 className="tp-team-details-text-title">
+                                <h4 className="font-thunder-med text-[70px] font-semibold leading-none text-px-black dark:text-white">
                                     {team?.name}
                                 </h4>
 
                                 {team?.bio && (
-                                    <p>
+                                    <p className="text-[#4d5051] dark:text-white/60">
                                         {team?.bio}
                                     </p>
                                 )}
                             </div>
 
                             {/* more details */}
-                            <div className="tp-team-details-more mb-50">
+                            <div className="mb-[50px]">
 
-                                <h4 className="tp-team-details-more-title">
+                                <h4 className="text-[24px] font-semibold mb-[18px] tracking-[-0.48px] text-px-black dark:text-white">
                                     More details
                                 </h4>
 
-                                <ul>
+                                <ul className="[&>li]:list-none [&>li]:mb-[12px] [&>li]:text-[16px] [&>li]:font-medium [&>li]:text-[#111013] dark:[&>li]:text-white [&>li>span]:inline-block [&>li>span]:min-w-[100px] [&>li>span]:mr-[40px] [&>li>span]:text-[16px] [&>li>span]:font-normal [&>li>span]:text-[#525356] dark:[&>li>span]:text-white/60">
 
                                     {team?.location && (
                                         <li>
@@ -175,13 +183,13 @@ const TeamDetailsMainContent = ({ id }: IdProps) => {
 
                             {/* experience */}
                             {team?.experiences && team?.experiences.length > 0 && (
-                                <div className="tp-team-details-more mb-50">
+                                <div className="mb-[50px]">
 
-                                    <h4 className="tp-team-details-more-title">
+                                    <h4 className="text-[24px] font-semibold mb-[18px] tracking-[-0.48px] text-px-black dark:text-white">
                                         Experience
                                     </h4>
 
-                                    <ul>
+                                    <ul className="[&>li]:list-none [&>li]:mb-[12px] [&>li]:text-[16px] [&>li]:font-medium [&>li]:text-[#111013] dark:[&>li]:text-white">
                                         {team?.experiences.map((experience, index) => (
                                             <li key={`${experience}-${index}`}>
                                                 {experience}
@@ -193,26 +201,26 @@ const TeamDetailsMainContent = ({ id }: IdProps) => {
 
                             {/* skills */}
                             {team?.skills && team?.skills.length > 0 && (
-                                <div className="tp-team-details-progress mb-50">
+                                <div className="mb-[50px]">
 
-                                    <h4 className="tp-team-details-more-title mb-35">
+                                    <h4 className="text-[24px] font-semibold mb-[35px] tracking-[-0.48px] text-px-black dark:text-white">
                                         My Skills
                                     </h4>
 
                                     {team?.skills.map((skill, index) => (
                                         <div
                                             key={`${skill.title}-${index}`}
-                                            className="tp-team-details-progress mb-35"
+                                            className="mb-[35px]"
                                         >
 
-                                            <h6 className="tp-team-details-progress-title">
+                                            <h6 className="text-[16px] font-medium text-[#111013] dark:text-white">
                                                 {skill.title}
                                             </h6>
 
-                                            <div className="tp-team-details-progress-inner">
+                                            <div className="relative w-full h-[5px] bg-[#d9d9d9]">
 
                                                 <div
-                                                    className="tp-team-details-progress-bar"
+                                                    className="overflow-visible flex h-[5px] text-center whitespace-nowrap transition-[0.6s] relative bg-px-orange before:absolute before:content-[''] before:h-[20px] before:w-[1px] before:right-0 before:top-[-8px] before:my-auto before:bg-px-orange"
                                                     role="progressbar"
                                                     style={{
                                                         width: `${skill.value}%`,
@@ -222,7 +230,7 @@ const TeamDetailsMainContent = ({ id }: IdProps) => {
                                                     aria-valuemax={100}
                                                 >
 
-                                                    <h6 className="tp-team-details-progress-counter">
+                                                    <h6 className="mt-[-29px] font-medium text-[14px] absolute top-0 right-[-15px] uppercase">
                                                         {skill.value}%
                                                     </h6>
 

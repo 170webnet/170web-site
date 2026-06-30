@@ -21,7 +21,7 @@ const DesignStudioHeader = () => {
     };
     return (
         <>
-            <div className="px-header-2-area header-fixed pt-40">
+            <div className="px-header-2-area header-fixed pt-[15px] md:pt-[40px]">
                 <div className="mx-auto w-full max-w-[1830px] px-3">
                     <div className="grid grid-cols-12 gap-x-6 items-center">
                         <div className="col-span-6">

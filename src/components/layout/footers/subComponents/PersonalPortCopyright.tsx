@@ -10,7 +10,7 @@ const PersonalPortCopyright = () => {
                 <div className="grid grid-cols-12 gap-x-6 items-center">
                     <div className="col-span-12 xl:col-span-4">
                         <div className="px-copyright-3-text text-center lg:text-left">
-                            <p>© {getCurrentYear()} <Link href="#">Themepure.</Link> All Right Reserved</p>
+                            <p>© {getCurrentYear()} <Link href="#">170web.</Link> All Right Reserved</p>
                         </div>
                     </div>
                     <div className="col-span-12 lg:col-span-8 xl:col-span-5">

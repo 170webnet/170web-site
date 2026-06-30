@@ -32,19 +32,22 @@ const funfacts = [
 ];
 const AboutUsFunfact = () => {
     return (
-        <div className="ar-funfact-area px-funfact-inner-style pb-100 px-fade-anim">
+        <div className="pb-[100px] max-md:pb-[50px] px-fade-anim">
             <div className="container-px">
                 <div className="grid grid-cols-12 gap-x-6">
                     {funfacts.map((item) => (
                         <div className="col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-3" key={item.id}>
-                            <div className="ar-funfact-item mb-45 tp_fade_anim"
+                            <div
+                                className="mb-[45px] p-[45px] pb-[35px] max-xl:p-[30px] max-sm:p-[30px] shadow-[-1px_0_0_0_#E11010] border border-[#1e1e1e0f] dark:border-white/15 tp_fade_anim"
                                 data-delay={item.delay}
                             >
-                                <h4>
+                                <h4 className="mb-0 font-thunder font-medium uppercase leading-[0.76] tracking-normal text-px-black dark:text-white text-[70px] min-[1600px]:text-[100px] [&_i]:not-italic">
                                     <AnimatedCounterTwo min={0} max={item.end} />
                                     {item.suffix}
                                 </h4>
-                                <span>{item.label}</span>
+                                <span className="block text-[18px] font-normal leading-none tracking-[-0.36px] capitalize text-[#5D5D5D] dark:text-white/50">
+                                    {item.label}
+                                </span>
                             </div>
                         </div>
                     ))}

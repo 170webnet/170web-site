@@ -6,15 +6,15 @@ const PortfolioSixMain = () => {
     const displayPortfolioData = portfolioProjects.slice(4, 9);
 
     return (
-        <div className="px-portfolio-area pb-80">
+        <div className="pb-80">
             <div className="w-full px-3">
-                <div className="px-portfolio-wrap">
-                    <div className="px-project-inner-6-top flex justify-between items-center pb-40">
-                        <div className="px-project-inner-6-text">
-                            <span>Web & Digital Experiences <br /> Design, Development, Brand Identity</span>
+                <div className="px-[35px] max-md:px-0">
+                    <div className="flex flex-wrap justify-between items-center pb-40">
+                        <div className="mb-[20px]">
+                            <span className="text-[18px] font-medium text-px-black dark:text-white">Web & Digital Experiences <br /> Design, Development, Brand Identity</span>
                         </div>
-                        <div className="px-project-inner-6-text md:text-right">
-                            <span>Philadelphia, PA <br /> 2026</span>
+                        <div className="mb-[20px] md:text-right">
+                            <span className="text-[18px] font-medium text-px-black dark:text-white">Philadelphia, PA <br /> 2026</span>
                         </div>
                     </div>
                     {displayPortfolioData.map((item) => (

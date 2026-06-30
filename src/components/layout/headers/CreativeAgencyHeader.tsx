@@ -18,11 +18,11 @@ const CreativeAgencyHeader = () => {
     return (
         <>
             <header>
-                <div className="px-header-area px-header-style-black header-fixed px-header-ptb">
+                <div className="px-header-area px-header-style-black header-fixed py-[15px] xl:py-0">
                     <div className="mx-auto w-full max-w-[1870px] px-3">
                         <div className="grid grid-cols-12 gap-x-6 items-start">
                             <div className="col-span-6 md:col-span-3 lg:col-span-4 xl:col-span-6">
-                                <div className="px-header-logo pt-30">
+                                <div className="px-header-logo pt-0 xl:pt-[30px]">
                                     <Link href="/">
                                         <Image
                                             width={735}
@@ -47,7 +47,7 @@ const CreativeAgencyHeader = () => {
                                         <button
                                             type="button"
                                             onClick={toggleMainSidebar}
-                                            className="px-header-bar tp-offcanvas-open-btn"
+                                            className="px-header-bar tp-offcanvas-open-btn ml-[40px]"
                                             aria-label="Open main menu"
                                             aria-expanded={false}
                                             aria-controls="primary-offcanvas"

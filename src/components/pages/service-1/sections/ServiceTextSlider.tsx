@@ -17,12 +17,9 @@ const sliderItems = [
 
 const ServiceTextSlider = () => {
     return (
-        <div className="px-text-slider-area">
-            <div
-                className="px-text-slider-wrap px-text-slider-style-5 pt-30"
-                style={{ backgroundColor: "#ff471d" }}
-            >
-                <div className="px-text-slider-active-2 tp-slider-transtion">
+        <div>
+            <div className="bg-px-orange pt-[30px]">
+                <div>
                     <Swiper
                         modules={[Autoplay, FreeMode]}
                         {...text_slider_active}
@@ -36,10 +33,12 @@ const ServiceTextSlider = () => {
                 </div>
             </div>
 
-            <div className="px-line-shape mt-10">
-                {Array.from({ length: 5 }).map((_, index) => (
-                    <span key={`dot-${index}`}></span>
-                ))}
+            <div className="mt-[10px] leading-none">
+                <span className="block h-[10px] w-full bg-[#ff471d]"></span>
+                <span className="mt-[8px] block h-[9px] w-full bg-[#ff471d]"></span>
+                <span className="block h-[6px] w-full bg-[#ff471d]"></span>
+                <span className="block h-[4px] w-full bg-[#ff471d]"></span>
+                <span className="block h-[2px] w-full translate-y-[-4px] bg-[#ff471d]"></span>
             </div>
         </div>
     );

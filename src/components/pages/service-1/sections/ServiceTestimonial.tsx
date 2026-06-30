@@ -12,12 +12,12 @@ const ServiceTestimonial = () => {
     const swiperRef = useRef<SwiperType | null>(null);
 
     return (
-        <div className="ar-testimonial-area pt-120 pb-120">
+        <div className="pt-[120px] pb-[120px] max-sm:pt-[80px] max-sm:pb-[80px]">
             <div className="mx-auto w-full max-w-[1330px] px-3">
                 <div className="grid grid-cols-12 gap-x-6 justify-center">
                     <div className="col-span-12 xl:col-span-8">
-                        <div className="ar-testimonial-slider-wrap p-relative">
-                            <div className="ar-testimonial-active fix">
+                        <div className="relative">
+                            <div className="overflow-hidden">
                                 <Swiper
                                     modules={[Navigation, Pagination, Autoplay]}
                                     slidesPerView={1}
@@ -45,17 +45,20 @@ const ServiceTestimonial = () => {
                                 </Swiper>
 
                                 {/* PAGINATION */}
-                                <div className="ar-testimonial-fraction-wrap">
+                                <div
+                                    className="absolute right-0 left-0 bottom-[-80px] mx-auto inline-flex w-[260px] justify-center text-center max-sm:left-[-60px] max-sm:bottom-[-20px] [&_.swiper-pagination-progress]:!top-auto [&_.swiper-pagination-progress]:!bottom-0 [&_.swiper-pagination-progress]:!left-0 [&_.swiper-pagination-progress]:!mx-[30px] [&_.swiper-pagination-progress]:!h-[2px] [&_.swiper-pagination-progress]:!w-full [&_.swiper-pagination-progress]:!bg-[#d9d9d9] dark:[&_.swiper-pagination-progress]:!bg-white/20"
+                                    style={{ ["--swiper-pagination-color" as string]: "#ff471d" }}
+                                >
                                     <div className="swiper-pagination-progress"></div>
-                                    <div className="swiper-pagination-fraction"></div>
+                                    <div className="swiper-pagination-fraction [&_span]:absolute [&_span]:top-[-10px] [&_span]:right-[-60px] [&_span]:text-[15px] [&_span]:font-medium [&_span]:leading-none [&_span]:tracking-[-0.01em] [&_span]:text-px-black dark:[&_span]:text-white [&_span.current]:right-auto [&_span.current]:left-0"></div>
                                 </div>
                             </div>
 
                             {/* NAVIGATION */}
-                            <div className="ar-testimonial-arrow">
+                            <div className="max-md:mt-[70px] max-md:text-center">
                                 <button
                                     type="button"
-                                    className="ar-testimonial-prev"
+                                    className="absolute top-1/2 left-[-85px] inline-flex h-[50px] w-[50px] -translate-y-1/2 items-center justify-center rounded-full border border-black/10 leading-none transition-[0.3s] hover:border-px-orange hover:bg-px-orange hover:text-white dark:border-white/20 dark:hover:border-px-orange max-md:static max-md:translate-y-0 [&_svg]:ml-[1px]"
                                     onClick={() => swiperRef.current?.slidePrev()}
                                     aria-label="Previous testimonial"
                                 >
@@ -64,7 +67,7 @@ const ServiceTestimonial = () => {
 
                                 <button
                                     type="button"
-                                    className="ar-testimonial-next"
+                                    className="absolute top-1/2 right-[-85px] inline-flex h-[50px] w-[50px] -translate-y-1/2 items-center justify-center rounded-full border border-black/10 leading-none transition-[0.3s] hover:border-px-orange hover:bg-px-orange hover:text-white dark:border-white/20 dark:hover:border-px-orange max-md:static max-md:translate-y-0 [&_svg]:ml-[1px]"
                                     onClick={() => swiperRef.current?.slideNext()}
                                     aria-label="Next testimonial"
                                 >

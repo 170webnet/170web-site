@@ -51,13 +51,13 @@ const PageHeader: React.FC<headerPropsDt> = ({ containerSize = "container-1870",
                         </div>
                      </div>
                      <div className="col-span-6 md:col-span-9 lg:col-span-8">
-                        <div className="px-header-box flex justify-end items-center">
+                        <div className="flex justify-end items-center">
                            <div className={`px-header-menu tp-header-dropdown px-megamenu-style ${dropdownBackgroundCls} hidden xl:block`}>
                               <nav className="tp-mobile-menu-active">
                                  <HeaderMenu />
                               </nav>
                            </div>
-                           <div className="px-header-action">
+                           <div>
                               <button
                                  type="button"
                                  onClick={toggleMainSidebar}

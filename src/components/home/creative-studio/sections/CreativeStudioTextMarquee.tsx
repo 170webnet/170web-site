@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import { text_slider_params } from "@/constant";
 import { Autoplay, FreeMode } from "swiper/modules";
-import { useIsDarkRoute } from "@/hooks/useIsDarkRoute";
 
 const marqueeItems = [
     "Brand Identity Design",
@@ -23,24 +22,20 @@ const marqueeItems = [
 ];
 
 const MarqueeItem = ({ text }: { text: string }) => (
-    <div className="px-text-slider-item flex items-center">
-        <span>{text}</span>
-        <span className="pl-40">
+    <div className="flex items-center">
+        <span className="font-semibold text-[18px] leading-none tracking-[-0.06em] uppercase text-px-black dark:text-white">
+            {text}
+        </span>
+        <span className="pl-[40px] text-px-black dark:text-white">
             <Star fill="currentColor" />
         </span>
     </div>
 );
 
 const CreativeStudioTextMarquee = () => {
-    const isDarkTheme = useIsDarkRoute();
-    const sectionBackground = isDarkTheme ? "#1D1D1F" : "#FEFFF8";
-
     return (
-        <section
-            className="px-text-slider-wrap px-text-slider-style-3 pt-15 pb-15"
-            style={{ backgroundColor: sectionBackground }}
-        >
-            <div className="px-text-slider-active tp-slider-transtion">
+        <section className="border-y border-[rgba(30,30,30,0.1)] dark:border-white/10 bg-[#FEFFF8] dark:bg-[#1D1D1F] pt-[15px] pb-[15px]">
+            <div className="tp-slider-transtion">
                 <Swiper
                     modules={[Autoplay, FreeMode]}
                     {...text_slider_params}

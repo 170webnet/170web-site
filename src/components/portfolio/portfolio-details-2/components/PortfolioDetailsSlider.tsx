@@ -19,12 +19,12 @@ const headingLines = [
 
 const PortfolioDetailsSlider = () => {
     return (
-        <section className="px-pd-4-slider-ptb px-pd-style pb-110">
+        <section className="pb-[110px]">
             <div className="mx-auto w-full max-w-[1230px] px-3">
                 <div className="grid grid-cols-12 gap-x-6 justify-center">
                     <div className="col-span-12 xl:col-span-9">
-                        <div className="px-pd-4-slider-heading design-social-title-box title-box text-center mb-120">
-                            <h4 className="px-section-title ff-thunder fs-130">
+                        <div className="title-box text-center mb-[120px]">
+                            <h4 className="font-thunder uppercase text-[130px] font-semibold leading-[0.83] tracking-[1px] text-px-black dark:text-white max-[1199px]:text-[75px] max-[991px]:text-[60px] max-[767px]:text-[80px]">
                                 {headingLines.map((item, index) => (
                                     <span
                                         key={`${item.text}-${index}`}
@@ -41,15 +41,15 @@ const PortfolioDetailsSlider = () => {
             </div>
 
             {/* Slider */}
-            <div className="px-pd-4-slider-wrapper">
-                <div className="px-pd-4-slider-active">
+            <div className="mx-[-220px]">
+                <div>
                     <Swiper
                         modules={[Pagination]}
                         {...portfolio_slider_params}
                     >
                         {sliderImages.map((image, index) => (
                             <SwiperSlide key={`${image}-${index}`}>
-                                <div className="px-pd-4-slider-thumb">
+                                <div className="rounded-[10px] overflow-hidden">
                                     <Image width={759} height={409} className="max-w-full h-auto"
                                         src={image}
                                         alt={`Portfolio slider preview ${index + 1}`}

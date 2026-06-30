@@ -11,7 +11,7 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         client: "Envato",
         role: "Branding",
         duration: "8 March 2026",
-        designer: "ThemePure",
+        designer: "170web",
     },
     {
         id: 2,
@@ -22,7 +22,7 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         client: "Creative Market",
         role: "UI/UX Design",
         duration: "18 February 2026",
-        designer: "ThemePure",
+        designer: "170web",
     },
     {
         id: 3,
@@ -33,7 +33,7 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         client: "Behance",
         role: "Web Development",
         duration: "22 January 2026",
-        designer: "ThemePure",
+        designer: "170web",
     },
     {
         id: 4,
@@ -44,7 +44,7 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         client: "Dribbble",
         role: "Brand Identity",
         duration: "3 January 2026",
-        designer: "ThemePure",
+        designer: "170web",
     },
     //startup agency portfolio project data end
     //design studio portfolio data start
@@ -57,7 +57,7 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         client: "Dribbble",
         role: "Brand Identity",
         duration: "3 January 2026",
-        designer: "ThemePure",
+        designer: "170web",
     },
     {
         id: 6,
@@ -68,7 +68,7 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         client: "Dribbble",
         role: "Brand Identity",
         duration: "3 January 2026",
-        designer: "ThemePure",
+        designer: "170web",
     },
     {
         id: 7,
@@ -79,7 +79,7 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         client: "Dribbble",
         role: "Brand Identity",
         duration: "3 January 2026",
-        designer: "ThemePure",
+        designer: "170web",
     },
     {
         id: 8,
@@ -90,7 +90,7 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         client: "Dribbble",
         role: "Brand Identity",
         duration: "3 January 2026",
-        designer: "ThemePure",
+        designer: "170web",
     },
     {
         id: 9,
@@ -101,7 +101,7 @@ export const portfolioProjects: PortfolioProjectDT[] = [
         client: "Dribbble",
         role: "Brand Identity",
         duration: "3 January 2026",
-        designer: "ThemePure",
+        designer: "170web",
     },
     //design studio portfolio data end
     {

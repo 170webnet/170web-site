@@ -31,33 +31,33 @@ const SERVICES = [
 
 const CreativeAgencyService = () => {
 	return (
-		<div className="px-service-5-area">
+		<div>
 			<div className="mx-auto w-full max-w-[1550px] px-3">
 				<div className="grid grid-cols-12 gap-x-6">
 					{SERVICES.map((service) => (
 						<div className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3" key={service.id}>
-							<div className="px-service-5-item mb-25 px-fade-anim">
+							<div className="mb-[25px] border border-px-black-2/10 p-[20px] xl:p-[40px] px-fade-anim dark:border-white/10">
 
 								{/* ICON */}
-								<div className="px-service-5-icon">
-									<Image className="max-w-full h-auto w-auto h-auto" width={90} height={60} src={service.icon} alt={service.title} />
+								<div className="mb-[60px] [&_img]:dark:invert">
+									<Image className="max-w-full h-auto w-auto" width={90} height={60} src={service.icon} alt={service.title} />
 								</div>
 
 								{/* CONTENT */}
-								<div className="px-service-5-content">
-									<h4 className="px-service-5-title">
+								<div className="mb-[80px]">
+									<h4 className="mb-[20px] text-[20px] xl:text-[22px] font-semibold leading-none tracking-[-0.04em] text-px-black dark:text-white">
 										<SmartLink className="px-line-lr" href={service.href}>
 											{service.title}
 										</SmartLink>
 									</h4>
 
-									<p>
+									<p className="mb-0 text-[16px] font-normal leading-[1.5] tracking-[-0.04em] text-px-body dark:text-white/60">
 										Brand identity design a the have to success whether you
 										breath onfire quanto agency.
 									</p>
 								</div>
 								{/* LINK */}
-								<div className="px-service-5-link">
+								<div className="text-[16px] font-medium leading-none text-px-black dark:text-white">
 									<SmartLink className="px-doubble-effect" href={service.href}>
 										View details
 										<i>

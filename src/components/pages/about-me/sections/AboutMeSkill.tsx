@@ -29,16 +29,18 @@ const SKILLS = [
 
 const AboutMeSkill = () => {
     return (
-        <div className="am-skill-area am-skill-bdr pt-60 pb-40">
+        <div className="border-t border-[rgba(30,30,30,0.08)] pt-[60px] pb-[40px] dark:border-white/10">
             <div className="container-px">
                 <div className="grid grid-cols-12 gap-x-6">
                     {/* Left Title */}
                     <div className="col-span-12 lg:col-span-5">
-                        <div className="am-skill-title-box">
-                            <span className="px-section-subtitle uppercase pb-30">
+                        <div className="md:mb-[30px]">
+                            <span className="inline-block pb-[30px] text-[16px] font-medium uppercase tracking-[-0.03em] text-px-black lg:pb-[20px] dark:text-white">
                                 About
                             </span>
-                            <h4 className="px-section-title ff-thunder fs-80">Skills</h4>
+                            <h4 className="font-thunder-med text-[80px] font-medium leading-[0.8] tracking-[1px] text-px-black dark:text-white">
+                                Skills
+                            </h4>
                         </div>
                     </div>
 

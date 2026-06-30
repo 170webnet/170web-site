@@ -6,13 +6,13 @@ const Blog = () => {
     const displayBlogs = blogs.slice(0, 3); // Display only the first 3 blogs
 
     return (
-        <div className="px-blog-area pt-120 pb-80 px-fade-anim">
+        <div className="pt-[80px] pb-0 xl:pt-[120px] xl:pb-[80px] px-fade-anim">
             <div className="mx-auto w-full max-w-[1750px] px-3">
                 {/* Title */}
                 <div className="grid grid-cols-12 gap-x-6">
                     <div className="col-span-12 xl:col-span-6">
-                        <div className="px-blog-title-box">
-                            <h4 className="px-section-title ff-thunder fs-100 mb-40">
+                        <div>
+                            <h4 className="mb-[40px] font-thunder text-[60px] md:text-[75px] lg:text-[100px] font-semibold leading-[0.9] tracking-[1px] uppercase text-px-black dark:text-white">
                                 Latest Blog
                             </h4>
                         </div>

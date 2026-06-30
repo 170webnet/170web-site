@@ -8,30 +8,47 @@ interface AwardItemProps {
 
 const AwardItem = ({ item, index, }: AwardItemProps) => {
     return (
-        <div className="px-award-item px-fade-anim" data-delay={item.delay}>
+        <div
+            className="px-fade-anim border-b border-[rgba(10,10,10,0.08)] py-[27px] dark:border-white/10"
+            data-delay={item.delay}
+        >
             <div className="grid grid-cols-12 gap-x-6">
                 <div className="col-span-12 md:col-span-1 lg:col-span-2 xl:col-span-3">
-                    <div className="px-award-num">
-                        <span>({String(index).padStart(3, "0")})</span>
+                    <div>
+                        <span className="text-[16px] font-medium tracking-[-0.03em] text-px-black dark:text-white md:text-[11px]">
+                            ({String(index).padStart(3, "0")})
+                        </span>
                     </div>
                 </div>
 
                 <div className="col-span-12 md:col-span-5 lg:col-span-4 xl:col-span-4">
-                    <div className="px-award-category">
-                        <Image width={20} height={20} src={item.image} alt={item.title} />
-                        <span>{item.title}</span>
+                    <div className="flex items-center max-md:py-[7px]">
+                        <Image
+                            width={20}
+                            height={20}
+                            src={item.image}
+                            alt={item.title}
+                            className="mr-[14px]"
+                        />
+                        <span className="mb-0 text-[18px] font-medium tracking-[-0.04em] text-px-black dark:text-white md:text-[16px]">
+                            {item.title}
+                        </span>
                     </div>
                 </div>
 
                 <div className="col-span-12 md:col-span-5 lg:col-span-4 xl:col-span-4">
-                    <div className="px-award-nomination">
-                        <span>{item.nomination}</span>
+                    <div>
+                        <span className="text-[16px] font-medium tracking-[-0.03em] text-px-body dark:text-white">
+                            {item.nomination}
+                        </span>
                     </div>
                 </div>
 
                 <div className="col-span-12 md:col-span-1 lg:col-span-2 xl:col-span-1">
-                    <div className="px-award-year md:text-right">
-                        <span>{item.year}</span>
+                    <div className="md:text-right max-md:py-[7px]">
+                        <span className="text-[16px] font-medium tracking-[-0.03em] text-px-black dark:text-white md:text-[12px]">
+                            {item.year}
+                        </span>
                     </div>
                 </div>
             </div>

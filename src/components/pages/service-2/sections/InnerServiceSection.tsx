@@ -3,16 +3,21 @@ import InnerServiceItem from "../components/InnerServiceItem";
 
 const InnerServiceSection = () => {
     return (
-        <div className="tp-inner-service-area px-inner-service-style pt-120 pb-120">
+        <div className="pt-[120px] pb-[120px] max-[1199px]:pt-[20px] max-[1199px]:pb-0">
             <div className="mx-auto w-full max-w-[1830px] px-3">
                 <div className="grid grid-cols-12 gap-x-6">
                     <div className="col-span-12 lg:col-span-3">
-                        <div className="inner-service-1-left">
-                            <span>Services</span>
+                        <div className="max-[991px]:mb-[50px]">
+                            <span className="mb-[25px] inline-block font-sans text-[14px] leading-none font-medium tracking-[0.02em] uppercase text-px-black-2 dark:text-white">
+                                Services
+                            </span>
                             <ul>
                                 {servicesNavItems.map((item, index) => (
-                                    <li key={item}>
-                                        <span>
+                                    <li
+                                        key={item}
+                                        className="list-none not-last:mb-[12px]"
+                                    >
+                                        <span className="font-sans text-[20px] leading-none font-semibold tracking-[0.02em] uppercase text-px-orange">
                                             {index + 1}. {item}
                                         </span>
                                     </li>

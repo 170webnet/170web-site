@@ -6,30 +6,30 @@ const CreativeAgencyCapsule = () => {
     const sceneRef = useThrowable({ scrollGravity: false });
 
     return (
-        <div className="px-capsule-area">
+        <div>
             <div className="mx-auto w-full max-w-[1550px] px-3">
                 <div className="grid grid-cols-12 gap-x-6">
                     <div className="col-span-12 xl:col-span-12">
-                        <div className="px-capsule-inner p-relative">
+                        <div className="relative border border-[rgba(30,30,30,0.1)] dark:border-white/10">
                             <div
-                                className="px-capsule-top-wrapper p-relative"
+                                className="relative"
                                 data-px-throwable-scene="true" ref={sceneRef}
                             >
-                                <div className="px-capsule-title-wrapper">
-                                    <span className="px-capsule-subtitle">
+                                <div className="pt-[60px] pl-[40px]">
+                                    <span className="mb-[30px] inline-block text-[18px] font-normal leading-[1.6] tracking-[-0.05em] text-px-black dark:text-white">
                                         Digital Services
                                     </span>
 
-                                    <h3 className="px-capsule-title">
+                                    <h3 className="font-thunder text-[60px] font-semibold uppercase leading-[0.8] tracking-[-0.01em] text-px-black md:text-[70px] lg:text-[80px] xl:text-[100px] dark:text-white">
                                         We can <br /> help with...
                                     </h3>
                                 </div>
 
-                                <div className="px-capsule-item-wrapper">
+                                <div className="pointer-events-none relative mt-[-270px] h-[650px] overflow-hidden [&>*]:pointer-events-auto [&>*]:absolute [&>*]:left-0 [&>*]:top-0 [&>*]:mb-0 [&>*]:inline-block [&>*]:select-none [&>*]:transition-none">
                                     {SERVICE_CAPSULE_ITEMS.map((item) => (
                                         <p data-px-throwable-el="" key={item.id}>
                                             <span
-                                                className="px-capsule-item"
+                                                className="inline-flex h-[130px] w-[130px] select-none items-center justify-center rounded-full bg-[#F6F6F6] font-thunder-med text-[20px] text-px-black lg:h-[160px] lg:w-[160px] lg:text-[32px]"
                                                 style={{ width: item.width, height: item.height, backgroundColor: item.bg }}>
                                                 {item.label}
                                             </span>
@@ -39,7 +39,7 @@ const CreativeAgencyCapsule = () => {
                             </div>
                         </div>
 
-                        <div className="px-line-shape px-line-bg-black m-2-top">
+                        <div className="mt-[-2px] leading-none [&>span]:inline-block [&>span]:h-[10px] [&>span]:w-full [&>span]:bg-px-black dark:[&>span]:bg-white [&>span:nth-child(2)]:mt-[8px] [&>span:nth-child(2)]:h-[9px] [&>span:nth-child(3)]:h-[6px] [&>span:nth-child(4)]:h-[4px] [&>span:nth-child(5)]:h-[2px] [&>span:nth-child(5)]:translate-y-[-4px]">
                             {[...Array(5)].map((_, index) => (
                                  <span key={`line-${index}`}></span>
                             ))}

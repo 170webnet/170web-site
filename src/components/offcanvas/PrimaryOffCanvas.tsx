@@ -29,7 +29,7 @@ const PrimaryOffCanvas = () => {
         <>
             <div className={`tp-offcanvas-area ${isMainSidebarOpen ? "opened" : ""}`}>
                 <div className={`tp-offcanvas-wrapper ${isDark ? "offcanvas-black-bg" : "offcanvas-white-bg"}`}>
-                    <div className="tp-offcanvas-top flex items-center justify-between">
+                    <div className="tp-offcanvas-top flex items-center justify-between mb-[90px]">
                         <div className="tp-offcanvas-logo">
                             <Link href="/">
                                 <Image width={120} height={42} className="logo-1" src="/assets/img/logo/logo-orange.png" alt="logo-orange" />
@@ -50,14 +50,14 @@ const PrimaryOffCanvas = () => {
                         </div>
                     </div>
                     <div className="tp-offcanvas-main">
-                        <div className="tp-offcanvas-content hidden xl:block">
-                            <h3 className="tp-offcanvas-title">Hello There!</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+                        <div className="tp-offcanvas-content hidden xl:block mb-[45px]">
+                            <h3 className="font-bold text-[40px] leading-none tracking-[-0.8px] mb-[15px] text-px-black">Hello There!</h3>
+                            <p className="text-[16px] font-normal leading-[24px] text-[#414144]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
                         </div>
                         <div className="tp-offcanvas-menu xl:hidden">
                             <nav><MobileMenus /></nav>
                         </div>
-                        <div className="tp-offcanvas-gallery hidden xl:block">
+                        <div className="tp-offcanvas-gallery hidden xl:block mb-[65px]">
                             <div className="grid grid-cols-12 gap-x-[2px]">
                                 <PhotoProviderWrapper>
                                     {galleryImages.map((image: ImageDT) => (
@@ -72,24 +72,24 @@ const PrimaryOffCanvas = () => {
                                 </PhotoProviderWrapper>
                             </div>
                         </div>
-                        <div className="tp-offcanvas-contact">
-                            <h3 className="tp-offcanvas-title sm">Information</h3>
-                            <ul>
-                                <li><Link href="tel:1245654">+ 4 20 7700 1007</Link></li>
-                                <li><Link href="mailto:hello@170web.com">hello@170web.com</Link></li>
-                                <li><Link href="#">Avenue de Roma 158b, Lisboa</Link></li>
+                        <div className="tp-offcanvas-contact mb-[55px]">
+                            <h3 className="tp-offcanvas-title sm text-[20px] font-bold mb-[15px] uppercase text-px-black">Information</h3>
+                            <ul className="list-none">
+                                <li className="[&:not(:last-child)]:mb-[2px]"><Link href="tel:1245654">+ 4 20 7700 1007</Link></li>
+                                <li className="[&:not(:last-child)]:mb-[2px]"><Link href="mailto:hello@170web.com">hello@170web.com</Link></li>
+                                <li className="[&:not(:last-child)]:mb-[2px]"><Link href="#">Avenue de Roma 158b, Lisboa</Link></li>
                             </ul>
                         </div>
                         <div className="tp-offcanvas-social">
-                            <h3 className="tp-offcanvas-title sm">Follow Us</h3>
-                            <ul>
-                                <li>
+                            <h3 className="tp-offcanvas-title sm text-[20px] font-bold mb-[15px] uppercase text-px-black">Follow Us</h3>
+                            <ul className="flex items-center list-none">
+                                <li className="[&:not(:last-child)]:mr-[8px]">
                                     <Link href="#"><SiInstagram /></Link>
                                 </li>
-                                <li>
+                                <li className="[&:not(:last-child)]:mr-[8px]">
                                     <Link href="#"><SiDribbble /></Link>
                                 </li>
-                                <li>
+                                <li className="[&:not(:last-child)]:mr-[8px]">
                                     <Link href="#"><SiYoutube /></Link>
                                 </li>
                             </ul>

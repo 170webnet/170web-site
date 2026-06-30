@@ -7,19 +7,22 @@ const Project = () => {
     const displayProjects = portfolioProjects.slice(9, 13);
 
     return (
-        <div className="px-project-3-area pt-40 pb-80">
+        <div className="pt-[40px] pb-[80px] max-[767px]:pb-0">
             <div className="w-full px-3">
-                <div className="grid grid-cols-12 gap-x-6 items-center mb-25">
+                <div className="grid grid-cols-12 gap-x-6 items-center mb-[25px]">
                     <div className="col-span-12 lg:col-span-8">
-                        <div className="px-project-3-title-box">
-                            <h4 className="px-section-title ff-thunder fs-100 mb-0">
+                        <div>
+                            <h4 className="font-thunder text-[100px] min-[768px]:max-[991px]:text-[75px] max-[767px]:text-[60px] font-semibold leading-[0.9] tracking-[1px] uppercase text-px-black dark:text-white mb-0">
                                 Featured Projects
                             </h4>
                         </div>
                     </div>
                     <div className="col-span-12 lg:col-span-4">
-                        <div className="px-project-3-top-btn lg:text-right">
-                            <SmartLink className="px-btn-border" href="/portfolio-6">
+                        <div className="lg:text-right">
+                            <SmartLink
+                                className="inline-block uppercase tracking-[-0.06em] leading-none text-[17px] font-medium text-px-black bg-[#fefff8] border border-px-black-2/[0.10] rounded-[70px] px-[35px] py-[13px] transition-all duration-300 hover:text-white hover:border-px-red hover:bg-px-red"
+                                href="/portfolio-6"
+                            >
                                 View All Projects
                             </SmartLink>
                         </div>

@@ -12,7 +12,7 @@ interface BannerSectionProps {
 const BannerSection = ({
     src,
     alt = "banner-image",
-    wrapperClass = "px-banner-wraper fix pb-70",
+    wrapperClass = "overflow-hidden pb-[70px]",
     imageClass = "",
     speed = 0.1,
     priority = false,

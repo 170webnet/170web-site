@@ -58,22 +58,22 @@ const images = [
 
 const PortfolioThreeMain = () => {
     return (
-        <div className="px-project-6-area px-project-inner-style pt-120 pb-160">
+        <div className="pt-[120px] pb-[160px] max-lg:pt-[40px]">
 
             {/* HEADER */}
-            <div className="px-project-inner-top-ptb">
+            <div className="pb-[28px] border-b border-[rgba(30,30,30,0.08)] dark:border-white/10">
                 <div className="w-full px-3">
                     <div className="grid grid-cols-12 gap-x-6 justify-center">
                         <div className="col-span-12 xl:col-span-9">
-                            <div className="px-project-inner-top-wrap">
+                            <div>
                                 <div className="grid grid-cols-12 gap-x-6">
                                     <div className="col-span-12 lg:col-span-7">
-                                        <div className="px-project-inner-header">
-                                            <span>Client</span>
+                                        <div>
+                                            <span className="inline-block text-[14px] font-normal tracking-[-0.2px] text-px-body dark:text-white/65">Client</span>
                                         </div>
                                     </div>
                                     <div className="col-span-12 lg:col-span-5">
-                                        <div className="px-project-inner-header flex justify-between">
+                                        <div className="flex justify-between [&_span]:inline-block [&_span]:text-[14px] [&_span]:font-normal [&_span]:tracking-[-0.2px] [&_span]:text-px-body dark:[&_span]:text-white/65">
                                             <span>Services</span>
                                             <span>Year</span>
                                         </div>
@@ -86,8 +86,8 @@ const PortfolioThreeMain = () => {
             </div>
 
             {/* PROJECT LIST */}
-            <div className="px-project-6-wrap projects p-relative">
-                <div className="px-project-6-inner">
+            <div className="px-project-6-wrap relative">
+                <div>
                     {portfolioItems.map((item, index) => (
                         <PortfolioThreeItem
                             key={item.id}
@@ -98,10 +98,10 @@ const PortfolioThreeMain = () => {
                 </div>
 
                 {/* IMAGES */}
-                <div className="px-project-6-img-wrap">
-                    <div className="px-project-6-img-slider">
+                <div className="px-project-6-img-wrap pointer-events-none absolute top-0 left-0 z-[3] h-[330px] w-[330px] -translate-x-1/2 -translate-y-1/2 overflow-hidden opacity-0">
+                    <div className="px-project-6-img-slider flex flex-col">
                         {images.map((img) => (
-                            <Image className="max-w-full h-auto" width={330} height={330} key={img} src={img} alt="portfolio" />
+                            <Image className="h-[330px] w-[330px] object-cover object-center" width={330} height={330} key={img} src={img} alt="portfolio" />
                         ))}
                     </div>
                 </div>

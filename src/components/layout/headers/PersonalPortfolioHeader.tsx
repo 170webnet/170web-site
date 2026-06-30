@@ -19,7 +19,7 @@ const PersonalPortfolioHeader = () => {
     return (
         <>
             <header>
-                <div className="px-header-6-ptb px-header-style-black header-transparent">
+                <div className="px-header-style-black header-transparent py-[15px] xl:py-0">
                     <div className="mx-auto w-full max-w-[1870px] px-3">
                         <div className="grid grid-cols-12 gap-x-6 items-center">
                             <div className="col-span-5">
@@ -46,8 +46,8 @@ const PersonalPortfolioHeader = () => {
                                     <div className="px-header-6-info hidden xl:block">
                                         <Link className="px-line-lr" href="mailto:hello@170web.com">Hello@170web.com</Link>
                                     </div>
-                                    <div className="px-header-6-btn ml-25 hidden xl:block">
-                                        <SmartLink className="px-btn-grey" href="/contact-me">
+                                    <div className="px-header-6-btn ml-[25px] hidden xl:block">
+                                        <SmartLink className="inline-block rounded-[50px] bg-[#f8f8f8] px-[24px] py-[7px] text-[15px] font-medium uppercase tracking-[-0.6px] text-px-black" href="/contact-me">
                                             Contact me
                                         </SmartLink>
                                     </div>
@@ -55,7 +55,7 @@ const PersonalPortfolioHeader = () => {
                                         <button
                                             type="button"
                                             onClick={toggleMainSidebar}
-                                            className="px-header-bar tp-offcanvas-open-btn"
+                                            className="px-header-bar tp-offcanvas-open-btn ml-[40px]"
                                             aria-label="Open sidebar menu"
                                         >
                                             <span></span>

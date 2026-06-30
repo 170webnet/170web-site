@@ -8,8 +8,8 @@ const socialLinks = ["Linkedin", "Twitter", "Facebook"];
 
 const PersonalPortfolioFooter = () => {
     return (
-        <footer className="tp-section-bg">
-            <div className="px-footer-3-area pt-90 pb-120">
+        <footer className="bg-[#0a0a0a] dark:bg-[#1c1d20]">
+            <div className="pt-[90px] pb-[120px]">
 
                 {/* Slider Area */}
                 <PersonalPortTextSlider />
@@ -17,17 +17,23 @@ const PersonalPortfolioFooter = () => {
                 <div className="container-px">
                     <div className="grid grid-cols-12 gap-x-6">
                         <div className="xl:col-start-5 col-span-12 xl:col-span-8">
-                            <div className="px-footer-3-box">
+                            <div>
 
                                 {/* Contact Info */}
-                                <div className="px-footer-3-info">
-                                    <div className="px-footer-3-tel">
-                                        <Link href="tel:(510)8956500">
+                                <div>
+                                    <div>
+                                        <Link
+                                            className="inline-block mb-[20px] text-white text-[34px] font-semibold leading-none font-thunder"
+                                            href="tel:(510)8956500"
+                                        >
                                             (510) 895-6500
                                         </Link>
                                     </div>
-                                    <div className="px-footer-3-mail">
-                                        <Link href="mailto:Hello@170web.com">
+                                    <div>
+                                        <Link
+                                            className="inline-block mb-[20px] text-white text-[60px] md:text-[90px] xl:text-[130px] font-semibold leading-none font-thunder"
+                                            href="mailto:Hello@170web.com"
+                                        >
                                             Hello@170web.com
                                         </Link>
                                     </div>
@@ -37,11 +43,16 @@ const PersonalPortfolioFooter = () => {
                                 <FooterContactForm />
 
                                 {/* Social Links */}
-                                <div className="px-footer-3-social">
+                                <div>
                                     {socialLinks.map((platform) => (
-                                        <Link href="#" key={platform} style={{ marginRight: "5px" }}>
+                                        <Link
+                                            href="#"
+                                            key={platform}
+                                            style={{ marginRight: "5px" }}
+                                            className="inline-block tracking-[-0.17px] text-white/70 bg-[#121212] dark:bg-white/5 rounded-[72px] py-[14px] px-[15px] md:py-[20px] md:px-[40px] text-[14px] md:text-[17px] font-semibold leading-none hover:text-white hover:bg-px-orange"
+                                        >
                                             {platform}
-                                            <span>
+                                            <span className="inline-block ml-[10px]">
                                                 <FooterSocialArrowIcon />
                                             </span>
                                         </Link>

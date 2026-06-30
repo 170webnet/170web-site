@@ -36,7 +36,7 @@ const CreativeAgencyHero = () => {
 	return (
 		<div
 			id="top"
-			className="px-hero-5-area px-hero-5-style px-hero-5-pt pb-40"
+			className="pb-[80px] lg:pb-[40px] pt-[100px] lg:pt-[160px] xl:pt-[330px] 2xl:pt-[450px] bg-[#FFF5F3] dark:bg-transparent"
 			style={{ backgroundColor: heroStyles.sectionBackground || undefined }}
 		>
 			<div className="mx-auto w-full max-w-[1870px] px-3">
@@ -44,13 +44,15 @@ const CreativeAgencyHero = () => {
 
 					{/* LEFT IMAGES */}
 					<div className="col-span-12 lg:col-span-3 xl:col-span-2 2xl:col-span-3 hidden md:block">
-						<div className="px-hero-5-thumb-wrap">
+						<div className="md:flex lg:block md:mb-[30px] lg:mb-0">
 							{HERO_IMAGES.map((item) => (
-								<div key={item.src} className="px-hero-5-thumb mt-30 flex items-end">
+								<div key={item.src} className="mt-[30px] flex items-end md:mr-[30px] lg:mr-0">
 									<SmartLink href="/portfolio-2">
 										<Image width={120} height={100} src={item.src} alt="hero image" />
 									</SmartLink>
-									<span>{item.label}</span>
+									<span className="ml-[10px] mb-[10px] inline-block font-medium text-[14px] leading-none tracking-[-0.01em] uppercase text-px-body dark:text-white/60 [writing-mode:sideways-lr]">
+										{item.label}
+									</span>
 								</div>
 							))}
 						</div>
@@ -58,31 +60,36 @@ const CreativeAgencyHero = () => {
 
 					{/* MAIN CONTENT */}
 					<div className="col-span-12 lg:col-span-9 xl:col-span-7 2xl:col-span-7">
-						<div className="px-hero-5-content">
-							<p>
+						<div>
+							<p className="font-medium text-[28px] md:text-[36px] xl:text-[34px] 2xl:text-[36px] leading-[1.1] tracking-[-0.04em] text-px-black dark:text-white mb-[50px] lg:mb-[170px] [&_br]:hidden md:[&_br]:inline">
 								170web is a creative studio <br />
 								based in London. We think like <br />
 								an agency and produce like visuals <br />
 								for brands & agencies.
 							</p>
 
-							<div className="px-hero-5-list">
-								<div className="flex flex-wrap row-cols-xl-3 row-cols-md-3 row-cols-2">
+							<div>
+								<div className="flex flex-wrap">
 
 									{/* YEAR */}
-									<div className="col-span-12 md:col-span-4 md:order-0 order-1">
-										<div className="px-hero-5-content mb-20">
-											<span>©{currentYear} Modern Studio</span>
+									<div className="basis-full md:basis-1/3 md:order-none order-1">
+										<div className="mb-[20px]">
+											<span className="inline-block font-medium text-[14px] leading-[1.3] tracking-[-0.01em] uppercase text-px-body dark:text-white/60">
+												©{currentYear} Modern Studio
+											</span>
 										</div>
 									</div>
 
 									{/* SERVICES */}
-									<div className="flex-1 order-0">
-										<div className="px-hero-5-category-wrap mb-20">
+									<div className="flex-1 order-none">
+										<div className="mb-[20px]">
 											{SERVICES.map((service) => (
-												<div key={service} className="px-hero-5-category">
-													<SmartLink href="/service-1">
-														<span>
+												<div key={service} className="group">
+													<SmartLink
+														href="/service-1"
+														className="inline-block font-medium text-[14px] leading-[1.3] tracking-[-0.01em] uppercase text-px-body dark:text-white/60"
+													>
+														<span className="hidden md:inline-block shrink-0 -translate-y-[2px] opacity-0 invisible transition-all duration-300 group-hover:opacity-100 group-hover:visible group-hover:-translate-x-[10px]">
 															<Plus />
 														</span>
 														{service}
@@ -93,11 +100,14 @@ const CreativeAgencyHero = () => {
 									</div>
 
 									{/* SOCIAL */}
-									<div className="flex-1 order-0">
-										<div className="px-hero-5-social-wrap mb-20">
+									<div className="flex-1 order-none">
+										<div className="mb-[20px]">
 											{SOCIALS.map((social) => (
-												<div key={social.name} className="px-hero-5-social">
-													<Link className="px-doubble-effect" href={social.href}>
+												<div key={social.name}>
+													<Link
+														className="px-doubble-effect font-medium text-[14px] leading-[1.3] tracking-[-0.01em] uppercase text-px-body dark:text-white/60"
+														href={social.href}
+													>
 														{social.name}
 														<i>
 															<HeroArrowIcon />
@@ -116,13 +126,13 @@ const CreativeAgencyHero = () => {
 
 					{/* VIDEO */}
 					<div className="col-span-12 xl:col-span-3 2xl:col-span-2">
-						<div className="px-hero-4-video-wrap flex justify-end">
-							<div className="px-hero-4-video">
-								<div className="text-right hidden xl:block mb-50">
+						<div className="flex justify-end">
+							<div className="w-full xl:w-auto mb-0">
+								<div className="text-right hidden xl:block mb-[50px]">
 									<Image className="max-w-full h-auto" width={171} height={60} src="/assets/img/shape/shape-1.png" alt="shape" />
 								</div>
 
-								<video loop muted autoPlay playsInline>
+								<video className="w-full h-full md:mt-[40px] lg:mt-[40px] xl:w-auto xl:h-auto xl:mt-0" loop muted autoPlay playsInline>
 									<source
 										src="https://html.aqlova.com/videos/170web/banner-4-1.mp4"
 										type="video/mp4"

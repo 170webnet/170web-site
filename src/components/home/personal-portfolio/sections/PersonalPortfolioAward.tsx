@@ -6,13 +6,13 @@ const PersonalPortfolioAward = () => {
     const displayAwardItems = awardData.slice(4, 8);
 
     return (
-        <div className="px-award-area pb-120">
+        <div className="pb-[120px]">
             <div className="container-px">
-                <div className="px-award-title-wrap mb-45">
+                <div className="mb-[45px]">
                     <div className="grid grid-cols-12 gap-x-6">
                         <div className="col-span-12 xl:col-span-9">
-                            <div className="px-award-content">
-                                <h3 className="px-section-title ff-thunder fs-130 mb-25">
+                            <div>
+                                <h3 className="font-thunder mb-[25px] font-semibold uppercase tracking-[1px] leading-[0.8] text-[80px] lg:text-[75px] md:text-[60px] xl:text-[130px] text-px-black dark:text-white">
                                     Awards & <br /> recognitions.
                                 </h3>
                             </div>
@@ -20,7 +20,7 @@ const PersonalPortfolioAward = () => {
                     </div>
                 </div>
 
-                <div className="px-award-wrapper">
+                <div className="flex flex-col">
                     {displayAwardItems.map((item) => (
                         <PersonalPortfolioAwardItem key={item.id} {...item} />
                     ))}

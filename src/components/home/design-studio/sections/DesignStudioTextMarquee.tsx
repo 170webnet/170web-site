@@ -8,19 +8,20 @@ import { SLIDER_TEXTS } from "@/data/site-data";
 
 const TextMarquee = () => {
     return (
-        <div
-            className="px-text-slider-wrap pt-25 pb-25"
-            style={{ backgroundColor: "#F11111" }}>
-            <div className="px-text-slider-active tp-slider-transtion">
+        <div className="bg-[#F11111] pt-[25px] pb-[25px]">
+            {/* tp-slider-transtion: linear timing + auto-width slides (Swiper selectors) */}
+            <div className="tp-slider-transtion">
                 <Swiper
                     modules={[FreeMode, Autoplay]}
                     {...text_slider_params}
                 >
                     {SLIDER_TEXTS.map((item) => (
                         <SwiperSlide key={item.id}>
-                            <div className="px-text-slider-item flex items-center">
-                                <span>{item.text}</span>
-                                <span className="pl-40">
+                            <div className="flex items-center">
+                                <span className="font-semibold text-[18px] leading-none tracking-[-0.06em] uppercase text-white">
+                                    {item.text}
+                                </span>
+                                <span className="pl-[40px]">
                                     <Star fill="currentColor" />
                                 </span>
                             </div>

@@ -22,17 +22,19 @@ const SLIDES = [
 
 const AboutMeTextSlide = () => {
     return (
-        <div className="px-text-slider-wrap px-text-slider-mt px-text-slider-style-3 pt-15 pb-15">
-            <div className="px-text-slider-active tp-slider-transtion">
+        <div className="relative z-[-1] translate-y-0 border-y border-[rgba(30,30,30,0.1)] pb-[15px] pt-[15px] dark:border-white/10 md:translate-y-[-200px] lg:translate-y-[-112px] xl:translate-y-[-300px]">
+            <div className="tp-slider-transtion">
                 <Swiper
                     modules={[Autoplay, FreeMode]}
                     {...text_slider_active}
                 >
                     {SLIDES.map((text, index) => (
                         <SwiperSlide key={`${text}-${index}`}>
-                            <div className="px-text-slider-item flex items-center">
-                                <span>{text}</span>
-                                <span className="pl-40">
+                            <div className="flex items-center">
+                                <span className="font-sans text-[18px] font-semibold uppercase leading-none tracking-[-0.06em] text-px-black dark:text-white">
+                                    {text}
+                                </span>
+                                <span className="pl-[40px]">
                                     <Star fill="currentColor" />
                                 </span>
                             </div>

@@ -7,23 +7,23 @@ const AboutUsTeam = () => {
     const teamItems = team_members.slice(8, 12);
 
     return (
-        <div className="px-team-area px-team-inner-ptb pt-130 px-fade-anim">
+        <div className="pt-[60px] md:pt-[130px] lg:pt-[100px] xl:pt-[100px] 2xl:pt-[130px] px-fade-anim">
             <div className="mx-auto w-full max-w-[1550px] px-3">
                 {/* TOP SECTION */}
-                <div className="px-team-top mb-60">
+                <div className="mb-[40px] md:mb-[60px]">
                     <div className="grid grid-cols-12 gap-x-6 items-end">
 
                         <div className="col-span-12 md:col-span-9 lg:col-span-8 xl:col-span-8">
-                            <div className="px-team-title-box">
-                                <h3 className="px-section-title ff-thunder fs-100 mb-0">
+                            <div>
+                                <h3 className="font-thunder text-[60px] md:text-[75px] xl:text-[100px] font-semibold leading-[0.9] tracking-[1px] uppercase text-px-black dark:text-white mb-0">
                                     Meet the <br /> talented team
                                 </h3>
                             </div>
                         </div>
                         <div className="col-span-12 md:col-span-3 lg:col-span-4 xl:col-span-4">
-                            <div className="px-team-link md:text-right pb-15">
+                            <div className="md:text-right pb-[15px]">
                                 <SmartLink
-                                    className="px-about-4-link text-black px-doubble-effect inline-flex items-center"
+                                    className="text-px-black dark:text-white px-doubble-effect inline-flex items-center"
                                     href="/team"
                                 >
                                     <span>Discover All</span>

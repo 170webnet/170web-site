@@ -25,7 +25,7 @@ const StartupAgencyProject = () => {
 
                         <div className="col-span-12 xl:col-span-9">
                             <div className="px-project-title-box">
-                                <h3 className="px-section-title mb-25 text-effect">
+                                <h3 className="mb-25 font-sans font-bold leading-[0.83] tracking-[-0.06em] text-px-black dark:text-white text-[55px] md:text-[100px] lg:text-[110px] xl:text-[125px] 2xl:text-[144px] text-effect">
                                     <span>Recent </span>
                                     <span>Case</span>
                                 </h3>

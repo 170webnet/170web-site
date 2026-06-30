@@ -27,7 +27,7 @@ const PortfolioDetailsHero = () => {
                             </div>
                             <div className="px-pd-2-bottom-item text-center">
                                 <span>Designer</span>
-                                <h6>ThemePure</h6>
+                                <h6>170web</h6>
                             </div>
                         </div>
                     </div>

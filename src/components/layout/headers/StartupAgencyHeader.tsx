@@ -17,7 +17,7 @@ const StartupAgencyHeader = () => {
    return (
       <>
          <header>
-            <div className="px-header-area header-transparent px-header-ptb">
+            <div className="px-header-area header-transparent py-[15px] xl:py-0">
                <div className="mx-auto w-full max-w-[1550px] px-3">
                   <div className="grid grid-cols-12 gap-x-6 items-center">
                      <div className="col-span-6 md:col-span-3 lg:col-span-4">
@@ -38,7 +38,7 @@ const StartupAgencyHeader = () => {
                               <button
                                  type="button"
                                  onClick={toggleMainSidebar}
-                                 className="px-header-bar tp-offcanvas-open-btn"
+                                 className="px-header-bar tp-offcanvas-open-btn ml-[40px]"
                                  aria-label="Open sidebar menu"
                                  aria-expanded={isMainSidebarOpen}
                                  aria-controls="main-sidebar"
