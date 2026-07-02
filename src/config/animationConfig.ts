@@ -3,7 +3,7 @@
 // Each value is an array of animation functions to run on that route
 
 import { initFlowImageDistortion } from "@/hooks/useFlowImageDistortion";
-import { aboutSkewAnimation, brandSkewAnimation, headerLogoAnimAnimation, initAwardAnimation, initButtonAnimations, initHeroScrollMarqueeAnimation, initHoverImageAnimation, initInnerServiceAnimation, initInstagramAnimation, initPortfolioAnimation, initPortfolioStickyAnimation, initProjectPerspectiveAnimation, initRevealImageAnimation, initRevealTextSplitAnimation, initScrollSkewParallaxSections, initTextRightScrollAnimation, portfolioPanelAnimation, stepScrollPinAnimation, textEffectAnimation } from "@/hooks/useGsapAnimation";
+import { aboutSkewAnimation, brandSkewAnimation, headerLogoAnimAnimation, initAwardAnimation, initButtonAnimations, initHeroScrollMarqueeAnimation, initHoverImageAnimation, initInnerServiceAnimation, initInstagramAnimation, initPortfolioAnimation, initPortfolioStickyAnimation, initProjectPerspectiveAnimation, initRevealImageAnimation, initRevealTextSplitAnimation, initScrollSkewParallaxSections, initTextRightScrollAnimation, portfolioPanelAnimation, textEffectAnimation } from "@/hooks/useGsapAnimation";
 
 
 export const animationConfig: Record<string, (() => void)[]> = {
@@ -11,11 +11,10 @@ export const animationConfig: Record<string, (() => void)[]> = {
     "/startup-agency": [aboutSkewAnimation, brandSkewAnimation, initScrollSkewParallaxSections, textEffectAnimation],
     "/design-studio": [portfolioPanelAnimation, textEffectAnimation],
     "/modern-agency": [textEffectAnimation],
-    "/creative-agency": [headerLogoAnimAnimation, textEffectAnimation, stepScrollPinAnimation],
+    "/creative-agency": [headerLogoAnimAnimation, textEffectAnimation],
     "/personal-portfolio": [initHoverImageAnimation],
     "/minimal-portfolio": [initRevealTextSplitAnimation, initProjectPerspectiveAnimation, initPortfolioStickyAnimation, initRevealImageAnimation, initAwardAnimation,initFlowImageDistortion],
     "/digital-studio": [initRevealTextSplitAnimation, initHeroScrollMarqueeAnimation, initTextRightScrollAnimation, initPortfolioAnimation, initAwardAnimation, initRevealImageAnimation, initInstagramAnimation, initButtonAnimations],
-    "/service-1": [stepScrollPinAnimation],
     "/service-2": [initInnerServiceAnimation],
     "/portfolio-1": [headerLogoAnimAnimation],
     "/portfolio-3": [initHoverImageAnimation],
@@ -26,11 +25,10 @@ export const animationConfig: Record<string, (() => void)[]> = {
     "/dark/startup-agency": [aboutSkewAnimation, brandSkewAnimation, initScrollSkewParallaxSections],
     "/dark/design-studio": [portfolioPanelAnimation, textEffectAnimation],
     "/dark/modern-agency": [textEffectAnimation],
-    "/dark/creative-agency": [headerLogoAnimAnimation, textEffectAnimation, stepScrollPinAnimation],
+    "/dark/creative-agency": [headerLogoAnimAnimation, textEffectAnimation],
     "/dark/personal-portfolio": [initHoverImageAnimation],
     "/dark/minimal-portfolio": [initRevealTextSplitAnimation, initProjectPerspectiveAnimation, initPortfolioStickyAnimation, initRevealImageAnimation, initAwardAnimation],
     "/dark/digital-studio": [initRevealTextSplitAnimation, initHeroScrollMarqueeAnimation, initTextRightScrollAnimation, initPortfolioAnimation, initAwardAnimation, initRevealImageAnimation, initInstagramAnimation, initButtonAnimations],
-    "/dark/service-1": [stepScrollPinAnimation],
     "/dark/service-2": [initInnerServiceAnimation],
     "/dark/portfolio-1": [headerLogoAnimAnimation],
     "/dark/portfolio-3": [initHoverImageAnimation],

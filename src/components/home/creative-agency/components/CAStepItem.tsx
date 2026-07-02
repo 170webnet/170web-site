@@ -5,42 +5,35 @@ interface CAStepItemProps {
     number: string;
     desc: string;
     title: string;
+    index: number;
 }
 
-const CAStepItem: React.FC<CAStepItemProps> = ({ bg, number, desc, title }) => {
+// Progressive top offset (xl only) → the four cards read as a descending staircase.
+const STAIR = ["xl:mt-0", "xl:mt-[50px]", "xl:mt-[100px]", "xl:mt-[150px]"];
+
+const CAStepItem: React.FC<CAStepItemProps> = ({ bg, number, desc, title, index }) => {
     return (
         <div
-            className="col-span-12 2xl:col-start-9 2xl:col-span-4 xl:col-start-8 xl:col-span-5 lg:col-span-6"
+            className={`flex min-h-[440px] flex-col rounded-[24px] p-7 transition-transform duration-500 ease-out hover:-translate-y-2.5 motion-reduce:transition-none motion-reduce:hover:translate-y-0 ${STAIR[index] ?? "xl:mt-0"}`}
+            style={{ backgroundColor: bg }}
         >
-            <div
-                className="px-step-card max-w-[530px] pt-[60px] px-[60px] pb-[45px] mb-[250px] xl:max-2xl:px-[30px] md:max-xl:mb-[30px] md:max-xl:max-w-full max-md:pt-[50px] max-md:px-[30px] max-md:mb-[30px] max-md:max-w-full"
-                style={{ backgroundColor: bg }}
-            >
-                <div className="inline-block px-[14px] py-[6px] rounded-[27px] text-[14px] font-semibold leading-none uppercase text-white bg-px-black">
-                    <span>Step</span>
-                </div>
-                <div className="mb-[65px] text-right">
-                    <span className="font-thunder-med text-[260px] max-md:text-[180px] font-medium leading-[0.7] uppercase text-px-black">
-                        {number}
-                    </span>
-                    <p className="mb-0 text-[18px] font-normal leading-[26px] text-px-black">
-                        {desc.split("\n").map((line, i) => (
-                            <React.Fragment key={`${line}-${i}`}>
-                                {line}
-                                <br />
-                            </React.Fragment>
-                        ))}
-                    </p>
-                </div>
+            {/* badge */}
+            <span className="inline-flex w-fit items-center rounded-full bg-px-black px-4 py-1.5 text-[12px] font-semibold uppercase tracking-[0.14em] text-white">
+                Step {number}
+            </span>
 
-                <h4 className="font-thunder-med text-[80px] max-md:text-[50px] font-medium leading-[0.9] mb-0 uppercase text-px-black">
-                    {title.split("\n").map((line, i) => (
-                        <span key={`${line}-${i}`}>
-                            {line}
-                            <br />
-                        </span>
-                    ))}
-                </h4>
+            {/* the number — hero of the card */}
+            <span className="mt-7 font-thunder-med text-[clamp(6rem,9vw,9rem)] font-medium leading-[0.7] text-px-black">
+                {number}
+            </span>
+
+            {/* title + description, anchored to the base.
+                pt-[40px]: arbitrary on purpose — the template's spacing.css defines .pt-10 as 10px. */}
+            <div className="mt-auto pt-[40px]">
+                <h3 className="font-thunder-med text-[clamp(1.9rem,2.6vw,2.4rem)] font-medium uppercase leading-[0.92] whitespace-pre-line text-px-black">
+                    {title}
+                </h3>
+                <p className="mt-4 max-w-[34ch] text-[15px] leading-relaxed text-px-black/70">{desc}</p>
             </div>
         </div>
     );

@@ -17,9 +17,15 @@ const PortfolioSixMain = () => {
                             <span className="text-[18px] font-medium text-px-black dark:text-white">Philadelphia, PA <br /> 2026</span>
                         </div>
                     </div>
-                    {displayPortfolioData.map((item) => (
-                        <PortfolioCard key={item.id} {...item} />
-                    ))}
+                    {/* px-portfolio-wrap: endTrigger for portfolioPanelAnimation's pin —
+                        without it the last panel stays pinned over the footer.
+                        px-0!: the template CSS styles .px-portfolio-wrap{padding:0 35px},
+                        which would double the parent's px-[35px]; we only want the hook. */}
+                    <div className="px-portfolio-wrap px-0!">
+                        {displayPortfolioData.map((item) => (
+                            <PortfolioCard key={item.id} {...item} />
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

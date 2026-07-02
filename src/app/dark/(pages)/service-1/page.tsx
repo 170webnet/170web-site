@@ -14,7 +14,7 @@ const page = () => {
             <ServiceCapsule />
             <ServiceTestimonial/>
             <ServiceBrand/>
-            <ServiceStep sectionSpacing="mb-140"/>
+            <ServiceStep />
             <ServiceFaq/>
             <ServiceSocial/>
         </main>

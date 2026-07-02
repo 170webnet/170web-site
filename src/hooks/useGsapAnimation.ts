@@ -229,49 +229,6 @@ export const headerLogoAnimAnimation = () => {
 	});
 };
 
-export const stepScrollPinAnimation = () => {
-	let mm = gsap.matchMedia();
-
-	mm.add("(min-width: 1199px)", () => {
-		// Common ScrollTrigger options
-		const baseOptions = {
-			scrub: 1,
-			start: 'top 0%',
-			end: 'bottom 80%',
-			endTrigger: '.px-step-area',
-			pinSpacing: false,
-			markers: false,
-		};
-
-		// For px-step-item
-		document.querySelectorAll('.px-step-item').forEach((item, i) => {
-			gsap.to(item, {
-				scrollTrigger: {
-					trigger: item,
-					pin: item,
-					...baseOptions,
-				}
-			});
-		});
-
-		// For px-step-card with left/right rotation
-		document.querySelectorAll('.px-step-card').forEach((card, i) => {
-			let rotateValue = i % 2 === 0 ? -5 : 5;
-
-			gsap.to(card, {
-				rotate: rotateValue,
-				scrollTrigger: {
-					trigger: card,
-					pin: card,
-					...baseOptions,
-					start: 'top 20%',
-					end: 'bottom 80%'
-				}
-			});
-		});
-	})
-}
-
 //  hover image-wrapper
 export const initHoverImageAnimation = () => {
 	const imageWrapper = document.querySelector(".px-project-6-img-wrap") as HTMLElement | null;
@@ -286,13 +243,8 @@ export const initHoverImageAnimation = () => {
 		projects.forEach((el) => {
 			el.addEventListener("mouseenter", () => {
 				gsap.to(imageWrapper, { opacity: 1, duration: 0.5, ease: "power2.out" });
-			});
-
-			el.addEventListener("mouseleave", () => {
-				gsap.to(imageWrapper, { opacity: 0, duration: 0.5, ease: "power2.in" });
-			});
-
-			el.addEventListener("mousemove", () => {
+				// The slider target only changes when the hovered item changes,
+				// so one tween per enter (not per mousemove pixel).
 				const indexNumber = Number(el.dataset.indexNumber);
 				gsap.to(imageSlider, {
 					y: -(movePercent * indexNumber) + "%",
@@ -300,41 +252,26 @@ export const initHoverImageAnimation = () => {
 					ease: "power2.out",
 				});
 			});
+
+			el.addEventListener("mouseleave", () => {
+				gsap.to(imageWrapper, { opacity: 0, duration: 0.5, ease: "power2.in" });
+			});
 		});
 
-		// Cursor-follow + ghost trail
+		// Cursor-follow. (The old "ghost trail" cloned the whole image wrapper —
+		// all images — on every mousemove, re-loading them dozens of times per
+		// second; removed. quickTo reuses one retargetable tween instead of
+		// allocating a new tween per event, so tracking while faded out is cheap
+		// and keeps the reveal already positioned under the cursor.)
 		const wrap = document.querySelector(".px-project-6-wrap") as HTMLElement | null;
 		if (wrap) {
+			const xTo = gsap.quickTo(imageWrapper, "x", { duration: 0.3, ease: "power3.out" });
+			const yTo = gsap.quickTo(imageWrapper, "y", { duration: 0.3, ease: "power3.out" });
+
 			wrap.addEventListener("mousemove", (e: MouseEvent) => {
 				const rect = wrap.getBoundingClientRect();
-				const x = e.clientX - rect.left;
-				const y = e.clientY - rect.top;
-
-				// Clone for ghost effect
-				const clone = imageWrapper.cloneNode(true) as HTMLElement;
-				clone.style.position = "absolute";
-				clone.style.pointerEvents = "none";
-				clone.style.opacity = "0.4";
-				clone.style.top = "0";
-				clone.style.left = "0";
-				clone.style.transform = `translate(-50%, -50%)`;
-				wrap.appendChild(clone);
-
-				gsap.set(clone, { x, y, scale: 0.9 });
-				gsap.to(clone, {
-					opacity: 0,
-					scale: 1.2,
-					duration: 0.6,
-					ease: "power2.out",
-					onComplete: () => clone.remove()
-				});
-
-				gsap.to(imageWrapper, {
-					x,
-					y,
-					duration: 0.3,
-					ease: "power3.out"
-				});
+				xTo(e.clientX - rect.left);
+				yTo(e.clientY - rect.top);
 			});
 		}
 	}

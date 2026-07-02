@@ -8,7 +8,8 @@ const CreativeAgencyTeam = () => {
     const teamItems = team_members.slice(0, 4);
 
     return (
-        <div className="pt-[330px] max-lg:pt-[80px]">
+        // pt was 330px, sized for the old pinned Step cards that overlapped into this section
+        <div className="pt-[120px] max-lg:pt-[80px]">
             <div className="mx-auto w-full max-w-[1550px] px-3">
 
                 {/* TOP SECTION */}

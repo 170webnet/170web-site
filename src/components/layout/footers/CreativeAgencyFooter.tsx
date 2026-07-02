@@ -1,13 +1,21 @@
 "use client";
-import { Mail } from "lucide-react";
-import { SmartLink } from "@/components/common";
+import { ArrowRight, ArrowUp } from "lucide-react";
+import { ScrollLink, SmartLink } from "@/components/common";
+import { getCurrentYear } from "@/utils/getCurrentYear";
 import { useIsDarkRoute } from "@/hooks/useIsDarkRoute";
-import { ArrowScrollIcon } from "@/svg";
+import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 import Link from "next/link";
 
 const CreativeAgencyFooter = () => {
-    const currentYear = new Date().getFullYear();
+    const currentYear = getCurrentYear();
     const isDarkTheme = useIsDarkRoute();
+
+    const { register, handleSubmit, reset } = useForm<{ email: string }>();
+    const onSubscribe = () => {
+        toast.success("Subscribed — thank you!");
+        reset();
+    };
 
     // Light theme background for service banner section
     const footerBackground = isDarkTheme ? "" : "#f7f7f7";
@@ -42,20 +50,21 @@ const CreativeAgencyFooter = () => {
                                     <div className="col-span-12 md:col-span-6 lg:col-span-5 xl:col-span-4">
                                         <div className="pr-[40px] max-[1199px]:pr-0 pb-[60px]">
                                             <h4 className="font-medium text-[24px] leading-[1.25] mb-[20px] tracking-[-0.02em] text-px-black dark:text-white">Our Newsletter</h4>
-                                            <div className="relative">
+                                            <form className="relative" onSubmit={handleSubmit(onSubscribe)}>
                                                 <input
-                                                    type="text"
+                                                    type="email"
                                                     placeholder="Your email address"
                                                     className="w-full h-[60px]! px-[35px]! pr-[60px]! rounded-[40px]! text-[20px]! font-medium! leading-none! bg-transparent! text-px-black! dark:text-px-white! border! border-[rgba(6,2,0,0.10)]! dark:border-white/10! placeholder:text-[20px]! placeholder:font-medium! placeholder:leading-none! placeholder:text-black/60! dark:placeholder:text-px-white! focus:border-px-black! dark:focus:border-px-white!"
+                                                    {...register("email", { required: true })}
                                                 />
                                                 <button
                                                     type="submit"
                                                     aria-label="Subscribe to newsletter"
-                                                    className="absolute top-1/2 right-[10px] -translate-y-1/2 h-[40px] w-[40px] inline-block text-center leading-none rounded-full text-px-white bg-px-black dark:text-px-black dark:bg-px-white transition-colors hover:text-px-white hover:bg-px-orange"
+                                                    className="absolute top-1/2 right-[10px] inline-flex h-[44px] w-[44px] -translate-y-1/2 items-center justify-center rounded-full text-px-white bg-px-black dark:text-px-black dark:bg-px-white transition-colors hover:text-px-white hover:bg-px-orange"
                                                 >
-                                                    <Mail />
+                                                    <ArrowRight size={19} aria-hidden="true" />
                                                 </button>
-                                            </div>
+                                            </form>
                                         </div>
                                     </div>
                                     <div className="col-span-12 md:col-span-6 lg:col-span-7 xl:col-span-8">
@@ -73,7 +82,7 @@ const CreativeAgencyFooter = () => {
                                                     <div className="pl-[5px] max-[1199px]:pl-0 max-[1199px]:mb-[20px]">
                                                         <h4 className="font-medium text-[16px] leading-none mb-[20px] tracking-[-0.02em] text-[rgba(10,10,10,0.5)] dark:text-white/50">Drop us a line</h4>
                                                         <div>
-                                                            <Link className="relative inline-block text-[24px] max-[1399px]:text-[20px] font-medium leading-none tracking-[-0.02em] text-px-black dark:text-white after:absolute after:content-[''] after:bottom-0 after:right-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-500 hover:after:right-auto hover:after:left-0 hover:after:w-full" href="mailto:inquiry@agntix.com">inquiry@agntix.com</Link>
+                                                            <Link className="relative inline-block text-[24px] max-[1399px]:text-[20px] font-medium leading-none tracking-[-0.02em] text-px-black dark:text-white after:absolute after:content-[''] after:bottom-0 after:right-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-500 hover:after:right-auto hover:after:left-0 hover:after:w-full" href="mailto:inquiry@170web.com">inquiry@170web.com</Link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -99,12 +108,10 @@ const CreativeAgencyFooter = () => {
                                     </div>
                                     <div className="col-span-12 md:col-span-6">
                                         <div className="text-center md:text-right mb-[10px]">
-                                            <Link className="inline-block text-[24px] font-medium leading-none tracking-[-0.02em] text-px-black dark:text-white" href="#top">
+                                            <ScrollLink className="group inline-flex items-center gap-2 text-[24px] font-medium leading-none tracking-[-0.02em] text-px-black transition-colors hover:text-px-orange dark:text-white" target="#top">
                                                 Back to top
-                                                <span className="ml-[8px] text-px-black dark:text-white">
-                                                    <ArrowScrollIcon />
-                                                </span>
-                                            </Link>
+                                                <ArrowUp size={20} aria-hidden="true" className="transition-transform duration-300 group-hover:-translate-y-1" />
+                                            </ScrollLink>
                                         </div>
                                     </div>
                                 </div>

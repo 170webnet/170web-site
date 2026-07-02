@@ -68,7 +68,7 @@ const PortfolioDetailsVarientOne = ({ id }: IdProps) => {
             <PortfolioDetailsThumb />
             <PortfolioDetailsStep />
             <PortfolioDetailsThumbTwo />
-            <PortfolioNavigation />
+            <PortfolioNavigation currentId={Number(id)} />
         </>
     );
 };
